@@ -2,12 +2,16 @@ import React from 'react'
 import { Container,Grid,Dropdown,Image, Menu,Divider} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import Header from "../../../src/assets/cabezotecyw.png"
-export default function layout() {
+import Footer from "../../../src/assets/footerintranet.png"
+
+
+export default function Layout(props) {
+    const {children} = props;
     
     return (
         <Container fluid>
             <Grid.Row>
-            <Image src={Header}/>
+            <Image href="/" src={Header}/>
             </Grid.Row>
             <Grid.Row>
             <Menu  tabular borderless stackable horinzontal fluid widths={4}>
@@ -99,6 +103,8 @@ export default function layout() {
             </Menu>
             </Grid.Row>
             <Divider hidden/>
+            {children}
+            <Image  href="/"src={Footer} fluid/>
         </Container>
     )
 }

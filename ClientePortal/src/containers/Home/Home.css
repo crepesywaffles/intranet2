@@ -1,0 +1,13 @@
+.botonimg:hover{
+    -webkit-transition: all 1.2s ease;
+    -moz-transition: all 1.2s ease;
+    -o-transition: all 1.2s ease;
+    -ms-transition:all 1.2s ease;
+    width: 100%;
+    -webkit-transition: scale(0.9);
+    -moz-transition: scale(0.9);
+    -o-transition: scale(0.9);
+    -ms-transition:scale(0.9);
+    transform: scale(0.9);
+    cursor: pointer;
+}

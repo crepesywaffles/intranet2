@@ -23,7 +23,7 @@ export class Carusel extends Component {
                     
                     {this.state.img.map((task,index)=>
                     <Carousel.Item >
-                    <img className=" d-block w-100" key ={index.id} clealt={task.name} src={`${apiURL}${task.formats.large.url}`}/>
+                    <img className=" d-block w-100 h-25" key ={index.id} clealt={task.name} src={`${apiURL}${task.url}`}/>
                     </Carousel.Item>
                 )}
                 
