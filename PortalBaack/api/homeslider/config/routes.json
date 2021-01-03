@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/homesliders",
+      "handler": "homeslider.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/homesliders/count",
+      "handler": "homeslider.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/homesliders/:id",
+      "handler": "homeslider.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/homesliders",
+      "handler": "homeslider.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/homesliders/:id",
+      "handler": "homeslider.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/homesliders/:id",
+      "handler": "homeslider.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
