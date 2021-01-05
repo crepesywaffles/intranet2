@@ -13,7 +13,6 @@ export class Carusel extends Component {
         fetch(`${apiURL}/homesliders`)
         .then(res=>{return res.json()})
         .then(res =>{this.setState({img:res[0].sliders})
-        console.log(res[0].sliders)
     })
     }
     render() {
@@ -23,7 +22,7 @@ export class Carusel extends Component {
                     
                     {this.state.img.map((task,index)=>
                     <Carousel.Item >
-                    <img className=" d-block w-100 h-25" key ={index.id} clealt={task.name} src={`${apiURL}${task.url}`}/>
+                    <img className=" d-block w-100 " key ={index.id} alt={task.name+"Slider"}clealt={task.name} src={`${apiURL}${task.url}`}/>
                     </Carousel.Item>
                 )}
                 

@@ -3,6 +3,8 @@ import { Container,Grid,Dropdown,Image, Menu,Divider} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import Header from "../../../src/assets/cabezotecyw.png"
 import Footer from "../../../src/assets/footerintranet.png"
+import*as paths from "../../config/routing/paths";
+
 
 
 export default function Layout(props) {
@@ -11,14 +13,14 @@ export default function Layout(props) {
     return (
         <Container fluid>
             <Grid.Row>
-            <Image href="/" src={Header}/>
+            <Image  to={paths.CON_HOME} as={Link} src={Header}/>
             </Grid.Row>
             <Grid.Row>
-            <Menu  tabular borderless stackable horinzontal fluid widths={4}>
+            <Menu stackable="true" tabular borderless  horinzontal="true" fluid widths={4}>
             <Dropdown item text='NUESTRA EMPRESA'>
             <Dropdown.Menu>
             <Dropdown.Item>
-            <Link to="/nuestra-historia">Nuestra Historia</Link>
+            <Link to={paths.CON_LOGIN}>Nuestra Historia</Link>
             </Dropdown.Item>
             <Dropdown.Item>
             <Link to="/cultura-filosofia" >Cultura y Filosofía Crepes & Waffles</Link>
@@ -37,7 +39,7 @@ export default function Layout(props) {
             <Dropdown item text='NUESTROS EQUIPOS'>
             <Dropdown.Menu>
             <Dropdown.Item>
-            <Link  to="/dir-dh" >Dirección Desarrollo Humano</Link>
+            <Link  to={paths.CON_DH} >Dirección Desarrollo Humano</Link>
             </Dropdown.Item>
             <Dropdown.Item>
             <Link  to="/dir-financiera" >Dirección Financiera</Link>

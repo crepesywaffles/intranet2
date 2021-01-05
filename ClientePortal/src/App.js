@@ -1,17 +1,25 @@
-import {BrowserRouter,Route} from 'react-router-dom'
+import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import './App.css';
-import Login from './containers/Login/Login'
-import Home from './containers/Home/Home'
 import 'semantic-ui-css/semantic.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import routes from "./config/routing/routes"
 
 
 function App() {
+  console.log(routes)
   return (
     <div className="App">
       <BrowserRouter>
-        <Route path="/login" component={Login}/>
-        <Route path="/" exact component={Home}/>
+        <Switch>
+          {routes.map(route=>(
+            <Route
+            key={route.path}
+            path={route.path}
+            component={route.component}
+            exact={route.exact}
+            />
+          ))}
+        </Switch>
       </BrowserRouter>
     </div>
   );
