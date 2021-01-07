@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bienestarlinks",
+      "handler": "bienestarlinks.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bienestarlinks/count",
+      "handler": "bienestarlinks.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bienestarlinks/:id",
+      "handler": "bienestarlinks.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bienestarlinks",
+      "handler": "bienestarlinks.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bienestarlinks/:id",
+      "handler": "bienestarlinks.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bienestarlinks/:id",
+      "handler": "bienestarlinks.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

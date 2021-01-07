@@ -6,7 +6,6 @@ import routes from "./config/routing/routes"
 
 
 function App() {
-  console.log(routes)
   return (
     <div className="App">
       <BrowserRouter>

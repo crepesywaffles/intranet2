@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bienestar_sliders",
+  "info": {
+    "name": "BienestarSlider",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Sliders": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "directorioBienestar": {
+      "type": "component",
+      "repeatable": false,
+      "component": "contacto.nombre",
+      "required": false
+    }
+  }
+}

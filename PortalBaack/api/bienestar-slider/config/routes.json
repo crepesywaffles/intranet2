@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bienestar-sliders",
+      "handler": "bienestar-slider.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bienestar-sliders/count",
+      "handler": "bienestar-slider.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bienestar-sliders/:id",
+      "handler": "bienestar-slider.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bienestar-sliders",
+      "handler": "bienestar-slider.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bienestar-sliders/:id",
+      "handler": "bienestar-slider.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bienestar-sliders/:id",
+      "handler": "bienestar-slider.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

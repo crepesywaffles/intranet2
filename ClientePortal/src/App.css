@@ -1,3 +1,4 @@
+/* Globales */
 .botonimg:hover{
     -webkit-transition: all 1.2s ease;
     -moz-transition: all 1.2s ease;
@@ -11,3 +12,28 @@
     transform: scale(0.9);
     cursor: pointer;
 }
+.botonimg2:hover{
+    -webkit-transition: all 1.2s ease;
+    -moz-transition: all 1.2s ease;
+    -o-transition: all 1.2s ease;
+    -ms-transition:all 1.2s ease;
+    width: 100%;
+    -webkit-transition: scale(1.1);
+    -moz-transition: scale(1.1);
+    -o-transition: scale(1.1);
+    -ms-transition:scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.btn{
+    border-bottom: none;
+}
+a{
+  text-decoration: none;  
+}
+
+
+
+
+
+

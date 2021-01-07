@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_contacto_nombres",
+  "info": {
+    "name": "Nombre",
+    "icon": "user-tie"
+  },
+  "options": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "Cargo": {
+      "type": "string"
+    },
+    "Correo": {
+      "type": "email"
+    },
+    "Extension": {
+      "type": "biginteger"
+    }
+  }
+}

@@ -9,9 +9,16 @@ import*as paths from "../../config/routing/paths";
 
 export default function Layout(props) {
     const {children} = props;
+
+    const LinkStyle={
+        textDecoration: "none",
+        color: "#523629",
+        textColor: "white",
+        fontFamily: "Arial"
+    }
     
     return (
-        <Container fluid>
+        <Container className={"layout"} fluid>
             <Grid.Row>
             <Image  to={paths.CON_HOME} as={Link} src={Header}/>
             </Grid.Row>
@@ -20,68 +27,68 @@ export default function Layout(props) {
             <Dropdown item text='NUESTRA EMPRESA'>
             <Dropdown.Menu>
             <Dropdown.Item>
-            <Link to={paths.CON_LOGIN}>Nuestra Historia</Link>
+            <Link to={paths.CON_LOGIN} style={LinkStyle}>Nuestra Historia</Link>
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link to="/cultura-filosofia" >Cultura y Filosofía Crepes & Waffles</Link>
+            <Link to="/cultura-filosofia"style={LinkStyle} >Cultura y Filosofía Crepes & Waffles</Link>
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link to="/empresas-b" >Empresas B </Link>  
+            <Link to="/empresas-b" style={LinkStyle}>Empresas B </Link>  
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link to="/directorio-pdv" >Directorio Puntos de venta</Link>
+            <Link to="/directorio-pdv" style={LinkStyle} >Directorio Puntos de venta</Link>
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link to="/directorio-admon" >Directorio Administración</Link>     
+            <Link to="/directorio-admon" style={LinkStyle} >Directorio Administración</Link>     
             </Dropdown.Item>
             </Dropdown.Menu>    
             </Dropdown>
-            <Dropdown item text='NUESTROS EQUIPOS'>
+            <Dropdown item text='NUESTROS EQUIPOS'style={LinkStyle}>
             <Dropdown.Menu>
             <Dropdown.Item>
-            <Link  to={paths.CON_DH} >Dirección Desarrollo Humano</Link>
+            <Link  to={paths.CON_DH} style={LinkStyle} >Dirección Desarrollo Humano</Link>
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link  to="/dir-financiera" >Dirección Financiera</Link>
+            <Link  to="/dir-financiera" style={LinkStyle} >Dirección Financiera</Link>
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link  to="/dir-calidad" >Dirección Calidad y Medio Ambiente</Link>
+            <Link  to="/dir-calidad" style={LinkStyle}>Dirección Calidad y Medio Ambiente</Link>
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link  to="/dir-producto-compras" >Dirección de Producto y Compras</Link>
+            <Link  to="/dir-producto-compras"style={LinkStyle} >Dirección de Producto y Compras</Link>
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link  to="/dir-admon">Dirección Administrativa</Link>
+            <Link  to="/dir-admon" style={LinkStyle}>Dirección Administrativa</Link>
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link  to="/dir-logistica">Dirección Logística y Abastecimiento</Link>  
+            <Link  to="/dir-logistica" style={LinkStyle}>Dirección Logística y Abastecimiento</Link>  
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link  to="/dir-operativa-rest" >Dirección Operativa Restaurantes</Link>
+            <Link  to="/dir-operativa-rest" style={LinkStyle} >Dirección Operativa Restaurantes</Link>
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link  to="/dir-operativa-hel" >Dirección Operativa Heladerías</Link>
+            <Link  to="/dir-operativa-hel" style={LinkStyle} >Dirección Operativa Heladerías</Link>
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link  to="/dir-mantenimiento" >Dirección de Mantenimiento</Link>
+            <Link  to="/dir-mantenimiento" style={LinkStyle} >Dirección de Mantenimiento</Link>
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link  to="/dir-planta-produccion" > Dirección Planta de Producción</Link>  
+            <Link  to="/dir-planta-produccion" style={LinkStyle} > Dirección Planta de Producción</Link>  
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link  to="/dir-planta-hel" >Dirección Planta de Helados</Link>    
+            <Link  to="/dir-planta-hel" style={LinkStyle} >Dirección Planta de Helados</Link>    
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link  to="/dir-tecnologia" >Dirección Tecnología</Link>  
+            <Link  to="/dir-tecnologia" style={LinkStyle} >Dirección Tecnología</Link>  
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link  to="/dir-innovacion" >Dirección de Innovación</Link>  
+            <Link  to="/dir-innovacion" style={LinkStyle}>Dirección de Innovación</Link>  
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link  to="/dir-sostenibilidad" >Dirección de Sostenibilidad</Link>  
+            <Link  to="/dir-sostenibilidad"style={LinkStyle} >Dirección de Sostenibilidad</Link>  
             </Dropdown.Item>
             <Dropdown.Item>
-            <Link  to="/academia" >Academia de las Artes</Link>  
+            <Link  to="/academia" style={LinkStyle} >Academia de las Artes</Link>  
             </Dropdown.Item>
             </Dropdown.Menu>
             </Dropdown>
@@ -104,7 +111,7 @@ export default function Layout(props) {
             </Dropdown>
             </Menu>
             </Grid.Row>
-            <Divider hidden/>
+            <Divider hidden />
             {children}
             <Image  href="/"src={Footer} fluid/>
         </Container>
