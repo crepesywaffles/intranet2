@@ -7,7 +7,7 @@ import Directorio from "../../../../componentes/Directorio/Directorio";
 import Grupobtn from "../../../../componentes/GrupoBtn/Grupobtn1";
 import Modal from "../../../../componentes/Modal/Modal"
 import Header from "../../../../assets/dh/CabezoteBienestar.png"
-import { btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8 } from "../../../../assets/dh/Bienestar/index"
+import { btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8,btn9 } from "../../../../assets/dh/Bienestar/index"
 import { Carousel } from "react-bootstrap";
 
 export default class Bienestar extends Component {
@@ -66,6 +66,7 @@ export default class Bienestar extends Component {
                     </Grid.Column>
                     <Grid.Column>
                         <Container stackable centered aling="center">
+                        {/* catalogo de beneficios */}
                         <Modal
                             btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn4} size="medium" centered/>}
                             size={"fullscreen"}
@@ -74,6 +75,7 @@ export default class Bienestar extends Component {
                                 <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=du96fask9s" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
                             </Container>
                         </Modal>
+                        {/* Beneficios bachillerato */}
                         <Modal
                             btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn3}/>}
                             
@@ -84,6 +86,7 @@ export default class Bienestar extends Component {
                                 )}
                             </Container>
                         </Modal>
+                        {/* Afiliacione y retiros caja compensación */}
                         <Modal
                             btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn1} AssetsBinestar  />}
                             
@@ -93,17 +96,24 @@ export default class Bienestar extends Component {
                                     <Image  src={`${apiURL}${link.Imagenes[1].url}`} size="massive"/>
                                 )}
                             </Container>
-                        </Modal>
-                            <Container>
-                            <Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn2}/>  
-                            </Container>
-                             
+                        </Modal>    
                         </Container>
                     </Grid.Column>
                     <Grid.Column>
                         <Container stackable centered>
+                        {/* Catalogo de Medicionas prepagadas */}
                         <Modal
                             btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn6}/>}
+                            size={"fullscreen"}
+                        >
+                            <Container>
+                            <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=dk8om85tk5" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+                            </Container>
+                        </Modal>
+                        {/* Afiliaicones y retiros EPS */}
+                        <Modal
+                            btn={<Grupobtn as={"a"} class={"botonimg btn"} size="medium" src={btn2} />}
+                            
                         >
                             <Container>
                             {link && (
@@ -111,16 +121,7 @@ export default class Bienestar extends Component {
                                 )}
                             </Container>
                         </Modal>
-                        <Modal
-                            btn={<Grupobtn as={"a"} class={"botonimg btn"} size="medium" src={btn5} />}
-                            
-                        >
-                            <Container>
-                            {link && (
-                                    <Image  src={`${apiURL}${link.Imagenes[4].url}`} size="massive"/>
-                                )}
-                            </Container>
-                        </Modal>
+                        {/* Retiro de cesantias */}
                         <Modal
                             btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn7} AssetsBinestar  />}
                             
@@ -131,15 +132,46 @@ export default class Bienestar extends Component {
                                 )}
                             </Container>
                         </Modal>
-                        <Container>
-                        <Grupobtn as={"a"} href={"https://corporativo.compensar.com"} target={"_blank"}class={"botonimg btn"} size="medium" src={btn8}/>
                         </Container>
-                               
+                    </Grid.Column>
+                    <Grid.Column>
+                        <Container stackable centered>
+                        {/* Nuestros aliados */}
+                        <Modal
+                            btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn9}/>}
+                        >
+                            <Container>
+                            {link && (
+                                    <Image  src={`${apiURL}${link.Imagenes[4].url}`} size="massive"/>
+                                )}
+                            </Container>
+                        </Modal>
+                        {/* Eventos */}
+                        <Modal
+                            btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn5} />}
+                            
+                        >
+                            <Container>
+                            {link && (
+                                    <Image  href={`${apiURL}${link.Imagenes[4].url}`} size="massive"/>
+                                )}
+                            </Container>
+                        </Modal>
+                        Servicios y Beneficios Caja compensación
+                        <Modal 
+                            open={false}
+                            btn={<Grupobtn as={"a"} href="https://corporativo.compensar.com" target="_blank" class={"botonimg btn"} size="medium" src={btn8}   />}
+                            size={"fullscreen"}
+                            
+                        >
+
+    
+                        </Modal>
                         </Container>
-                        
                     </Grid.Column>
                 </Grid>
             </Layout>
         );
     }
 }
+

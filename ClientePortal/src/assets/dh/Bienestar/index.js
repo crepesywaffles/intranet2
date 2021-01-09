@@ -6,6 +6,7 @@ export {default as btn5}from "../Bienestar/BotonEventos.png"
 export {default as btn6} from "../Bienestar/BotonMedicinasyPlanes.png"
 export {default as btn7}from "../Bienestar/BotonRetiroDeCesantiasUV.png"
 export {default as btn8} from "../Bienestar/BotonServiciosBeneficiosCaja.png"
+export {default as btn9} from "../Bienestar/BtnNuestrosAliados.png"
 
 
 

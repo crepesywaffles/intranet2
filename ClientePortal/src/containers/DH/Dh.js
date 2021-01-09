@@ -29,7 +29,7 @@ export default function Dh() {
                             <Image className="botonimg"size="medium" src={BtnSST}/>
                         </Grid.Column>
                         <Grid.Column>
-                            <Image className="botonimg" size="medium"  src={BtnFormacion}/>
+                            <Image as={Link} to={paths.CON_DH_FYD}className="botonimg" size="medium"  src={BtnFormacion}/>
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>

@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/homevideo",
+      "handler": "homevideo.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/homevideo",
+      "handler": "homevideo.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/homevideo",
+      "handler": "homevideo.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

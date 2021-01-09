@@ -1,7 +1,7 @@
 
 
 import React from 'react'
-import {  Icon, Image, Modal,Button, Container,Grid, ModalDescription } from 'semantic-ui-react'
+import {  Icon, Image, Modal,Button} from 'semantic-ui-react'
 
 
 function ModalScrollingExample(props) {
@@ -12,7 +12,7 @@ function ModalScrollingExample(props) {
       centered
       open={open}
       onClose={() => setOpen(false)}
-      onOpen={() => setOpen(true)}
+      onOpen={() => setOpen(props.open)}
       trigger={ <Image className="btn" as={"button"}> {props.btn}</Image>}
       size={props.size}
 

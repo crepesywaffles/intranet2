@@ -22,11 +22,17 @@ export const CON_DH_BIENESTAR={
     path:paths.CON_DH_BIENESTAR,
     exact:false
 }
+export const CON_DH_FYD={
+    component:containers.CON_DH_FORMACION,
+    path:paths.CON_DH_FYD,
+    exact:false
+}
 
 export default [
     CON_HOME,
     CON_LOGIN,
     CON_DH,
-    CON_DH_BIENESTAR
+    CON_DH_BIENESTAR,
+    CON_DH_FYD
 ]
 

@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "homevideos",
+  "info": {
+    "name": "Homevideo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "url": {
+      "type": "string"
+    }
+  }
+}

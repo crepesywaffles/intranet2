@@ -4,7 +4,6 @@ import { List, Container, Divider} from "semantic-ui-react";
 export default function Directorio(props) {
     return (
         <Container>
-            <Divider hidden />
             <List animated className="botonimg2">
                 <List.Item>
                     <List.Icon name="users" />
@@ -20,6 +19,7 @@ export default function Directorio(props) {
                         <a href={`mailto:${props.email}`}>{props.email}</a>
                     </List.Content>
                 </List.Item>
+                <br/>
             </List>
         </Container>
     );

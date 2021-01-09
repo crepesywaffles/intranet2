@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/imagendiaria",
+      "handler": "imagendiaria.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/imagendiaria",
+      "handler": "imagendiaria.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/imagendiaria",
+      "handler": "imagendiaria.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

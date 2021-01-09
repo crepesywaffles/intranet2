@@ -1,0 +1,6 @@
+export {default as btn1} from "../Formacion/BTNLinkDesempeño.png"
+export {default as btn2} from "../Formacion/BTNLinkPP.png"
+export {default as btn3 } from "../Formacion/BTNProgrEntrenam.png"
+export {default as btn4 } from "../Formacion/BTNToderas.png"
+export {default as btn5} from "../Formacion/BTNUniversidadCorporativa.png"
+export {default as Header} from "../Formacion/CabezoteFormacion.png"
