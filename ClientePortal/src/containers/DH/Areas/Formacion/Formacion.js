@@ -8,13 +8,13 @@ import Grupobtn from "../../../../componentes/GrupoBtn/Grupobtn1";
 import Modal from "../../../../componentes/Modal/Modal"
 import { btn1, btn2, btn3, btn4, btn5,Header } from "../../../../assets/dh/Formacion/index"
 import { Carousel } from "react-bootstrap";
-import link from "../../../../assets/dh/BtnAdmonP.png"
 import { Link } from "react-router-dom";
 import*as paths from "../../../../config/routing/paths";
 
 export default class Formacion extends Component {
     state = {
-        img: []
+        img: [],
+        prg: []
         
     };
 
@@ -22,25 +22,32 @@ export default class Formacion extends Component {
         fetch(`${apiURL}/formacions`)
             .then((res) => res.json())
             .then((res) => this.setState({ img: res }));
+        fetch(`${apiURL}/programas-de-entrenamiento`)
+        .then((res) => res.json())
+        .then((res) => this.setState({ prg: res }));
     }
 
     render() {
         const sml = this.state.img[0]
-        console.log(sml)
+        const pro = this.state.prg.programas
+        console.log(pro)
         
        
 
         return (
             <Layout>
-                {/* {slider && (
-                    <Carusel interval={3000}>
-                        <Carousel.Item >
+                <Carusel interval={3000}>
+                {sml && (
+                    sml.Sliders.map((sl)=>(
+                        <Carousel.Item key={sl.id}>
                             <img className=" d-block w-100"
-                                src={`${apiURL}${slider.Sliders[0].url}`}
+                                src={`${apiURL}${sl.url}`}
                             />
                         </Carousel.Item>
-                    </Carusel>
-                )} */}
+
+                    ))
+                )}
+                </Carusel>
                 <Divider hidden />
                 <Image as={Link}  to={paths.CON_DH}src={Header}/>
                 <Divider hidden />
@@ -68,24 +75,27 @@ export default class Formacion extends Component {
                         target="_blank" class={"botonimg btn"} size="medium" src={btn1}  />}
                         >
                         </Modal>
-                        {/* Beneficios bachillerato */}
+                        {/* Periodo de prueba */}
                         <Modal
                             open={false} 
                             btn={<Grupobtn as={"a"} href="https://forms.office.com/Pages/ResponsePage.aspx?id=o-892U5X-0KhwOBKlt3QwV7BWg1ooP9NvjviDI8_YQ5UMDVNSkIxN0MyWU1FQ1YwMkE5M1ZCSldNTC4u"
                             target="_blank" class={"botonimg btn"} size="medium" src={btn2}  />}
                             
                         >
-                            <Container>
-                                <Image src={link}/>
-                            </Container>
                         </Modal>
-                        {/* Afiliacione y retiros caja compensación */}
+                        {/* Programas de entrenamiento*/}
                         <Modal
                             btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn3} AssetsBinestar  />}
                             
                         >
                             <Container>
-                            <Image src={link}/>
+                            { pro && pro.map((pr)=>(
+                                <li className="lista-programas">
+                                    <a href={`${apiURL}${pr.url}`} download={`${pr.name}`}>{`${pr.name}`}</a>
+                                </li>
+                                
+                            ))
+                            }
                             </Container>
                         </Modal>    
                         </Container>
@@ -107,7 +117,7 @@ export default class Formacion extends Component {
                             
                         >
                             <Container>
-                            <Image src={link}/>
+                            
                             </Container>
                         </Modal>
                         </Container>

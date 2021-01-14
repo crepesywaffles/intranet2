@@ -6,7 +6,7 @@ import Footer from "../../../src/assets/footerintranet.png"
 import*as paths from "../../config/routing/paths";
 
 
-
+// 86854606673
 export default function Layout(props) {
     const {children} = props;
 

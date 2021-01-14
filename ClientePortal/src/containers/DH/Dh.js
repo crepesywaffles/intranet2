@@ -21,12 +21,12 @@ export default function Dh() {
                             <Image as={Link} to={paths.CON_DH_BIENESTAR}className="botonimg" size="medium" src={BtnBienestar}/>
                         </Grid.Column>
                         <Grid.Column>
-                            <Image className="botonimg"size="medium" src={BtnAdmonP}/>
+                            <Image as={Link} to={paths.CON_DH_ADMON} className="botonimg"size="medium" src={BtnAdmonP}/>
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
                         <Grid.Column>
-                            <Image className="botonimg"size="medium" src={BtnSST}/>
+                            <Image  as={Link} to={paths.CON_DH_SST} className="botonimg"size="medium" src={BtnSST}/>
                         </Grid.Column>
                         <Grid.Column>
                             <Image as={Link} to={paths.CON_DH_FYD}className="botonimg" size="medium"  src={BtnFormacion}/>
@@ -34,10 +34,10 @@ export default function Dh() {
                     </Grid.Row>
                     <Grid.Row>
                         <Grid.Column>
-                            <Image className="botonimg"size="medium"  src={BtnRelaciones}/>
+                            <Image  as={Link} to={paths.CON_DH_RELACIONES} className="botonimg"size="medium"  src={BtnRelaciones}/>
                         </Grid.Column>
                         <Grid.Column>
-                            <Image className="botonimg" size="medium"  src={BtnSeleccion}/>
+                            <Image as={Link} to={paths.CON_DH_SELECCION} className="botonimg" size="medium"  src={BtnSeleccion}/>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>

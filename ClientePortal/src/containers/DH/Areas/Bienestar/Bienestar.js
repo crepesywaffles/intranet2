@@ -9,6 +9,8 @@ import Modal from "../../../../componentes/Modal/Modal"
 import Header from "../../../../assets/dh/CabezoteBienestar.png"
 import { btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8,btn9 } from "../../../../assets/dh/Bienestar/index"
 import { Carousel } from "react-bootstrap";
+import*as paths from "../../../../config/routing/paths";
+import {Link} from "react-router-dom"
 
 export default class Bienestar extends Component {
     state = {
@@ -30,7 +32,7 @@ export default class Bienestar extends Component {
         const slider = sml.filter((sl) => (sl.Sliders.length > 0))[0]
         
         const link= this.state.link[0]
-        console.log(link)
+        
 
         return (
             <Layout>
@@ -45,7 +47,7 @@ export default class Bienestar extends Component {
                 )}
                 <Divider hidden />
                 <Container fluid align="center">
-                    <Image src={Header} />
+                    <Image as={Link}  to={paths.CON_DH} src={Header} />
                 </Container>
                 <Divider hidden />
                 <Grid centered stackable columns={4}>
@@ -157,7 +159,7 @@ export default class Bienestar extends Component {
                                 )}
                             </Container>
                         </Modal>
-                        Servicios y Beneficios Caja compensación
+                        {/* Servicios y Beneficios Caja compensación */}
                         <Modal 
                             open={false}
                             btn={<Grupobtn as={"a"} href="https://corporativo.compensar.com" target="_blank" class={"botonimg btn"} size="medium" src={btn8}   />}
