@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/programas-de-entrenamiento",
+      "handler": "programas-de-entrenamiento.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/programas-de-entrenamiento",
+      "handler": "programas-de-entrenamiento.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/programas-de-entrenamiento",
+      "handler": "programas-de-entrenamiento.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

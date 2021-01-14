@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "formacions",
+  "collectionName": "galeria_bienestars",
   "info": {
-    "name": "Formacion",
-    "description": ""
+    "name": "GaleriaBienestar"
   },
   "options": {
     "increments": true,
@@ -11,12 +10,10 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "directorio": {
-      "type": "component",
-      "repeatable": true,
-      "component": "contacto.nombre"
+    "Evento": {
+      "type": "string"
     },
-    "Sliders": {
+    "Fotos": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [

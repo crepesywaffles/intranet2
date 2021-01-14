@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/galeria-bienestars",
+      "handler": "galeria-bienestar.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/galeria-bienestars/count",
+      "handler": "galeria-bienestar.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/galeria-bienestars/:id",
+      "handler": "galeria-bienestar.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/galeria-bienestars",
+      "handler": "galeria-bienestar.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/galeria-bienestars/:id",
+      "handler": "galeria-bienestar.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/galeria-bienestars/:id",
+      "handler": "galeria-bienestar.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,9 +1,8 @@
 {
-  "kind": "collectionType",
-  "collectionName": "formacions",
+  "kind": "singleType",
+  "collectionName": "programas_de_entrenamiento_s",
   "info": {
-    "name": "Formacion",
-    "description": ""
+    "name": "Programas de entrenamiento "
   },
   "options": {
     "increments": true,
@@ -11,18 +10,13 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "directorio": {
-      "type": "component",
-      "repeatable": true,
-      "component": "contacto.nombre"
-    },
-    "Sliders": {
+    "programas": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
         "files",
-        "images",
-        "videos"
+        "videos",
+        "images"
       ],
       "plugin": "upload",
       "required": false
