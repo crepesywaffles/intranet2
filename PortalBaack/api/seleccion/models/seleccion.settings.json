@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seleccions",
+  "info": {
+    "name": "seleccion"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "slider": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "directorio": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contacto.nombre"
+    }
+  }
+}

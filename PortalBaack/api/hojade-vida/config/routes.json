@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/hojade-vida",
+      "handler": "hojade-vida.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/hojade-vida",
+      "handler": "hojade-vida.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/hojade-vida",
+      "handler": "hojade-vida.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

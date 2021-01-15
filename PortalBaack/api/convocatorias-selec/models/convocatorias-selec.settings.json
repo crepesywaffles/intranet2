@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "convocatorias_selecs",
+  "info": {
+    "name": "ConvocatoriasSelec",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "titulo": {
+      "type": "text"
+    },
+    "intro": {
+      "type": "text"
+    },
+    "direccion": {
+      "type": "text"
+    },
+    "motivacion": {
+      "type": "text"
+    },
+    "condicion1": {
+      "type": "text"
+    },
+    "condicion2": {
+      "type": "text"
+    },
+    "condicion3": {
+      "type": "text"
+    },
+    "condicion4": {
+      "type": "text"
+    },
+    "condicion5": {
+      "type": "text"
+    },
+    "cargo": {
+      "type": "text"
+    },
+    "Fechalimite": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/convocatorias-selecs",
+      "handler": "convocatorias-selec.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/convocatorias-selecs/count",
+      "handler": "convocatorias-selec.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/convocatorias-selecs/:id",
+      "handler": "convocatorias-selec.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/convocatorias-selecs",
+      "handler": "convocatorias-selec.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/convocatorias-selecs/:id",
+      "handler": "convocatorias-selec.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/convocatorias-selecs/:id",
+      "handler": "convocatorias-selec.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

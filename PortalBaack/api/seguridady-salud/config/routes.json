@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/seguridady-saluds",
+      "handler": "seguridady-salud.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/seguridady-saluds/count",
+      "handler": "seguridady-salud.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/seguridady-saluds/:id",
+      "handler": "seguridady-salud.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/seguridady-saluds",
+      "handler": "seguridady-salud.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/seguridady-saluds/:id",
+      "handler": "seguridady-salud.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/seguridady-saluds/:id",
+      "handler": "seguridady-salud.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
