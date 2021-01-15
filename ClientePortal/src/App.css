@@ -73,3 +73,8 @@ a:active{
   list-style: none;
 }
 
+.inframe-sst{
+ border: 10px;
+ max-width: 100vh;
+ max-height: 100vh;
+}

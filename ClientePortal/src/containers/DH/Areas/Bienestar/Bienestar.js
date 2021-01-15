@@ -166,8 +166,6 @@ export default class Bienestar extends Component {
                             size={"fullscreen"}
                             
                         >
-
-    
                         </Modal>
                         </Container>
                     </Grid.Column>

@@ -1,0 +1,6 @@
+export {default as btn1} from "../SST/BTNAccidentesTrabajo.png"
+export {default as btn2} from "../SST/BTNCondicionesInseguras.png"
+export {default as btn3} from "../SST/BTNCertificadosMedicos.png"
+export {default as btn4} from "../SST/BTNDirectorioEmergencias.png"
+export {default as btn5} from "../SST/BTNInfoCOVID.png"
+export {default as Header} from "../SST/CabezoteSST.png"

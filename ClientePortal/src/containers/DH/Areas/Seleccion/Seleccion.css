@@ -1,0 +1,12 @@
+.cartas{
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    height:100%;
+    
+}
+.cartas-carta{
+ padding: 1em;
+ height: max-content;
+ height: inherit;
+}
