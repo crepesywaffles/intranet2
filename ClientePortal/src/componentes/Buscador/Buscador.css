@@ -1,0 +1,45 @@
+.usuarios{
+    width: 100%;
+    align-content:center;
+}
+.tabla-u{
+    width: 100%;
+    border: solid 0.1rem ;
+}
+/* th,td{
+ width: 12%;
+ 
+ display: inline-block;
+ text-align: center;
+ 
+}
+th{
+    background-color: cornsilk;
+    border: solid 0.2rem;
+    height: 3rem;
+    text-size-adjust: auto;
+} */
+th{
+    border: solid 1px black;
+    background-color:cornsilk;
+}
+td{
+    border: solid 1px black;
+}
+.form-control{
+    padding: 10px;
+    border: solid 5px;
+    margin-bottom: 20px;
+}
+input{
+    width: 50%;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 390px) {
+    .tabla-u {
+      display: block;
+      overflow-x: auto;
+    }
+}

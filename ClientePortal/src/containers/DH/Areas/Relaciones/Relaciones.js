@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Layout from "../../../../componentes/Layout/Layout"
-import {btn1,btn2,btn3,Header} from "../../../../assets/dh/Relaciones/index"
+import {btn1,btn2,btn3,btn4,Header} from "../../../../assets/dh/Relaciones/index"
 import { Grid, Container, Image, Divider } from "semantic-ui-react";
 import Grupobtn from "../../../../componentes/GrupoBtn/Grupobtn1";
 import Modal from "../../../../componentes/Modal/Modal"
@@ -30,7 +30,7 @@ export default class Seleccion extends Component {
                     <Image as={Link}  to={paths.CON_DH} src={Header} />
                 </Container>
                 <Divider hidden />
-                <Grid centered stackable columns={3}>
+                <Grid centered stackable columns={5}>
                     <Grid.Column verticalAlign="middle">
                         <Container stakcable aling="center">
                         {sml && (
@@ -68,7 +68,13 @@ export default class Seleccion extends Component {
                             btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn3} size="medium" centered/>}
                             size={"fullscreen"}
                         >
-                        <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=dpio5ask9s" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+                        <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=dpio5ask9s" width="100%" height="750" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+                        </Modal>
+                        <Modal 
+                            btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn4} size="medium" centered/>}
+                            size={"fullscreen"}
+                        >
+                        <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=vclrleqjiq" width="100%" height="750" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen> </iframe>"
                         </Modal>
                         </Container>
                     </Grid.Column>

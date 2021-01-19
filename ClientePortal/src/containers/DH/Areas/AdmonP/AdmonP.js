@@ -54,13 +54,6 @@ export default class Seleccion extends Component {
                             
                         >
                         </Modal>
-                        <Modal 
-                            open={false}
-                            btn={<Grupobtn as={"a"} href="https://forms.office.com/Pages/ResponsePage.aspx?id=o-892U5X-0KhwOBKlt3QwfSJHoVqmZVGnddDUfmHRTpUMlNPNDNLOFZBSDNURDNNQ0JDOFdXWUpQSSQlQCN0PWcu" target="_blank" class={"botonimg btn"} size="medium" src={btn2}   />}
-                            size={"fullscreen"}
-                        >
-                        </Modal>
-                        
                         </Container>
                     </Grid.Column>
                 </Grid>

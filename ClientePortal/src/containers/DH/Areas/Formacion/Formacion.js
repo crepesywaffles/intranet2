@@ -10,6 +10,7 @@ import { btn1, btn2, btn3, btn4, btn5,Header } from "../../../../assets/dh/Forma
 import { Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import*as paths from "../../../../config/routing/paths";
+import Buscador from "../../../../componentes/Buscador/Buscador"
 
 export default class Formacion extends Component {
     state = {
@@ -102,19 +103,18 @@ export default class Formacion extends Component {
                     </Grid.Column>
                     <Grid.Column>
                         <Container stackable centered>
-                        {/* Catalogo de Medicionas prepagadas */}
+                        {/* info toderas */}
                         <Modal
                             btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn4}/>}
                             size={"fullscreen"}
                         >
                             <Container>
-                            <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=dk8om85tk5" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+                                <Buscador />
                             </Container>
                         </Modal>
-                        {/* Afiliaicones y retiros EPS */}
+                        {/* Universidad Coorporativa */}
                         <Modal
                             btn={<Grupobtn as={"a"} class={"botonimg btn"} size="medium" src={btn5} />}
-                            
                         >
                             <Container>
                             

@@ -45,7 +45,6 @@ export default class Sst extends Component {
                 
                 <Divider hidden />
                 <Container fluid align="center">
-                    {/* <Image as={Link}  to={paths.CON_DH} src={Header} /> */}
                 </Container>
                 <Divider hidden />
                 <Grid centered stackable columns={4}>
@@ -79,16 +78,15 @@ export default class Sst extends Component {
                             size={"fullscreen"}
                         >
                         </Modal>
-                        <Modal
+                        {/* <Modal
                             btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn3} size="medium" centered/>}
                             size={"fullscreen"}
                         >
-                        </Modal>
+                        </Modal> */}
                         </Container>
                     </Grid.Column>
                     <Grid.Column>
                         <Container stackable centered aling="center">
-                        {/* catalogo de beneficios */}
                         <Modal
                             btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn4} size="medium" centered/>}
                             size={"fullscreen"}

@@ -74,7 +74,7 @@ export default class Bienestar extends Component {
                             size={"fullscreen"}
                         >
                             <Container>
-                                <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=du96fask9s" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+                                <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=du96fask9s" width="100%" height="750" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
                             </Container>
                         </Modal>
                         {/* Beneficios bachillerato */}
@@ -150,14 +150,10 @@ export default class Bienestar extends Component {
                         </Modal>
                         {/* Eventos */}
                         <Modal
-                            btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn5} />}
-                            
+                            open={false}
+                            btn={<Grupobtn as={Link}  path={paths.CON_DH_BIENESTAR_GALERIA}  class={"botonimg btn"} size="medium" src={btn5} />}
                         >
-                            <Container>
-                            {link && (
-                                    <Image  href={`${apiURL}${link.Imagenes[4].url}`} size="massive"/>
-                                )}
-                            </Container>
+                            
                         </Modal>
                         {/* Servicios y Beneficios Caja compensación */}
                         <Modal 

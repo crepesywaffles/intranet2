@@ -99,7 +99,7 @@ export default function Layout(props) {
             <Dropdown.Item>Encuesta sintomas Covid-19</Dropdown.Item>
             </Dropdown.Menu>
             </Dropdown>
-            <Dropdown item text='ACTUALIZATE'>
+            <Dropdown item text='ACTUALÍZATE'>
             <Dropdown.Menu>
             <Dropdown.Item>
             <Link  to="/beatriz" >Crece e inspirate con Beatriz</Link> 
