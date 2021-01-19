@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/centrosdetrabajos",
+      "handler": "centrosdetrabajo.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/centrosdetrabajos/count",
+      "handler": "centrosdetrabajo.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/centrosdetrabajos/:id",
+      "handler": "centrosdetrabajo.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/centrosdetrabajos",
+      "handler": "centrosdetrabajo.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/centrosdetrabajos/:id",
+      "handler": "centrosdetrabajo.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/centrosdetrabajos/:id",
+      "handler": "centrosdetrabajo.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

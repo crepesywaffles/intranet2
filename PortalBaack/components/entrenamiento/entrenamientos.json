@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_entrenamiento_entrenamientos",
+  "info": {
+    "name": "Entrenamientos",
+    "icon": "landmark",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Nombre": {
+      "type": "text"
+    },
+    "fecha_inicio": {
+      "type": "date"
+    },
+    "fecha_final": {
+      "type": "date"
+    },
+    "lugar_de_entrenamiento": {
+      "type": "string"
+    },
+    "calificacion": {
+      "type": "float"
+    }
+  }
+}

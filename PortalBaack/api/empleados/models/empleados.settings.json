@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "empleados",
+  "info": {
+    "name": "Empleados",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "text"
+    },
+    "documento": {
+      "type": "biginteger"
+    },
+    "fecha_nacimiento": {
+      "type": "date"
+    },
+    "centrosdetrabajo": {
+      "model": "centrosdetrabajo"
+    },
+    "cursos": {
+      "collection": "cursos"
+    },
+    "Entrenamientos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "entrenamiento.entrenamientos"
+    }
+  }
+}

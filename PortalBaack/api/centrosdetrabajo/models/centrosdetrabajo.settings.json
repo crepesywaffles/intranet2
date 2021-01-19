@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "centrosdetrabajos",
+  "info": {
+    "name": "centrosdetrabajo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "text"
+    },
+    "telefono": {
+      "type": "biginteger"
+    },
+    "id_pdv": {
+      "type": "string"
+    },
+    "Zona_formacion": {
+      "type": "string"
+    }
+  }
+}
