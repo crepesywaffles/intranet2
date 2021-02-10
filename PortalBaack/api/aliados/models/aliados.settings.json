@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "aliados",
+  "info": {
+    "name": "aliados"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "aliados": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

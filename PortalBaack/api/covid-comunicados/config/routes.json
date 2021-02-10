@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/covid-comunicados",
+      "handler": "covid-comunicados.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/covid-comunicados/count",
+      "handler": "covid-comunicados.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/covid-comunicados/:id",
+      "handler": "covid-comunicados.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/covid-comunicados",
+      "handler": "covid-comunicados.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/covid-comunicados/:id",
+      "handler": "covid-comunicados.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/covid-comunicados/:id",
+      "handler": "covid-comunicados.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -2,24 +2,24 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/hojade-vida",
-      "handler": "hojade-vida.find",
+      "path": "/aliados",
+      "handler": "aliados.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/hojade-vida",
-      "handler": "hojade-vida.update",
+      "path": "/aliados",
+      "handler": "aliados.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/hojade-vida",
-      "handler": "hojade-vida.delete",
+      "path": "/aliados",
+      "handler": "aliados.delete",
       "config": {
         "policies": []
       }

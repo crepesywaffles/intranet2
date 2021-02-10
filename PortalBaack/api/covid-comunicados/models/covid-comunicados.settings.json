@@ -1,8 +1,8 @@
 {
-  "kind": "singleType",
-  "collectionName": "hojade_vidas",
+  "kind": "collectionType",
+  "collectionName": "covid_comunicados",
   "info": {
-    "name": "HojadeVida"
+    "name": "covid_comunicados"
   },
   "options": {
     "increments": true,
@@ -10,7 +10,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Hvseleccion": {
+    "comunicados": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
