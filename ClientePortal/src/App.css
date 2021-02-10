@@ -25,6 +25,25 @@
     -ms-transition:scale(1.1);
     transform: scale(1.1);
     cursor: pointer;
+    align-items: center;
+}
+.botonimg3:hover{
+  -webkit-transition: all 1.2s ease;
+  -moz-transition: all 1.2s ease;
+  -o-transition: all 1.2s ease;
+  -ms-transition:all 1.2s ease;
+  width: 100%;
+  -webkit-transition: scale(1.7);
+  -moz-transition: scale(1.7);
+  -o-transition: scale(1.7);
+  -ms-transition:scale(1.7);
+  transform: scale(1.7);
+  cursor: pointer;
+  z-index: 1 ;
+}
+.img{
+  max-width: 100%;
+  height: auto;
 }
 .btn{
     border-bottom: none;
@@ -78,3 +97,8 @@ a:active{
  max-width: 100vh;
  max-height: 100vh;
 }
+.programas_E{
+  text-decoration: none;
+  width: 100vh;
+}
+

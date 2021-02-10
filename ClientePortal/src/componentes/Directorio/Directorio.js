@@ -1,5 +1,5 @@
 import React from "react";
-import { List, Container, Divider} from "semantic-ui-react";
+import { List, Container, Divider } from "semantic-ui-react";
 
 export default function Directorio(props) {
     return (
@@ -19,7 +19,7 @@ export default function Directorio(props) {
                         <a href={`mailto:${props.email}`}>{props.email}</a>
                     </List.Content>
                 </List.Item>
-                <br/>
+                <br />
             </List>
         </Container>
     );

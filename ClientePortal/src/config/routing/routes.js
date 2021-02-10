@@ -27,6 +27,16 @@ export const CON_DH_BIENESTAR_GALERIA={
     path:paths.CON_DH_BIENESTAR_GALERIA,
     exact:false
 }
+export const CON_DH_BIENESTAR_ALIADOS={
+    component:containers.CON_DH_BIENESTAR_ALIADOS,
+    path:paths.CON_DH_BIENESTAR_ALIADOS,
+    exact:false
+}
+export const CON_DH_BIENESTAR_APOYO={
+    component:containers.CON_DH_BIENESTAR_APOYO,
+    path:paths.CON_DH_BIENESTAR_APOYO,
+    exact:false
+}
 export const CON_DH_FYD={
     component:containers.CON_DH_FORMACION,
     path:paths.CON_DH_FYD,
@@ -50,7 +60,17 @@ export const CON_DH_SELECCION={
 export const CON_DH_SST={
     component:containers.CON_DH_SST,
     path:paths.CON_DH_SST,
-    exact:false
+    exact:true
+}
+export const CON_DH_SST_COVID={
+    component:containers.CON_DH_SST_COVID,
+    path:paths.CON_DH_SST_COVID,
+    exact:true
+}
+export const CON_DH_SST_COVID_GALERIA={
+    component:containers.CON_DH_SST_COVID_GALERIA,
+    path:paths.CON_DH_SST_COVID_GALERIA,
+    exact:true
 }
 
 
@@ -62,9 +82,13 @@ export default [
     CON_DH_BIENESTAR,
     CON_DH_FYD,
     CON_DH_BIENESTAR_GALERIA,
+    CON_DH_BIENESTAR_ALIADOS,
+    CON_DH_BIENESTAR_APOYO,
     CON_DH_ADMON,
     CON_DH_RELACIONES,
     CON_DH_SELECCION,
-    CON_DH_SST
+    CON_DH_SST,
+    CON_DH_SST_COVID,
+    CON_DH_SST_COVID_GALERIA
 ]
 

@@ -1,0 +1,32 @@
+.galeria_contenedor{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows:300px;
+    padding: 15px;
+    grid-gap:0.5rem;
+    overflow: auto;
+    background-color:black;
+    
+}
+.galeria_item:hover{
+    position: relative;
+    overflow: auto;
+    margin: auto;
+}
+.galeria_img{
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+}
+.galeria_item:last-child{
+    grid-column-start: span 3 ;
+}
+
+
+@media  (max-width:858px){
+    .galeria_contenedor{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+

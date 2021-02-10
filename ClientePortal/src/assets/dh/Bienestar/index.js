@@ -7,6 +7,12 @@ export {default as btn6} from "../Bienestar/BotonMedicinasyPlanes.png"
 export {default as btn7}from "../Bienestar/BotonRetiroDeCesantiasUV.png"
 export {default as btn8} from "../Bienestar/BotonServiciosBeneficiosCaja.png"
 export {default as btn9} from "../Bienestar/BtnNuestrosAliados.png"
-
+export {default as btn10} from "../Bienestar/BTNApoyoFinanciero.png"
+export {default as btn11} from "../Bienestar/BTNApoyoPsicologico.png"
+export {default as btn12} from "../Bienestar/BTNSolicitudesCarnet.png"
+export {default as btn13} from "../Bienestar/BTNSubsidioEducativo.png"
+export {default as btn14} from "../Bienestar/BTNSubsidioMonetario.png"
+export {default as btn15} from "../Bienestar/BTNAsesoriaBienestar.png"
+export {default as btn16} from "../Bienestar/BTNAtencionInmediata.png"
 
 
