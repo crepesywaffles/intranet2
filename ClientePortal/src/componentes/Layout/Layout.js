@@ -53,7 +53,7 @@ export default function Layout(props) {
                                 <Link to="/dir-financiera" style={LinkStyle} >Dirección Financiera</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/dir-calidad" style={LinkStyle}>Dirección Calidad y Medio Ambiente</Link>
+                                <Link to={paths.CON_CALIDAD} style={LinkStyle}>Dirección Calidad y Medio Ambiente</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
                                 <Link to="/dir-producto-compras" style={LinkStyle} >Dirección de Producto y Compras</Link>
@@ -98,6 +98,9 @@ export default function Layout(props) {
                             <Dropdown.Item>Reporte Accidentes</Dropdown.Item>
                             <Dropdown.Item>Reporte incapcidades</Dropdown.Item>
                             <Dropdown.Item>Encuesta sintomas Covid-19</Dropdown.Item>
+                            <Dropdown.Item>Crepero</Dropdown.Item>
+                            <Dropdown.Item>Wafflero</Dropdown.Item>
+                            <Dropdown.Item>Novedades Calidad</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                     <Dropdown style={LinkStyle} item text='ACTUALÍZATE'>

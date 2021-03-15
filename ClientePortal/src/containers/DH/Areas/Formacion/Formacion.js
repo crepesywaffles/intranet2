@@ -17,7 +17,6 @@ export default class Formacion extends Component {
     state = {
         img: [],
         prg: []
-
     };
 
     componentDidMount() {
@@ -138,7 +137,7 @@ export default class Formacion extends Component {
 
                             >
 
-                                <iframe src="https://outlook.office365.com/owa/calendar/14233adb853d4e3bbd213c8d6813f476@crepesywaffles.com/a62490f67fde40359e0fc79aebff12c24645716698705594533/calendar.html" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen />
+                                <iframe src="https://outlook.office365.com/owa/calendar/14233adb853d4e3bbd213c8d6813f476@crepesywaffles.com/490a444a2a1d469b9ad3879b14eb2e153748042896991813961/calendar.html" width="100%" height="800" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen />
 
                             </Modal>
                         </Container>

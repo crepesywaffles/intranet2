@@ -1,7 +1,7 @@
 
 
 import React from 'react'
-import { Icon, Image, Modal, Button } from 'semantic-ui-react'
+import { Icon,  Modal, Button } from 'semantic-ui-react'
 
 
 function ModalScrollingExample(props) {

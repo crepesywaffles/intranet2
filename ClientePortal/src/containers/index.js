@@ -12,6 +12,20 @@ import CON_DH_SELECCION from "../containers/DH/Areas/Seleccion/Seleccion"
 import CON_DH_SST from "../containers/DH/Areas/SST/Sst"
 import CON_DH_SST_COVID from "../containers/DH/Areas/SST/Covid"
 import CON_DH_SST_COVID_GALERIA from "../containers/DH/Areas/SST/Galeria";
+import CON_CALIDAD from "../containers/Calidad/Calidad"
+import CON_CALIDAD_NOTICIAS from "../containers/Calidad/CalidadCore/GaleriaNoticias"
+import CON_CALIDAD_HABLADORES from "../containers/Calidad/CalidadCore/Habladores"
+import CON_CALIDAD_PROCEDIMIENTOS  from "../containers/Calidad/CalidadCore/ProcedimeintosE"
+import CON_CALIDAD_REQUISITOS  from "../containers/Calidad/CalidadCore/RequisitosH"
+import CON_CALIDAD_CORE from "./Calidad/CalidadCore/CalidadMain";
+import CON_CALIDAD_INDICADORES from "./Calidad/Indicadores";
+import CON_MEDIOAMBIENTE from "./Calidad/MedioA/MedioA";
+import CON_ACADEMIA   from "../containers/Academia/AcademiaMain"
+import CON_ACADEMIA_ARTE from "../containers/Academia/Arteycultura"
+import CON_ACADEMIA_EMPODERAMIENTO from "../containers/Academia/Empoderamiento";
+import CON_ACADEMIA_BIENESTAR from "../containers/Academia/BienestarIntegral";
+import CON_ACADEMIA_CONCIENCIA from "../containers/Academia/Conciencia"
+
 
 export default {
     CON_HOME,
@@ -27,5 +41,18 @@ export default {
     CON_DH_SELECCION,
     CON_DH_SST,
     CON_DH_SST_COVID,
-    CON_DH_SST_COVID_GALERIA
+    CON_DH_SST_COVID_GALERIA,
+    CON_CALIDAD,
+    CON_CALIDAD_CORE,
+    CON_CALIDAD_INDICADORES,
+    CON_MEDIOAMBIENTE,
+    CON_CALIDAD_NOTICIAS,
+    CON_CALIDAD_HABLADORES,
+    CON_CALIDAD_PROCEDIMIENTOS,
+    CON_CALIDAD_REQUISITOS,
+    CON_ACADEMIA,
+    CON_ACADEMIA_ARTE,
+    CON_ACADEMIA_EMPODERAMIENTO,
+    CON_ACADEMIA_BIENESTAR,
+    CON_ACADEMIA_CONCIENCIA
 }

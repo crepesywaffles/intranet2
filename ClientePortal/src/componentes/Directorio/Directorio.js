@@ -1,5 +1,5 @@
 import React from "react";
-import { List, Container, Divider } from "semantic-ui-react";
+import { List, Container} from "semantic-ui-react";
 
 export default function Directorio(props) {
     return (

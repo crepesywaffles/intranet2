@@ -24,8 +24,7 @@ export default class Galeria extends Component {
     }
     render() {
         const pics = this.state.img[0]
-        const modal= this.state.value
-        console.log(modal)
+        
         return (
             <Layout>
                 

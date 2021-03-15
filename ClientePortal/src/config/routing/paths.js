@@ -12,5 +12,17 @@ export const CON_DH_SELECCION = "/desarrollo/humano/seleccion";
 export const CON_DH_SST= "/desarrollohumano/seguridadysalud" ;
 export const CON_DH_SST_COVID= "/desarrollohumano/seguridadysalud/covid";
 export const CON_DH_SST_COVID_GALERIA= "/desarrollohumano/seguridadysalud/covid/comunicados";
-
+export const CON_CALIDAD = "/calidad";
+export const CON_CALIDAD_CORE = "/calidad/calidad";
+export const CON_CALIDAD_NOTICIAS = "/calidad/noticias";
+export const CON_CALIDAD_HABLADORES = "/calidad/habladores";
+export const CON_CALIDAD_INDICADORES = "/calidad/indicadores";
+export const CON_CALIDAD_PROCEDIMIENTOS = "/calidad/procedimientos";
+export const CON_CALIDAD_REQUISITOS = "/calidad/requisitos";
+export const CON_MEDIOAMBIENTE = "/medioambiente";
+export const CON_ACADEMIA = "/academia"
+export const CON_ACADEMIA_ARTE = "/academia/arteycultura"
+export const CON_ACADEMIA_EMPODERAMIENTO= "/academia/empoderamiento"
+export const CON_ACADEMIA_BIENESTAR = "/academia/bienestar"
+export const CON_ACADEMIA_CONCIENCIA = "/academia/conciencia"
 

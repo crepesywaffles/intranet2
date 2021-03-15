@@ -1,0 +1,8 @@
+export {default as ArteCultura} from "../academia/ArteCulturaTransformacion.png"
+export {default as BienestarIntegral} from "../academia/BienestarIntegral.png"
+export {default as ConcienciaE} from "../academia/ConcienciaEntorno.png"
+export {default as Empoderamiento} from "../academia/EmpoderamientoyLiderazgo.png"
+export {default as Formaciones} from "../academia/Formaciones.png"
+export {default as imgArticulos} from "../academia/ImagenesArticulos.png"
+export {default as Podcast} from "../academia/Podcast.png"
+export {default as Videos} from "../academia/Videos.png"

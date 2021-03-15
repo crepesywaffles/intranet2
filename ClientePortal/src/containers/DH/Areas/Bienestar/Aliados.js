@@ -30,106 +30,93 @@ export default class Aliados extends Component {
                 <Grid centered stackable columns={4}>
                     <Grid.Column>
                         {/* Compensar */}
-                    <Modal
-                                btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn1} size="medium" centered />}
-                                size={"fullscreen"}
-                            >
-                                <Container>
-                                    
-                                </Container>
-                    </Modal>
+                        {aliado && aliado.filter((content)=>(content.name == "ContenidoCompensar.pdf")).map((pdf)=>(
+                        <Modal
+                        open={false}
+                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                            target="_blank" class={"botonimg btn"} size="medium" src={btn1} />}
+                        ></Modal>
+                    ))}
                     <Divider hidden/>
                     {/* Coopcafam */}
-                    <Modal
-                                btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn2} size="medium" centered />}
-                                size={"fullscreen"}
-                            >
-                                <Container>
-                                    {aliado && aliado.map((content)=>(
-                                        <embed src={`${apiURL}${content.url}`} type="application/pdf" width="100%" height="700px" />
-                                    ))}
-                                </Container>
-                    </Modal>
+                    {aliado && aliado.filter((content)=>(content.name == "ContenidoCoopCafam.pdf")).map((pdf)=>(
+                        <Modal
+                        open={false}
+                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                            target="_blank" class={"botonimg btn"} size="medium" src={btn2} />}
+                        ></Modal>
+                    ))}
                     <Divider hidden/>
                     {/* Davivienda */}
-                    <Modal
-                                btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn3} size="medium" centered />}
-                                size={"fullscreen"}
-                            >
-                                <Container>
-                                    
-                                </Container>
-                    </Modal>
+                    {aliado && aliado.filter((content)=>(content.name == "ContenidoDavivienda.pdf")).map((pdf)=>(
+                        <Modal
+                        open={false}
+                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                            target="_blank" class={"botonimg btn"} size="medium" src={btn3} />}
+                        ></Modal>
+                    ))}
                     <Divider hidden/>
                     {/* Dentifacil */}
-                    {aliado && aliado.map((content)=>(
-                    <Modal
-                    open={true}
-                    btn={<Grupobtn as={"a"} href={`${apiURL}${content.url}`}
-                        target="_blank" class={"botonimg btn"} size="medium" src={btn4} />}
-                    ></Modal>
+                    {aliado && aliado.filter((content)=>(content.name == "ContenidoDentifacil.pdf")).map((pdf)=>(
+                        <Modal
+                        open={false}
+                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                            target="_blank" class={"botonimg btn"} size="medium" src={btn4} />}
+                        ></Modal>
                     ))}
-                    
                     <Divider hidden/>
                     {/* Sura */}
-                    <Modal
-                                btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn9} size="massive" />}
-                                size={"fullscreen"}
-                            >
-                                <Container>
-                                    
-                                </Container>
-                    </Modal>
+                    {aliado && aliado.filter((content)=>(content.name == "ContenidoSura.pdf")).map((pdf)=>(
+                        <Modal
+                        open={false}
+                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                            target="_blank" class={"botonimg btn"} size="medium" src={btn9} />}
+                        ></Modal>
+                    ))}
                     </Grid.Column>
                     <Grid.Column>
                     {/* Emermedica */}
-                    <Modal
-                                btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn5} size="medium" centered />}
-                                size={"fullscreen"}
-                            >
-                                <Container>
-                                    
-                                </Container>
-                    </Modal>
+                    {aliado && aliado.filter((content)=>(content.name == "ContenidoEmermedica.pdf")).map((pdf)=>(
+                        <Modal
+                        open={false}
+                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                            target="_blank" class={"botonimg btn"} size="medium" src={btn5} />}
+                        ></Modal>
+                    ))}
                     <Divider hidden/>
                     {/* Jardines de Paz */}
-                    <Modal
-                                btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn6} size="medium" centered />}
-                                size={"fullscreen"}
-                            >
-                                <Container>
-                                    
-                                </Container>
-                    </Modal>
+                    {aliado && aliado.filter((content)=>(content.name == "ContenidoJardinezdePaz.pdf")).map((pdf)=>(
+                        <Modal
+                        open={false}
+                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                            target="_blank" class={"botonimg btn"} size="medium" src={btn6} />}
+                        ></Modal>
+                    ))}
                     <Divider hidden/>
                     {/* Plenitud */}
-                    <Modal
-                                btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn7} size="medium" centered />}
-                                size={"fullscreen"}
-                            >
-                                <Container>
-                                    
-                                </Container>
-                    </Modal>
+                    {aliado && aliado.filter((content)=>(content.name == "ContenidoPlenitud.pdf")).map((pdf)=>(
+                        <Modal
+                        open={false}
+                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                            target="_blank" class={"botonimg btn"} size="medium" src={btn7} />}
+                        ></Modal>
+                    ))}
                     <Divider hidden/>
                     {/* Protección */}
-                    <Modal
-                                btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn8} size="medium" centered />}
-                                size={"fullscreen"}
-                            >
-                                <Container>
-                                    
-                                </Container>
-                    </Modal>
+                        <Modal
+                        open={false}
+                        btn={<Grupobtn as={"a"} href="https://www.proteccion.com/wps/portal/proteccion"
+                            target="_blank" class={"botonimg btn"} size="medium" src={btn8} />}
+                        ></Modal>
+                   
                     {/* Unimos */}
-                    <Modal
-                                btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn10} size="medium" centered />}
-                                size={"fullscreen"}
-                            >
-                                <Container>
-                                    
-                                </Container>
-                    </Modal>
+                    {aliado && aliado.filter((content)=>(content.name == "ContenidoUnimos.pdf")).map((pdf)=>(
+                        <Modal
+                        open={false}
+                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                            target="_blank" class={"botonimg btn"} size="medium" src={btn10} />}
+                        ></Modal>
+                    ))}
                     </Grid.Column>
                 </Grid>
             </Layout>

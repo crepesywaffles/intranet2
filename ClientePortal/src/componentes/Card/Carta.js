@@ -5,7 +5,6 @@ import "../Card/Carta.css"
 
 
 export default function Carta(props) {
-  const { children } = props;
   return (
     <Card>
       <Image size={props.size} src={props.img}/>

@@ -72,6 +72,72 @@ export const CON_DH_SST_COVID_GALERIA={
     path:paths.CON_DH_SST_COVID_GALERIA,
     exact:true
 }
+export const CON_CALIDAD={
+    component:containers.CON_CALIDAD,
+    path:paths.CON_CALIDAD,
+    exact:true
+}
+export const CON_CALIDAD_CORE={
+    component:containers.CON_CALIDAD_CORE,
+    path:paths.CON_CALIDAD_CORE,
+    exact:false
+}
+export const CON_CALIDAD_NOTICIAS={
+    component:containers.CON_CALIDAD_NOTICIAS,
+    path:paths.CON_CALIDAD_NOTICIAS,
+    exact:false
+}
+export const CON_CALIDAD_HABLADORES={
+    component:containers.CON_CALIDAD_HABLADORES,
+    path:paths.CON_CALIDAD_HABLADORES,
+    exact:false
+}
+export const CON_CALIDAD_PROCEDIMIENTOS={
+    component:containers.CON_CALIDAD_PROCEDIMIENTOS,
+    path:paths.CON_CALIDAD_PROCEDIMIENTOS,
+    exact:false
+}
+export const CON_CALIDAD_REQUISITOS={
+    component:containers.CON_CALIDAD_REQUISITOS,
+    path:paths.CON_CALIDAD_REQUISITOS,
+    exact:false
+}
+export const CON_CALIDAD_INDICADORES={
+    component:containers.CON_CALIDAD_INDICADORES,
+    path:paths.CON_CALIDAD_INDICADORES,
+    exact:false
+}
+export const CON_MEDIOAMBIENTE={
+    component:containers.CON_MEDIOAMBIENTE,
+    path:paths.CON_MEDIOAMBIENTE,
+    exact:true
+}
+export const CON_ACADEMIA={
+    component:containers.CON_ACADEMIA,
+    path:paths.CON_ACADEMIA,
+    exact:true
+}
+export const CON_ACADEMIA_ARTE={
+    component:containers.CON_ACADEMIA_ARTE,
+    path:paths.CON_ACADEMIA_ARTE,
+    exact:false
+}
+export const CON_ACADEMIA_EMPODERAMIENTO={
+    component:containers.CON_ACADEMIA_EMPODERAMIENTO,
+    path:paths.CON_ACADEMIA_EMPODERAMIENTO,
+    exact:false
+}
+export const CON_ACADEMIA_BIENESTAR={
+    component:containers.CON_ACADEMIA_BIENESTAR,
+    path:paths.CON_ACADEMIA_BIENESTAR,
+    exact:false
+}
+export const CON_ACADEMIA_CONCIENCIA={
+    component:containers.CON_ACADEMIA_CONCIENCIA,
+    path:paths.CON_ACADEMIA_CONCIENCIA,
+    exact:false
+}
+
 
 
 
@@ -89,6 +155,19 @@ export default [
     CON_DH_SELECCION,
     CON_DH_SST,
     CON_DH_SST_COVID,
-    CON_DH_SST_COVID_GALERIA
+    CON_DH_SST_COVID_GALERIA,
+    CON_CALIDAD,
+    CON_CALIDAD_NOTICIAS,
+    CON_CALIDAD_HABLADORES,
+    CON_CALIDAD_PROCEDIMIENTOS,
+    CON_CALIDAD_REQUISITOS,
+    CON_CALIDAD_CORE,
+    CON_CALIDAD_INDICADORES,
+    CON_MEDIOAMBIENTE,
+    CON_ACADEMIA,
+    CON_ACADEMIA_ARTE,
+    CON_ACADEMIA_EMPODERAMIENTO,
+    CON_ACADEMIA_BIENESTAR,
+    CON_ACADEMIA_CONCIENCIA
 ]
 

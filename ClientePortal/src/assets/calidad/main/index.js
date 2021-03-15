@@ -1,0 +1,7 @@
+export {default as btnAlergenos} from "../main/BTNAlergenosIngredientes.png"
+export {default as btnHabladores} from "../main/BTNHabladores.png"
+export {default as btnInstructivos} from "../main/BTNInstructivos.png"
+export {default as btnNoticias} from "../main/BTNNoticiasInocuidad.png"
+export {default as btnProcedimientos} from "../main/BTNProcedimientos.png"
+export {default as btnProgramas} from "../main/BTNProgramas.png"
+export {default as btnRequisitos} from "../main/BTNRequisitos.png"
