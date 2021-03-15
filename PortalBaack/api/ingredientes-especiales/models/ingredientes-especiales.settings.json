@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ingredientes_especiales",
+  "info": {
+    "name": "ingredientes especiales"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ingredienteEsp": {
+      "type": "text"
+    }
+  }
+}

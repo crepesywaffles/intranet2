@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "noticias_inocuidads",
+  "info": {
+    "name": "Noticias_inocuidad",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "noticia": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "area": {
+      "type": "text"
+    }
+  }
+}

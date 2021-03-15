@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "name": "productos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "producto": {
+      "type": "text"
+    },
+    "Tipo_pdv": {
+      "type": "enumeration",
+      "enum": [
+        "Restaurante",
+        "Heladeria",
+        "Carretino"
+      ],
+      "default": "Restaurante"
+    },
+    "Cartas": {
+      "type": "enumeration",
+      "enum": [
+        "Sal",
+        "PostresyHelados",
+        "Brunch",
+        "Artesano",
+        "Helados",
+        "CopasHel",
+        "CrepesSal",
+        "CrepesDul",
+        "Gofres",
+        "Bebidas"
+      ]
+    },
+    "vegetariano": {
+      "type": "boolean",
+      "default": false
+    },
+    "alergenos": {
+      "collection": "alergenos"
+    },
+    "vegano": {
+      "type": "text"
+    },
+    "ingredientes_especiales": {
+      "collection": "ingredientes-especiales"
+    }
+  }
+}

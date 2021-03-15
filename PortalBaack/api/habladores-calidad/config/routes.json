@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/habladores-calidads",
+      "handler": "habladores-calidad.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/habladores-calidads/count",
+      "handler": "habladores-calidad.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/habladores-calidads/:id",
+      "handler": "habladores-calidad.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/habladores-calidads",
+      "handler": "habladores-calidad.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/habladores-calidads/:id",
+      "handler": "habladores-calidad.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/habladores-calidads/:id",
+      "handler": "habladores-calidad.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

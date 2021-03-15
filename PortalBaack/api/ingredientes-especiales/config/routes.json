@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ingredientes-especiales",
+      "handler": "ingredientes-especiales.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ingredientes-especiales/count",
+      "handler": "ingredientes-especiales.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ingredientes-especiales/:id",
+      "handler": "ingredientes-especiales.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ingredientes-especiales",
+      "handler": "ingredientes-especiales.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ingredientes-especiales/:id",
+      "handler": "ingredientes-especiales.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ingredientes-especiales/:id",
+      "handler": "ingredientes-especiales.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

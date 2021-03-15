@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/alergenos",
+      "handler": "alergenos.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/alergenos/count",
+      "handler": "alergenos.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/alergenos/:id",
+      "handler": "alergenos.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/alergenos",
+      "handler": "alergenos.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/alergenos/:id",
+      "handler": "alergenos.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/alergenos/:id",
+      "handler": "alergenos.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

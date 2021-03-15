@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alergenos",
+  "info": {
+    "name": "alergenos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "alergeno": {
+      "type": "text"
+    }
+  }
+}

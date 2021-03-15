@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calidads",
+  "info": {
+    "name": "calidad"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "directorioCalidad": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contacto.nombre"
+    },
+    "directorioMeadioA": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contacto.nombre"
+    }
+  }
+}

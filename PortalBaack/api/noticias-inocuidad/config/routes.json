@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/noticias-inocuidads",
+      "handler": "noticias-inocuidad.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/noticias-inocuidads/count",
+      "handler": "noticias-inocuidad.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/noticias-inocuidads/:id",
+      "handler": "noticias-inocuidad.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/noticias-inocuidads",
+      "handler": "noticias-inocuidad.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/noticias-inocuidads/:id",
+      "handler": "noticias-inocuidad.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/noticias-inocuidads/:id",
+      "handler": "noticias-inocuidad.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

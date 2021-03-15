@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "habladores_calidads",
+  "info": {
+    "name": "habladores_calidad",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hablador": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "tipo": {
+      "type": "text"
+    }
+  }
+}
