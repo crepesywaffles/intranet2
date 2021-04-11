@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "academia_capacitadores",
+  "info": {
+    "name": "Academia-capacitadores",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "text"
+    },
+    "foto_perfil": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Descripcion": {
+      "type": "text"
+    },
+    "facebook": {
+      "type": "text"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "curso": {
+      "type": "text"
+    }
+  }
+}
