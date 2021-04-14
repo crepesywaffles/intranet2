@@ -1,0 +1,134 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container-car{
+display: block;
+width: 100%;
+height: 100%;
+font-family: Arial, Helvetica, sans-serif;
+position: relative;
+}
+.card-wrapper{
+    position: relative;
+    width: 550px;
+    padding: 0 10px 20px 0px;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+.card-wrapper:active:hover:focus{
+    outline: none;
+    border: none;
+}
+.card{
+    width: 100%;
+    height: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+.card-image{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index:2;
+    background-color: black;
+    transition: 5s;
+   
+}
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-image img:hover{
+    opacity: .4;
+    transition: 5s;
+}
+.card-image:hover{
+    transform: translateY(-200px);
+    transition: all .7s;
+}
+.social-icons{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-70%);
+    z-index:3;
+    display:flex;
+}
+.social-icons li{
+    list-style: none;
+}
+.social-icons a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height:50px;
+    text-align: center;
+    background: black;
+    font-size: 23px;
+    color: white;
+    font-weight: bold;
+    margin: 0 6px;
+    transition: .4
+    s;
+    transform: translateY(200px);
+    opacity:0;
+}
+.card:hover .social-icons li a{
+    transform:translateY(0px) ;
+    opacity:1;
+    
+}
+.social-icons .social-icon:hover{
+    transition: .8s;
+    transform: rotateY(360deg);
+    color: black
+}
+.slick-prev:before{
+    color: black;
+    font-size: 30px;
+}
+.slick-next:before{
+    color: black;
+    font-size: 30px;
+}
+.details{
+    position: absolute;
+    bottom: 400px;
+    left:0;
+    background: white;
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+    padding: 0 2px 0 2px;
+    transition: .6s;
+}
+.details h2{
+    margin: 0 0;
+    padding: 0;
+    text-align: center;
+}
+.details .btn-curso{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2px;
+}
+.description{
+    font-size:12px;
+    line-height: 2;
+    color: black;
+    display: block;
+}
+.card:hover .details{
+    bottom: 75px;
+    
+
+}
+

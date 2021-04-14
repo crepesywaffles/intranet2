@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Grid, Dropdown, Image, Menu, Divider } from 'semantic-ui-react'
+import { Container, Grid, Dropdown, Image, Menu, Divider,Button } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import Header from "../../../src/assets/cabezotecyw.png"
 import Footer from "../../../src/assets/footerintranet.png"
@@ -17,6 +17,12 @@ export default function Layout(props) {
         fontFamily: "Arial",
         fontSize: "1.2em"
     }
+    
+    function cerrarsesion() {
+        window.location.pathname="/"
+        localStorage.clear()
+    }
+      
 
     return (
         <Container className={"layout"} fluid>
@@ -24,7 +30,7 @@ export default function Layout(props) {
                 <Image to={paths.CON_HOME} as={Link} src={Header} />
             </Grid.Row>
             <Grid.Row>
-                <Menu stackable="true" tabular borderless horinzontal="true" fluid widths={4}>
+                <Menu stackable="true" tabular borderless horinzontal="true" fluid widths={6}>
                     <Dropdown style={LinkStyle} item text='NUESTRA EMPRESA'>
                         <Dropdown.Menu>
                             <Dropdown.Item>
@@ -86,7 +92,7 @@ export default function Layout(props) {
                                 <Link to="/dir-innovacion" style={LinkStyle}>Dirección de Innovación</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/dir-sostenibilidad" style={LinkStyle} >Dirección de Sostenibilidad</Link>
+                                <Link to={paths.CON_SOSTENIBILIDAD} style={LinkStyle} >Dirección de Sostenibilidad</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
                                 <Link to="/academia" style={LinkStyle} >Academia de las Artes</Link>
@@ -98,8 +104,6 @@ export default function Layout(props) {
                             <Dropdown.Item>Reporte Accidentes</Dropdown.Item>
                             <Dropdown.Item>Reporte incapcidades</Dropdown.Item>
                             <Dropdown.Item>Encuesta sintomas Covid-19</Dropdown.Item>
-                            <Dropdown.Item>Crepero</Dropdown.Item>
-                            <Dropdown.Item>Wafflero</Dropdown.Item>
                             <Dropdown.Item>Novedades Calidad</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
@@ -113,6 +117,9 @@ export default function Layout(props) {
                             </Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
+                    <Menu.Item>
+                    <Button onClick={cerrarsesion} secondary>Cerrar Sesión</Button>
+                    </Menu.Item>
                 </Menu>
             </Grid.Row>
             <Divider hidden />
