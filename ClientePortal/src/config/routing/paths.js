@@ -1,5 +1,5 @@
-export const CON_HOME= "/";
-export const CON_LOGIN= "/login";
+export const CON_HOME= "/home";
+export const CON_LOGIN= "/";
 export const CON_DH = "/desarrollohumano";
 export const CON_DH_BIENESTAR = "/desarrollohumano/bienestar";
 export const CON_DH_BIENESTAR_GALERIA = "/desarrollohumano/bienestar/galeria";
@@ -23,6 +23,9 @@ export const CON_MEDIOAMBIENTE = "/medioambiente";
 export const CON_ACADEMIA = "/academia"
 export const CON_ACADEMIA_ARTE = "/academia/arteycultura"
 export const CON_ACADEMIA_EMPODERAMIENTO= "/academia/empoderamiento"
+export const CON_ACADEMIA_EMPODERAMIENTO_FORMACIONES= "/academia/empoderamiento/formaciones"
+export const CON_ACADEMIA_CURSO = "/academia/curso"
 export const CON_ACADEMIA_BIENESTAR = "/academia/bienestar"
 export const CON_ACADEMIA_CONCIENCIA = "/academia/conciencia"
+export const CON_SOSTENIBILIDAD = "/sostenibilidad"
 

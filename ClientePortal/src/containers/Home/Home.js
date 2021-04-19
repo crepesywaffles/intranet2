@@ -7,11 +7,15 @@ import Boton2 from "../../assets/home/BotonAniversarios.png"
 import Boton3 from "../../assets/home/BotonBeneficios.png"
 import Boton4 from "../../assets/home/BotonCOVID19.png"
 import Boton5 from "../../assets/home/BotonCumpleaños.png"
+import Boton6 from "../../assets/home/BotonEcommerce.png"
 import "../Home/Home.css"
 import { Component } from 'react'
 import apiURL from "../../utils/apiURL"
 import { Carousel } from "react-bootstrap"
 import ReactPlayer from "react-player"
+import *as paths from "../../config/routing/paths"
+import {Link} from "react-router-dom"
+
 
 
 
@@ -37,6 +41,7 @@ class Home extends Component {
             .then(res => { return res.json() })
             .then(res => {
                 this.setState({ day: res })
+        
 
             })
     }
@@ -77,12 +82,12 @@ class Home extends Component {
                     <Grid.Column verticalAlign="middle">
                         <Container align="center">
                             <Image.Group className="mobile-img" size="medium">
+                                <Image as="a" target="_blanck" href="http://192.168.181.50/opencart/upload/index.php?route=common/home" className="botonimg" rounded src={Boton6} />
                                 <Image className="botonimg" rounded src={Boton1} />
                                 <Image className="botonimg" rounded src={Boton2} />
-                                <Image className="botonimg" rounded src={Boton3} />
-                                <Image className="botonimg" rounded src={Boton4} />
+                                <Image as={Link} to={paths.CON_DH_BIENESTAR} className="botonimg" rounded src={Boton3} />
+                                <Image as={Link} to={paths.CON_DH_SST_COVID} className="botonimg" rounded src={Boton4} />
                                 <Image className="botonimg" rounded src={Boton5} />
-                                <Image className="botonimg" rounded src={Boton1} />
                             </Image.Group>
                         </Container>
                     </Grid.Column>

@@ -10,10 +10,10 @@ export default class AcademiaMain extends Component {
             <Layout>
                 <Grid centered={true}  verticalAlign="middle"columns={2}>
                     <Grid.Column>
-                        <Image as={Link} className="botonimg" to={paths.CON_ACADEMIA_ARTE} src={ArteCultura} size="medium" />
+                        {/* <Image as={Link} className="botonimg" to={paths.CON_ACADEMIA_ARTE} src={ArteCultura} size="medium" /> */}
                         <Image as={Link} className="botonimg" to={paths.CON_ACADEMIA_EMPODERAMIENTO} src={Empoderamiento} size="medium" />
                         <Image as={Link} className="botonimg" to={paths.CON_ACADEMIA_BIENESTAR} src={BienestarIntegral} size="medium" />
-                        <Image as={Link} className="botonimg" to={paths.CON_ACADEMIA_CONCIENCIA}src={ConcienciaE} size="medium" />
+                        {/* <Image as={Link} className="botonimg" to={paths.CON_ACADEMIA_CONCIENCIA}src={ConcienciaE} size="medium" /> */}
                     </Grid.Column>
                 </Grid>
                 <Divider hidden/>

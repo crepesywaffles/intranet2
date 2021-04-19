@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/academia-capacitadores",
+      "handler": "academia-capacitadores.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/academia-capacitadores/count",
+      "handler": "academia-capacitadores.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/academia-capacitadores/:id",
+      "handler": "academia-capacitadores.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/academia-capacitadores",
+      "handler": "academia-capacitadores.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/academia-capacitadores/:id",
+      "handler": "academia-capacitadores.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/academia-capacitadores/:id",
+      "handler": "academia-capacitadores.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

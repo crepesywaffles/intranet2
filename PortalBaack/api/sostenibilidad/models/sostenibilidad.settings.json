@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sostenibilidads",
+  "info": {
+    "name": "sostenibilidad"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "proyecto": {
+      "type": "text"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "region": {
+      "type": "text"
+    },
+    "foto": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "url_externo": {
+      "type": "string"
+    }
+  }
+}
