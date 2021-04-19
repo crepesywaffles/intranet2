@@ -23,7 +23,7 @@ import CON_MEDIOAMBIENTE from "./Calidad/MedioA/MedioA";
 import CON_ACADEMIA   from "../containers/Academia/AcademiaMain"
 import CON_ACADEMIA_ARTE from "../containers/Academia/Arteycultura/Arteycultura"
 import CON_ACADEMIA_EMPODERAMIENTO from "../containers/Academia/Empoderamiento/Empoderamiento";
-import CON_ACADEMIA_EMPODERAMIENTO_FORMACIONES from "../containers/Academia/Empoderamiento/Formaciones"
+import CON_ACADEMIA_EMPODERAMIENTO_FORMACIONES from "../containers/Academia/Empoderamiento/Formaciones";
 import CON_ACADEMIA_BIENESTAR from "../containers/Academia/BienestarIntegral/BienestarIntegral";
 import CON_ACADEMIA_CONCIENCIA from "../containers/Academia/Conciencia/Conciencia"
 import CON_ACADEMIA_CURSO from "../containers/Academia/Empoderamiento/Curso"

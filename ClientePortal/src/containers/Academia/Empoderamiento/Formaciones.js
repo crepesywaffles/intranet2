@@ -10,10 +10,10 @@ import {
     faFacebook,
     faInstagram
   } from '@fortawesome/free-brands-svg-icons';
-import React, { Component } from 'react';
 import *as paths from "../../../config/routing/paths";
 import {Button} from "semantic-ui-react"
-import { CON_ACADEMIA_CURSO } from "../../../config/routing/routes"
+import React, { Component } from 'react'
+
 
 
 
@@ -27,9 +27,13 @@ export default class Formaciones extends Component {
             .then((res) => res.json())
             .then((res) => this.setState({ data: res }));
     }
+
+    
     
     render() {
+        
         const capacitador= this.state.data
+        
         const settings = {
             dot:true,
             infinite: true,
@@ -66,13 +70,13 @@ export default class Formaciones extends Component {
                 }
               ],
         }
-        console.log(capacitador)
+        
         return (
             <Layout>
             <div className="container mt-5 carousel container-car">
             <Slider {...settings}>
             {capacitador && capacitador.map((cap)=>(
-                <div key={cap.id} className="card-wrapper">
+                <div id={cap.Nombre} key={cap.id} className="card-wrapper">
                 <div className="card">
                     <div className="card-image">
                         <img src={`${cap.foto_perfil.url}`}/>
@@ -88,7 +92,7 @@ export default class Formaciones extends Component {
                     <div className="details">
                         
                         <h2>{cap.Nombre}<span className="description">{cap.Descripcion}</span></h2>
-                        <Button className="btn-curso" as={Link} to={paths.CON_ACADEMIA_CURSO} secondary>{cap.curso}</Button>
+                        <Button className="btn-curso"  as={Link} to={paths.CON_ACADEMIA_CURSO} secondary>{cap.curso}</Button>
                         
                     </div>
                 </div>
@@ -96,7 +100,6 @@ export default class Formaciones extends Component {
             ))}
             </Slider>
             </div>
-            
         </Layout>
         )
     }

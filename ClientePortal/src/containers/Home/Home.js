@@ -84,10 +84,10 @@ class Home extends Component {
                             <Image.Group className="mobile-img" size="medium">
                                 <Image as="a" target="_blanck" href="http://192.168.181.50/opencart/upload/index.php?route=common/home" className="botonimg" rounded src={Boton6} />
                                 <Image className="botonimg" rounded src={Boton1} />
-                                <Image className="botonimg" rounded src={Boton2} />
+                                {/* <Image className="botonimg" rounded src={Boton2} /> */}
                                 <Image as={Link} to={paths.CON_DH_BIENESTAR} className="botonimg" rounded src={Boton3} />
                                 <Image as={Link} to={paths.CON_DH_SST_COVID} className="botonimg" rounded src={Boton4} />
-                                <Image className="botonimg" rounded src={Boton5} />
+                                {/* <Image className="botonimg" rounded src={Boton5} /> */}
                             </Image.Group>
                         </Container>
                     </Grid.Column>

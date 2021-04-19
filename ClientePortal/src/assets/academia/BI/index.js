@@ -1,0 +1,5 @@
+export {default as BienestarIntegral} from "../BI/BienestarIntegral.png"
+export {default as Formaciones} from "../BI/BIFormaciones.png"
+export {default as Articulos} from "../BI/BIImagenesArticulos.png"
+export {default as Podcast} from "../BI/BIPodcast.png"
+export {default as Videos} from "../BI/BIVideos.png"

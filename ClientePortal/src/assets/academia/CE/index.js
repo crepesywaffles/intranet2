@@ -1,0 +1,5 @@
+export {default as CocienciaEntorno} from "../CE/ConcienciaEntorno.png"
+export {default as Articulos} from "../CE/CEImagenesArticulos.png"
+export {default as Podcast} from "../CE/CEPodcast.png"
+export {default as Videos} from "../CE/CEVideos.png"
+export {default as Formaciones} from "../CE/CEFormaciones.png"

@@ -30,7 +30,7 @@ export default function Layout(props) {
                 <Image to={paths.CON_HOME} as={Link} src={Header} />
             </Grid.Row>
             <Grid.Row>
-                <Menu stackable="true" tabular borderless horinzontal="true" fluid widths={6}>
+                <Menu stackable="true" tabular borderless horinzontal="true" fluid widths={5}>
                     <Dropdown style={LinkStyle} item text='NUESTRA EMPRESA'>
                         <Dropdown.Menu>
                             <Dropdown.Item>
@@ -42,12 +42,12 @@ export default function Layout(props) {
                             <Dropdown.Item>
                                 <Link to="/empresas-b" style={LinkStyle}>Empresas B </Link>
                             </Dropdown.Item>
-                            <Dropdown.Item>
+                            {/* <Dropdown.Item>
                                 <Link to="/directorio-pdv" style={LinkStyle} >Directorio Puntos de venta</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
                                 <Link to="/directorio-admon" style={LinkStyle} >Directorio Administración</Link>
-                            </Dropdown.Item>
+                            </Dropdown.Item> */}
                         </Dropdown.Menu>
                     </Dropdown>
                     <Dropdown item text='NUESTROS EQUIPOS' style={LinkStyle}>
@@ -55,42 +55,42 @@ export default function Layout(props) {
                             <Dropdown.Item>
                                 <Link to={paths.CON_DH} style={LinkStyle} >Dirección Desarrollo Humano</Link>
                             </Dropdown.Item>
-                            <Dropdown.Item>
+                            {/* <Dropdown.Item>
                                 <Link to="/dir-financiera" style={LinkStyle} >Dirección Financiera</Link>
-                            </Dropdown.Item>
+                            </Dropdown.Item> */}
                             <Dropdown.Item>
                                 <Link to={paths.CON_CALIDAD} style={LinkStyle}>Dirección Calidad y Medio Ambiente</Link>
                             </Dropdown.Item>
-                            <Dropdown.Item>
+                            {/* <Dropdown.Item>
                                 <Link to="/dir-producto-compras" style={LinkStyle} >Dirección de Producto y Compras</Link>
-                            </Dropdown.Item>
-                            <Dropdown.Item>
+                            </Dropdown.Item> */}
+                            {/* <Dropdown.Item>
                                 <Link to="/dir-admon" style={LinkStyle}>Dirección Administrativa</Link>
-                            </Dropdown.Item>
-                            <Dropdown.Item>
+                            </Dropdown.Item> */}
+                            {/* <Dropdown.Item>
                                 <Link to="/dir-logistica" style={LinkStyle}>Dirección Logística y Abastecimiento</Link>
-                            </Dropdown.Item>
-                            <Dropdown.Item>
+                            </Dropdown.Item> */}
+                            {/* <Dropdown.Item>
                                 <Link to="/dir-operativa-rest" style={LinkStyle} >Dirección Operativa Restaurantes</Link>
-                            </Dropdown.Item>
-                            <Dropdown.Item>
+                            </Dropdown.Item> */}
+                            {/* <Dropdown.Item>
                                 <Link to="/dir-operativa-hel" style={LinkStyle} >Dirección Operativa Heladerías</Link>
-                            </Dropdown.Item>
-                            <Dropdown.Item>
+                            </Dropdown.Item> */}
+                            {/* <Dropdown.Item>
                                 <Link to="/dir-mantenimiento" style={LinkStyle} >Dirección de Mantenimiento</Link>
-                            </Dropdown.Item>
-                            <Dropdown.Item>
+                            </Dropdown.Item> */}
+                            {/* <Dropdown.Item>
                                 <Link to="/dir-planta-produccion" style={LinkStyle} > Dirección Planta de Producción</Link>
-                            </Dropdown.Item>
-                            <Dropdown.Item>
+                            </Dropdown.Item> */}
+                            {/* <Dropdown.Item>
                                 <Link to="/dir-planta-hel" style={LinkStyle} >Dirección Planta de Helados</Link>
-                            </Dropdown.Item>
-                            <Dropdown.Item>
+                            </Dropdown.Item> */}
+                            {/* <Dropdown.Item>
                                 <Link to="/dir-tecnologia" style={LinkStyle} >Dirección Tecnología</Link>
-                            </Dropdown.Item>
-                            <Dropdown.Item>
+                            </Dropdown.Item> */}
+                            {/* <Dropdown.Item>
                                 <Link to="/dir-innovacion" style={LinkStyle}>Dirección de Innovación</Link>
-                            </Dropdown.Item>
+                            </Dropdown.Item> */}
                             <Dropdown.Item>
                                 <Link to={paths.CON_SOSTENIBILIDAD} style={LinkStyle} >Dirección de Sostenibilidad</Link>
                             </Dropdown.Item>
@@ -107,7 +107,7 @@ export default function Layout(props) {
                             <Dropdown.Item>Novedades Calidad</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
-                    <Dropdown style={LinkStyle} item text='ACTUALÍZATE'>
+                    {/* <Dropdown style={LinkStyle} item text='ACTUALÍZATE'>
                         <Dropdown.Menu> 
                             <Dropdown.Item>
                                 <Link style={LinkStyle} to="/beatriz" >Crece e inspirate con Beatriz</Link>
@@ -116,7 +116,7 @@ export default function Layout(props) {
                                 <Link  style={LinkStyle} to="/revista" >Revista CYW</Link>
                             </Dropdown.Item>
                         </Dropdown.Menu>
-                    </Dropdown>
+                    </Dropdown> */}
                     <Menu.Item>
                     <Button onClick={cerrarsesion} secondary>Cerrar Sesión</Button>
                     </Menu.Item>
