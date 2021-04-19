@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_curso_curso_academias",
+  "info": {
+    "name": "Curso_academia",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Titulo": {
+      "type": "text"
+    },
+    "link": {
+      "type": "text"
+    }
+  }
+}

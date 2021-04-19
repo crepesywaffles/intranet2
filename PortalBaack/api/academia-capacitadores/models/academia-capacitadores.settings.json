@@ -36,6 +36,11 @@
     },
     "curso": {
       "type": "text"
+    },
+    "Curso_academia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "curso.curso-academia"
     }
   }
 }
