@@ -38,7 +38,7 @@ export default class Apoyo extends Component {
                         >
                             <Container>
                                 {link && (
-                                    <Image src={`${apiURL}${link.Imagenes[8].url}`} size="massive" />
+                                    <Image src={`${link.Imagenes[8].url}`} size="massive" />
                                 )}
                             </Container>
                         </Modal>

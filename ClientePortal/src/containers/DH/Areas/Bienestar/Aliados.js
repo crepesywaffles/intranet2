@@ -4,7 +4,7 @@ import Header from "../../../../assets/dh/CabezoteBienestar.png"
 import { Image,Divider,Grid,Container } from "semantic-ui-react"
 import { Link } from "react-router-dom"
 import *as paths from "../../../../config/routing/paths";
-import { btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9 , btn10} from "../../../../assets/dh/Bienestar/Aliados/index"
+import { btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9 , btn10,Coop1,Coop2} from "../../../../assets/dh/Bienestar/Aliados/index"
 import Grupobtn from "../../../../componentes/GrupoBtn/Grupobtn1";
 import Modal from "../../../../componentes/Modal/Modal" 
 import apiURL from "../../../../utils/apiURL";
@@ -33,7 +33,7 @@ export default class Aliados extends Component {
                         {aliado && aliado.filter((content)=>(content.name == "ContenidoCompensar.pdf")).map((pdf)=>(
                         <Modal
                         open={false}
-                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                        btn={<Grupobtn as={"a"} href={`${pdf.url}`}
                             target="_blank" class={"botonimg btn"} size="medium" src={btn1} />}
                         ></Modal>
                     ))}
@@ -41,17 +41,22 @@ export default class Aliados extends Component {
                     {/* Coopcafam */}
                     {aliado && aliado.filter((content)=>(content.name == "ContenidoCoopCafam.pdf")).map((pdf)=>(
                         <Modal
-                        open={false}
-                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
-                            target="_blank" class={"botonimg btn"} size="medium" src={btn2} />}
-                        ></Modal>
+                        open={true}
+                        btn={<Grupobtn as={"a"} href={`${pdf.url}`}
+                        target="_blank" class={"botonimg btn"} size="medium" src={btn2} />
+                        
+                    }
+                        >
+                            <Image src={Coop1}/>
+                            <Image src={Coop2}/>
+                        </Modal>
                     ))}
                     <Divider hidden/>
                     {/* Davivienda */}
                     {aliado && aliado.filter((content)=>(content.name == "ContenidoDavivienda.pdf")).map((pdf)=>(
                         <Modal
                         open={false}
-                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                        btn={<Grupobtn as={"a"} href={`${pdf.url}`}
                             target="_blank" class={"botonimg btn"} size="medium" src={btn3} />}
                         ></Modal>
                     ))}
@@ -60,7 +65,7 @@ export default class Aliados extends Component {
                     {aliado && aliado.filter((content)=>(content.name == "ContenidoDentifacil.pdf")).map((pdf)=>(
                         <Modal
                         open={false}
-                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                        btn={<Grupobtn as={"a"} href={`${pdf.url}`}
                             target="_blank" class={"botonimg btn"} size="medium" src={btn4} />}
                         ></Modal>
                     ))}
@@ -69,7 +74,7 @@ export default class Aliados extends Component {
                     {aliado && aliado.filter((content)=>(content.name == "ContenidoSura.pdf")).map((pdf)=>(
                         <Modal
                         open={false}
-                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                        btn={<Grupobtn as={"a"} href={`${pdf.url}`}
                             target="_blank" class={"botonimg btn"} size="medium" src={btn9} />}
                         ></Modal>
                     ))}
@@ -79,7 +84,7 @@ export default class Aliados extends Component {
                     {aliado && aliado.filter((content)=>(content.name == "ContenidoEmermedica.pdf")).map((pdf)=>(
                         <Modal
                         open={false}
-                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                        btn={<Grupobtn as={"a"} href={`${pdf.url}`}
                             target="_blank" class={"botonimg btn"} size="medium" src={btn5} />}
                         ></Modal>
                     ))}
@@ -88,7 +93,7 @@ export default class Aliados extends Component {
                     {aliado && aliado.filter((content)=>(content.name == "ContenidoJardinezdePaz.pdf")).map((pdf)=>(
                         <Modal
                         open={false}
-                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                        btn={<Grupobtn as={"a"} href={`${pdf.url}`}
                             target="_blank" class={"botonimg btn"} size="medium" src={btn6} />}
                         ></Modal>
                     ))}
@@ -97,7 +102,7 @@ export default class Aliados extends Component {
                     {aliado && aliado.filter((content)=>(content.name == "ContenidoPlenitud.pdf")).map((pdf)=>(
                         <Modal
                         open={false}
-                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                        btn={<Grupobtn as={"a"} href={`${pdf.url}`}
                             target="_blank" class={"botonimg btn"} size="medium" src={btn7} />}
                         ></Modal>
                     ))}
@@ -113,7 +118,7 @@ export default class Aliados extends Component {
                     {aliado && aliado.filter((content)=>(content.name == "ContenidoUnimos.pdf")).map((pdf)=>(
                         <Modal
                         open={false}
-                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
+                        btn={<Grupobtn as={"a"} href={`${pdf.url}`}
                             target="_blank" class={"botonimg btn"} size="medium" src={btn10} />}
                         ></Modal>
                     ))}

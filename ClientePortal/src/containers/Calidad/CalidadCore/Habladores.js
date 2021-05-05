@@ -30,7 +30,7 @@ export default class Habladores extends Component {
                     {artesano && artesano.map((img)=>(
                     img.map((im)=>(
                         <div>
-                        <img src={`${apiURL}${im.url}`}/>
+                        <img src={`${im.url}`}/>
                         </div>
                     
                     ))
@@ -45,7 +45,7 @@ export default class Habladores extends Component {
                     {carretinos && carretinos.map((img)=>(
                     img.map((im)=>(
                         <div>
-                        <img src={`${apiURL}${im.url}`}/>
+                        <img src={`${im.url}`}/>
                         </div>
                     
                     ))
@@ -60,7 +60,7 @@ export default class Habladores extends Component {
                     {Haeropuerto && Haeropuerto.map((img)=>(
                     img.map((im)=>(
                         <div>
-                        <img src={`${apiURL}${im.url}`}/>
+                        <img src={`${im.url}`}/>
                         </div>
                     
                     ))
@@ -75,7 +75,7 @@ export default class Habladores extends Component {
                     {heladerias && heladerias.map((img)=>(
                     img.map((im)=>(
                         <div>
-                        <img src={`${apiURL}${im.url}`}/>
+                        <img src={`${im.url}`}/>
                         </div>
                     
                     ))
@@ -90,7 +90,7 @@ export default class Habladores extends Component {
                     {restaurantes && restaurantes.map((img)=>(
                     img.map((im)=>(
                         <div>
-                        <img src={`${apiURL}${im.url}`}/>
+                        <img src={`${im.url}`}/>
                         </div>
                     
                     ))

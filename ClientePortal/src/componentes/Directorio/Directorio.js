@@ -9,10 +9,10 @@ export default function Directorio(props) {
                     <List.Icon name="users" />
                     <List.Content>{props.nombre}</List.Content>
                 </List.Item>
-                <List.Item>
+                {/* <List.Item>
                     <List.Icon name="phone volume" />
                     <List.Content>Ext.{props.extension}</List.Content>
-                </List.Item>
+                </List.Item> */}
                 <List.Item>
                     <List.Icon name="mail" />
                     <List.Content>

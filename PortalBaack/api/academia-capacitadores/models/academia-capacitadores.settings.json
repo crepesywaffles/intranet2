@@ -41,6 +41,9 @@
       "type": "component",
       "repeatable": true,
       "component": "curso.curso-academia"
+    },
+    "path": {
+      "type": "text"
     }
   }
 }

@@ -8,6 +8,7 @@ import Boton3 from "../../assets/home/BotonBeneficios.png"
 import Boton4 from "../../assets/home/BotonCOVID19.png"
 import Boton5 from "../../assets/home/BotonCumpleaños.png"
 import Boton6 from "../../assets/home/BotonEcommerce.png"
+
 import "../Home/Home.css"
 import { Component } from 'react'
 import apiURL from "../../utils/apiURL"
@@ -54,7 +55,7 @@ class Home extends Component {
                 <Carusel>
                     {this.state.img.map((task, index) =>
                         <Carousel.Item >
-                            <img className=" d-block w-100 " key={index.id} alt={task.name + "Slider"} src={`${apiURL}${task.url}`} />
+                            <img className=" d-block w-100 " key={index.id} alt={task.name + "Slider"} src={`${task.url}`} />
                         </Carousel.Item>
                     )}
                 </Carusel>
@@ -74,7 +75,7 @@ class Home extends Component {
                             </Container>
                             <Container>
                                 {day && (
-                                    <Image src={`${apiURL}${day.url}`} />
+                                    <Image src={`${day.url}`}/>
                                 )}
                             </Container>
                         </Container>
@@ -82,8 +83,8 @@ class Home extends Component {
                     <Grid.Column verticalAlign="middle">
                         <Container align="center">
                             <Image.Group className="mobile-img" size="medium">
-                                <Image as="a" target="_blanck" href="http://192.168.181.50/opencart/upload/index.php?route=common/home" className="botonimg" rounded src={Boton6} />
-                                <Image className="botonimg" rounded src={Boton1} />
+                                <Image as="a" target="_blanck" href="http://169.48.72.72/opencart/upload/index.php?route=common/home" className="botonimg" rounded src={Boton6} />
+                                <Image className="botonimg" as="a" target="_blanck" href="https://manual.crepesywaffles.com:8090/Login.aspx?ReturnUrl=%2fdefault.aspx"rounded src={Boton1} />
                                 {/* <Image className="botonimg" rounded src={Boton2} /> */}
                                 <Image as={Link} to={paths.CON_DH_BIENESTAR} className="botonimg" rounded src={Boton3} />
                                 <Image as={Link} to={paths.CON_DH_SST_COVID} className="botonimg" rounded src={Boton4} />

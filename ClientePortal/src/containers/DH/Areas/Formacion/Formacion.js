@@ -6,7 +6,7 @@ import { Grid, Container, Image, Divider, Button } from "semantic-ui-react";
 import Directorio from "../../../../componentes/Directorio/Directorio";
 import Grupobtn from "../../../../componentes/GrupoBtn/Grupobtn1";
 import Modal from "../../../../componentes/Modal/Modal"
-import { btn1, btn2, btn3, btn4, btn5, btn6,btn7, Header } from "../../../../assets/dh/Formacion/index"
+import { btn1, btn2, btn3, btn4, btn5, btn6,btn7, Header,Info} from "../../../../assets/dh/Formacion/index"
 import { Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import *as paths from "../../../../config/routing/paths";
@@ -37,12 +37,18 @@ export default class Formacion extends Component {
 
         return (
             <Layout>
+                <Container fluid align="center">
+                <Image as={Link} to={paths.CON_DH} src={Header} />
+                </Container>
+                <Container fluid align="center">
+                    <Image src={Info} />
+                </Container>
                 <Carusel interval={3000}>
                     {sml && (
                         sml.Sliders.map((sl) => (
                             <Carousel.Item key={sl.id}>
                                 <img className=" d-block w-100"
-                                    src={`${apiURL}${sl.url}`}
+                                    src={`${sl.url}`}
                                 />
                             </Carousel.Item>
 
@@ -50,7 +56,7 @@ export default class Formacion extends Component {
                     )}
                 </Carusel>
                 <Divider hidden />
-                <Image as={Link} to={paths.CON_DH} src={Header} />
+                
                 <Divider hidden />
                 <Grid centered stackable columns={4}>
                     <Grid.Column>
@@ -60,7 +66,7 @@ export default class Formacion extends Component {
                                     <Directorio
                                         key={sml.id}
                                         nombre={sml.Nombre}
-                                        extension={sml.Extension}
+                                        // extension={sml.Extension}
                                         email={sml.Correo}
                                     />
                                 )))}
@@ -93,7 +99,7 @@ export default class Formacion extends Component {
                                     {pro && pro.map((pr) => (
                                         <li className="lista-programas">
                                             <Container textAlign="center">
-                                                <Button className="programas_E" as={"a"} color="black" href={`${apiURL}${pr.url}`} download={`${pr.name}`}>{`${pr.name}`}</Button>
+                                                <Button className="programas_E" as={"a"} color="black" href={`${pr.url}`} download={`${pr.name}`}>{`${pr.name}`}</Button>
                                                 <Divider hidden />
                                             </Container>
 

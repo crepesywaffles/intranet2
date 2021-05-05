@@ -92,7 +92,7 @@ export default class Formaciones extends Component {
                     <div className="details">
                         
                         <h2>{cap.Nombre}<span className="description">{cap.Descripcion}</span></h2>
-                        <Button className="btn-curso"  as={Link} to={paths.CON_ACADEMIA_CURSO} secondary>{cap.curso}</Button>
+                        <Button className="btn-curso"  as={Link} to={cap.path} secondary>{cap.curso}</Button>
                         
                     </div>
                 </div>

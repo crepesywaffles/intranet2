@@ -7,8 +7,9 @@ import Directorio from "../../../../componentes/Directorio/Directorio";
 import Grupobtn from "../../../../componentes/GrupoBtn/Grupobtn1";
 import Modal from "../../../../componentes/Modal/Modal"
 import Header from "../../../../assets/dh/CabezoteBienestar.png"
-import { btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9 , btn10, btn11, btn12 ,btn13,btn14 } from "../../../../assets/dh/Bienestar/index"
+import { btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9 , btn10, btn11, btn12 ,btn13,btn14,Convenioscaja } from "../../../../assets/dh/Bienestar/index"
 import { Carousel } from "react-bootstrap";
+import {btn17} from "../../../../assets/dh/Bienestar/index"
 import *as paths from "../../../../config/routing/paths";
 import { Link } from "react-router-dom"
 
@@ -36,38 +37,44 @@ export default class Bienestar extends Component {
 
         return (
             <Layout>
+                <Container fluid align="center">
+                    <Image as={Link} to={paths.CON_DH} src={Header} />
+                </Container>
+                <Container fluid align="center">
+                <Image src={btn17}/>
+                </Container>
                 {slider && (
                     <Carusel interval={3000}>
                         <Carousel.Item >
                             <img className=" d-block w-100"
-                                src={`${apiURL}${slider.Sliders[0].url}`}
+                                src={`${slider.Sliders[0].url}`}
                             />
                         </Carousel.Item>
                     </Carusel>
                 )}
                 <Divider hidden />
-                <Container fluid align="center">
-                    <Image as={Link} to={paths.CON_DH} src={Header} />
-                </Container>
+                
+                
                 <Divider hidden />
-                <Grid centered stackable columns={4}>
-                    <Grid.Column>
-                        <Container stakcable aling="center">
+                <Grid centered stackable columns={4} >
+                    <Grid.Column computer={4} tablet={13} >
+                        
                             {sml
                                 .filter((info) => info.directorioBienestar != null)
                                 .map((slider) => (
                                     <Directorio
                                         key={slider.id}
                                         nombre={slider.directorioBienestar.Nombre}
-                                        extension={slider.directorioBienestar.Extension}
+                                        // extension={slider.directorioBienestar.Extension}
                                         email={slider.directorioBienestar.Correo}
                                     />
                                 ))}
-                        </Container>
+                        
 
                     </Grid.Column>
-                    <Grid.Column>
-                        <Container stackable centered aling="center">
+                    
+                    <Grid.Column computer={4} >
+                        {/* <Container stackable centered aling="center"> */}
                             {/* catalogo de beneficios */}
                             <Modal
                                 btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn4} size="medium" centered />}
@@ -84,7 +91,7 @@ export default class Bienestar extends Component {
                             >
                                 <Container>
                                     {link && (
-                                        <Image src={`${apiURL}${link.Imagenes[0].url}`} size="massive" />
+                                        <Image src={`${link.Imagenes[0].url}`} size="massive" />
                                     )}
                                 </Container>
                             </Modal>
@@ -95,7 +102,7 @@ export default class Bienestar extends Component {
                             >
                                 <Container>
                                     {link && (
-                                        <Image src={`${apiURL}${link.Imagenes[1].url}`} size="massive" />
+                                        <Image src={`${link.Imagenes[1].url}`} size="massive" />
                                     )}
                                 </Container>
                             </Modal>
@@ -112,14 +119,14 @@ export default class Bienestar extends Component {
                             >
                                 <Container>
                                     {link && (
-                                        <Image src={`${apiURL}${link.Imagenes[6].url}`} size="massive" />
+                                        <Image src={`${link.Imagenes[6].url}`} size="massive" />
                                     )}
                                 </Container>
                             </Modal>
-                        </Container>
+                        {/* </Container> */}
                     </Grid.Column>
-                    <Grid.Column>
-                        <Container stackable centered>
+                    <Grid.Column computer={4} >
+                        {/* <Container stackable centered> */}
                             {/* Catalogo de Medicionas prepagadas */}
                             <Modal
                                 btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn6} />}
@@ -136,7 +143,7 @@ export default class Bienestar extends Component {
                             >
                                 <Container>
                                     {link && (
-                                        <Image src={`${apiURL}${link.Imagenes[3].url}`} size="massive" />
+                                        <Image src={`${link.Imagenes[3].url}`} size="massive" />
                                     )}
                                 </Container>
                             </Modal>
@@ -147,7 +154,7 @@ export default class Bienestar extends Component {
                             >
                                 <Container>
                                     {link && (
-                                        <Image src={`${apiURL}${link.Imagenes[2].url}`} size="massive" />
+                                        <Image src={`${link.Imagenes[2].url}`} size="massive" />
                                     )}
                                 </Container>
                             </Modal>
@@ -164,14 +171,14 @@ export default class Bienestar extends Component {
                             >
                                 <Container>
                                     {link && (
-                                        <Image src={`${apiURL}${link.Imagenes[7].url}`} size="massive" />
+                                        <Image src={`${link.Imagenes[7].url}`} size="massive" />
                                     )}
                                 </Container>
                             </Modal>
-                        </Container>
+                        {/* </Container> */}
                     </Grid.Column>
-                    <Grid.Column>
-                        <Container stackable centered>
+                    <Grid.Column computer={4} >
+                        {/* <Container stackable centered> */}
                             {/* Nuestros aliados */}
                             <Modal
                                 open={false}
@@ -201,11 +208,17 @@ export default class Bienestar extends Component {
                             >
                                 <Container>
                                     {link && (
-                                        <Image src={`${apiURL}${link.Imagenes[5].url}`} size="massive" />
+                                        <Image src={`${link.Imagenes[5].url}`} size="massive" />
                                     )}
                                 </Container>
                             </Modal>
-                        </Container>
+                            <Modal
+                                open={false}
+                                btn={<Grupobtn as={Link} path={paths.CON_DH_BIENESTAR_CONVENIO} class={"botonimg btn"} size="medium" src={Convenioscaja} />}
+                            >
+
+                            </Modal>
+                        {/* </Container> */}
                     </Grid.Column>
                 </Grid>
             </Layout>

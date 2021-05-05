@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Layout from "../../../../componentes/Layout/Layout"
-import { btn1, btn2, btn3, btn4, btn5, Header } from "../../../../assets/dh/SST/index"
+import { btn1, btn2, btn3, btn4, btn5, Header,Info } from "../../../../assets/dh/SST/index"
 import { Grid, Container, Image, Divider } from "semantic-ui-react";
 import Grupobtn from "../../../../componentes/GrupoBtn/Grupobtn1";
 import Modal from "../../../../componentes/Modal/Modal"
@@ -32,19 +32,20 @@ export default class Sst extends Component {
         return (
             <Layout>
                 <Image as={Link} to={paths.CON_DH} src={Header} />
+                <Image src={Info}/>
                 <Carusel>
                     {sml && (
                         sml.Slidersst.map((sl) => (
                             <Carousel.Item key={sl.id}>
                                 <img className=" d-block w-100"
-                                    src={`${apiURL}${sl.url}`}
+                                    src={`${sl.url}`}
                                 />
                             </Carousel.Item>
 
                         ))
                     )}
                 </Carusel>
-
+                
                 <Divider hidden />
                 <Container fluid align="center">
                 </Container>
@@ -57,7 +58,7 @@ export default class Sst extends Component {
                                     <Directorio
                                         key={sml.id}
                                         nombre={sml.Nombre}
-                                        extension={sml.Extension}
+                                        // extension={sml.Extension}
                                         email={sml.Correo}
                                     />
                                 )))}
@@ -95,7 +96,7 @@ export default class Sst extends Component {
                             >
                                 {dir && (dir.Slidersst.map((dir) => (
                                     <Container>
-                                        <Image className="dir_emergencias" key={dir.id} src={`${apiURL}${dir.url}`} />
+                                        <Image className="dir_emergencias" key={dir.id} src={`${dir.url}`} />
                                     </Container>
                                 )))}
                             </Modal>

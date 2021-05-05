@@ -14,5 +14,11 @@ export {default as btn13} from "../Bienestar/BTNSubsidioEducativo.png"
 export {default as btn14} from "../Bienestar/BTNSubsidioMonetario.png"
 export {default as btn15} from "../Bienestar/BTNAsesoriaBienestar.png"
 export {default as btn16} from "../Bienestar/BTNAtencionInmediata.png"
+export {default as btn17} from "../Bienestar/InfoBienestar.png"
+export {default as Convenioscaja} from "../Bienestar/BTNConveniosCaja.png"
+export {default as Edubasica} from "../Bienestar/BTNEduBasica.png"
+export {default as Edusuperior} from "../Bienestar/BTNEduSuperior.png"
+export {default as Idiomas} from "../Bienestar/BTNIdiomas.png"
+export {default as Jardines} from "../Bienestar/BTNJardinesInfantiles.png"
 
 

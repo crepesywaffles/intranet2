@@ -637,6 +637,9 @@
               }
             }
           },
+          "path": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -679,6 +682,9 @@
                 }
               }
             }
+          },
+          "path": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

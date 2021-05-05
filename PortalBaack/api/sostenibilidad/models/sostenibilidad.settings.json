@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "sostenibilidads",
   "info": {
-    "name": "sostenibilidad"
+    "name": "sostenibilidad",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -32,6 +33,31 @@
     },
     "url_externo": {
       "type": "string"
+    },
+    "imagen_ref": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "path": {
+      "type": "text"
+    },
+    "galeria": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

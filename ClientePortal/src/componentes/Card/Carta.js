@@ -6,7 +6,7 @@ import "../Card/Carta.css"
 
 export default function Carta(props) {
   return (
-    <Card>
+    <Card  >
       <Image size={props.size} src={props.img}/>
       <Card.Content>
         CONVOCATORIA

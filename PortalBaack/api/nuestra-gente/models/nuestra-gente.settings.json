@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nuestra_gentes",
+  "info": {
+    "name": "nuestra_gente"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "text"
+    },
+    "imagenes": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "portada": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "path": {
+      "type": "text"
+    },
+    "descripcion": {
+      "type": "text"
+    }
+  }
+}

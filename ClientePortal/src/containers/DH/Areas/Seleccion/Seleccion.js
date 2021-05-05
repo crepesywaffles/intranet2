@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Layout from "../../../../componentes/Layout/Layout"
-import { btn1, btn2, Header } from "../../../../assets/dh/seleccion/index"
+import { btn1, btn2, Header,Info } from "../../../../assets/dh/seleccion/index"
 import { Grid, Container, Image, Divider } from "semantic-ui-react";
 import Grupobtn from "../../../../componentes/GrupoBtn/Grupobtn1";
 import Modal from "../../../../componentes/Modal/Modal"
@@ -36,19 +36,20 @@ export default class Seleccion extends Component {
         return (
             <Layout>
                 <Image as={Link} to={paths.CON_DH} src={Header} />
+                <Image src={Info} />
                 <Carusel>
                     {sml && (
                         sml.slider.map((sl) => (
                             <Carousel.Item key={sl.id}>
                                 <img className=" d-block w-100"
-                                    src={`${apiURL}${sl.url}`}
+                                    src={`${sl.url}`}
                                 />
                             </Carousel.Item>
 
                         ))
                     )}
                 </Carusel>
-
+                
                 <Divider hidden />
                 <Divider hidden />
                 <Grid centered stackable columns={3}>
@@ -59,7 +60,7 @@ export default class Seleccion extends Component {
                                     <Directorio
                                         key={sml.id}
                                         nombre={sml.Nombre}
-                                        extension={sml.Extension}
+                                        // extension={sml.Extension}
                                         email={sml.Correo}
                                     />
                                 )))}
@@ -70,7 +71,7 @@ export default class Seleccion extends Component {
                         <Container stackable centered aling="center">
                             {/* Convocatorias */}
                             <Modal
-                                btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn1} size="medium" centered />}
+                                btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn1}  centered />}
                                 size={"fullscreen"}
 
                             >
@@ -79,7 +80,7 @@ export default class Seleccion extends Component {
                                         con.map((co) => (
                                             <div className="cartas-carta">
                                                 <Carta key={co.id}
-                                                    img={`${apiURL}${co.Imagen.url}`}
+                                                    img={`${co.Imagen.url}`}
                                                     size="medium"
                                                     titulo={co.titulo}
                                                     cargo={co.cargo}

@@ -15,6 +15,7 @@ function ModalScrollingExample(props) {
       onOpen={() => setOpen(props.open)}
       trigger={<Image className="btn" as={"button"}> {props.btn}</Image>}
       size={props.size}
+      centered={props.centered}
 
     >
       <Modal.Actions>

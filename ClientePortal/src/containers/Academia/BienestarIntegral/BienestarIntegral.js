@@ -3,6 +3,7 @@ import Layout from "../../../componentes/Layout/Layout"
 import {Formaciones,Videos,Podcast,Articulos} from "../../../assets/academia/BI/index"
 import {Grid,Image,Divider} from "semantic-ui-react"
 import {Link} from "react-router-dom"
+import*as paths from "../../../config/routing/paths";
 export default class BienestarIntegral extends Component {
     render() {
         return (
@@ -10,7 +11,7 @@ export default class BienestarIntegral extends Component {
                 <Grid centered={true}  verticalAlign="middle"columns={4}>
                     <Grid.Column>
                         {/* <Image as={Link} className="botonimg" src={Formaciones} size="medium" /> */}
-                        <Image as={Link} className="botonimg" src={Videos} size="medium" />
+                        <Image as={Link} to={paths.CON_ACADEMIA_BI_VIDEOS} className="botonimg" src={Videos} size="medium" />
                         {/* <Image as={Link} className="botonimg" src={Podcast} size="medium" />
                         <Image as={Link} className="botonimg" src={Articulos} size="medium" /> */}
                     </Grid.Column>

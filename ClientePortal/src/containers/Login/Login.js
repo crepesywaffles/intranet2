@@ -4,6 +4,7 @@ import axios from 'axios';
 import apiURL from "../../utils/apiURL"
 import logo from "../../assets/home/LogoMoneda.png"
 import "../Login/Login.css"
+import Modal from "../../componentes/Modal/Modal"
 
 
 
@@ -71,7 +72,17 @@ function handleSubmit(e) {
                     }
                 </div>
                 <div className="terminos">
-                <label><input type="checkbox" name="TYC" required />Acepto <a href="">terminos y condiciones</a></label>
+                <label><input type="checkbox" name="TYC" required />
+                <Modal
+                    btn={`Acepto terminos y condiciones`}
+                    size={"small"}
+                    centered={"true"}
+                    
+                    
+                >
+                  <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=vc94nuvqwd" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+                </Modal>
+                </label>
                 </div>
                 
                 

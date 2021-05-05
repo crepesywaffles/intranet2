@@ -6,7 +6,7 @@ import Modal from "../../../componentes/Modal/Modal";
 import Grupobtn from "../../../componentes/GrupoBtn/Grupobtn1"
 import apiURL from "../../../utils/apiURL"
 import *as paths from "../../../config/routing/paths"
-import {HeaderCalidad} from "../../../assets/calidad/index"
+import {HeaderMedioA} from "../../../assets/calidad/index"
 import {Link} from "react-router-dom"
 import Directorio from '../../../componentes/Directorio/Directorio';
 
@@ -37,7 +37,7 @@ export default class MedioA extends Component {
         console.log(directorio)
         return (
             <Layout>
-                <Image as={Link} src={HeaderCalidad} to={paths.CON_CALIDAD} />
+                <Image as={Link} src={HeaderMedioA} to={paths.CON_CALIDAD} />
                 <Divider hidden />
                 <Container stackable align="center">
                     <Grid stackable centered columns={3}>
@@ -46,7 +46,7 @@ export default class MedioA extends Component {
                                     <Directorio
                                         key={dir.id}
                                         nombre={dir.Nombre}
-                                        extension={dir.Extension}
+                                        // extension={dir.Extension}
                                         email={dir.Correo}
                                     />
                                 ))}
@@ -59,7 +59,7 @@ export default class MedioA extends Component {
                                     {habladores && habladores.map((img) => (
                                         img.map((im) => (
                                             <div className="container-habladores">
-                                                <img src={`${apiURL}${im.url}`} />
+                                                <img src={`${im.url}`} />
                                             </div>
 
                                         ))
@@ -89,7 +89,7 @@ export default class MedioA extends Component {
                                     size={"fullscreen"}
                                 >
                                     {noticiasmedio && noticiasmedio.noticia.map((noticia)=>(
-                                        <img src={`${apiURL}${noticia.url}`}/>
+                                        <img src={`${noticia.url}`}/>
                                     ))}
                                 </Modal>
                                 <Modal

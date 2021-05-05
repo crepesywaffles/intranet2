@@ -31,7 +31,7 @@ export default class Galeria extends Component {
                 <div className="galeria_contenedor">
                     {pics && pics.comunicados.map((i) => (
                         <div key={i.id} className="galeria_item">
-                            <img as="button" onClick={this.handleImg} className="galeria_img " src={`${apiURL}${i.url}`} />
+                            <img as="button" onClick={this.handleImg} className="galeria_img " src={`${i.url}`} />
                         </div> 
                     ))}
                 </div>

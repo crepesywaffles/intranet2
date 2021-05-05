@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Layout from "../../../../componentes/Layout/Layout"
-import { btn1, btn2, btn3, btn4,btn5,btn6, Header ,btn7 } from "../../../../assets/dh/Relaciones/index"
+import { btn1, btn2, btn3, btn4,btn5,btn6, Header ,btn7,Info } from "../../../../assets/dh/Relaciones/index"
 import { Grid, Container, Image, Divider } from "semantic-ui-react";
 import Grupobtn from "../../../../componentes/GrupoBtn/Grupobtn1";
 import Modal from "../../../../componentes/Modal/Modal"
@@ -29,6 +29,9 @@ export default class Seleccion extends Component {
                 <Container fluid align="center">
                     <Image as={Link} to={paths.CON_DH} src={Header} />
                 </Container>
+                <Container fluid align="center">
+                    <Image  src={Info} />
+                </Container>
                 <Divider hidden />
                 <Grid centered stackable columns={4}>
                     <Grid.Column>
@@ -38,7 +41,7 @@ export default class Seleccion extends Component {
                                     <Directorio
                                         key={sml.id}
                                         nombre={sml.Nombre}
-                                        extension={sml.Extension}
+                                        // extension={sml.Extension}
                                         email={sml.Correo}
                                     />
                                 )))}

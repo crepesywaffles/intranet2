@@ -43,7 +43,7 @@ export default class Galeria extends Component {
               >
                 <Grid stackable centered>
                   {ti.Fotos.map((ft) => (
-                    <Image className="botonimg" size="medium" src={`${apiURL}${ft.url}`} />
+                    <Image className="botonimg" size="medium" src={`${ft.url}`} />
                   ))}
                 </Grid>
               </Modal>

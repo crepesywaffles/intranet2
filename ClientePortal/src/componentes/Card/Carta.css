@@ -1,3 +1,7 @@
 .ul-carta{
-    height: 30vh;
+    
+}
+.card{
+    overflow: auto!important;
+    
 }

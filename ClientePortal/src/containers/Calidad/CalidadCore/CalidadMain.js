@@ -33,7 +33,7 @@ export default class CalidadMain extends Component {
                                     <Directorio
                                         key={dir.id}
                                         nombre={dir.Nombre}
-                                        extension={dir.Extension}
+                                        // extension={dir.Extension}
                                         email={dir.Correo}
                                     />
                                 ))}

@@ -3,6 +3,9 @@ import Layout from "../../../componentes/Layout/Layout"
 import Modal from "../../../componentes/Modal/Modal"
 import apiURL from "../../../utils/apiURL";
 import "./GaleriaNoticias.css"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 export default class GaleriaNoticias extends Component {
     state = {
@@ -15,6 +18,8 @@ export default class GaleriaNoticias extends Component {
           .then((res) => this.setState({ img: res }));
       }
     render() {
+        
+            
         const noticias = this.state.img[0]
         console.log(noticias)
         return (
@@ -26,7 +31,7 @@ export default class GaleriaNoticias extends Component {
                     size={"fullscreen"}
                     
                  >
-                 <img className="noticia" src={`${apiURL}${noticia.url}`} />
+                 <img className="noticia" src={`${noticia.url}`} />
                  </Modal>
                 ))}
                 </div>
