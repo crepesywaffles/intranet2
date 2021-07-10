@@ -83,9 +83,9 @@ class Home extends Component {
                     <Grid.Column verticalAlign="middle">
                         <Container align="center">
                             <Image.Group className="mobile-img" size="medium">
-                                <Image as="a" target="_blanck" href="http://169.48.72.72/opencart/upload/index.php?route=common/home" className="botonimg" rounded src={Boton6} />
-                                <Image className="botonimg" as="a" target="_blanck" href="https://manual.crepesywaffles.com:8090/Login.aspx?ReturnUrl=%2fdefault.aspx"rounded src={Boton1} />
-                                {/* <Image className="botonimg" rounded src={Boton2} /> */}
+                                {/* <Image as="a" target="_blanck" href="http://169.48.72.72/opencart/upload/index.php?route=common/home" className="botonimg" rounded src={Boton6} /> */}
+                                {/* <Image className="botonimg" as="a" target="_blanck" href="https://manual.crepesywaffles.com:8090/Login.aspx?ReturnUrl=%2fdefault.aspx"rounded src={Boton1} />
+                                <Image className="botonimg" rounded src={Boton2} /> */}
                                 <Image as={Link} to={paths.CON_DH_BIENESTAR} className="botonimg" rounded src={Boton3} />
                                 <Image as={Link} to={paths.CON_DH_SST_COVID} className="botonimg" rounded src={Boton4} />
                                 {/* <Image className="botonimg" rounded src={Boton5} /> */}

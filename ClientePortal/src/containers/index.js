@@ -52,6 +52,23 @@ import CON_GENTE_RESTAURANTES from "../containers/Nuestra/NuestraGente/Restauran
 import CON_GENTE_CALL from "../containers/Nuestra/NuestraGente/Callcenter"
 import CON_GENTE_CAMION from "../containers/Nuestra/NuestraGente/Camion"
 import CON_GENTE_COCINA from "../containers/Nuestra/NuestraGente/Cocinaoculta";
+import CON_FUNDADORES from "../containers/Fundadores/Fundadores"
+import CON_GERENCIA from "../containers/Fundadores/Gerenciaadmon"
+import CON_RECONOCIMIENTOS from "../containers/Nuestra/Reconocimientos"
+import CON_CALIDAD_PROGRAMAS from "../containers/Calidad/Programas"
+import CON_COMPRAS from "../containers/Compras/Compras"
+import CON_FINANCIERA from "../containers/Financiera/Financiera"
+import CON_LEGAL from "../containers/Legaladmin/Legal"
+import CON_LOGISTICA from "../containers/Logistica/Logistica"
+import CON_MANTENIMIENTO from "../containers/Mantenimiento/Mantenimiento"
+import CON_MERCADEO from "../containers/Mercadeo/Mercadeo"
+import CON_HELADERIAS from "../containers/Oheladerias/Oheladerias"
+import CON_RESTAURANTES from "../containers/Orestaurantes/Restaurantes"
+import CON_PLANTA_HELADOS from "../containers/Plantahelados/Plantahelados"
+import CON_PLANTA_PRODUCCION from "../containers/Plantaproducion/Plantaproduccion"
+import CON_SARGLAFT from "../containers/Sarglaft/Sarglaft"
+import CON_TECNOLOGIA from "../containers/Tecnologia/Tecnologia"
+import CON_UBICACIONES from "../containers/Nuestra/Lugares"
 
 
 export default {
@@ -108,6 +125,23 @@ export default {
     CON_GENTE_RESTAURANTES,
     CON_GENTE_CALL,
     CON_GENTE_CAMION,
-    CON_GENTE_COCINA
+    CON_GENTE_COCINA,
+    CON_FUNDADORES,
+    CON_GERENCIA,
+    CON_RECONOCIMIENTOS,
+    CON_CALIDAD_PROGRAMAS,
+    CON_COMPRAS,
+    CON_FINANCIERA,
+    CON_LEGAL,
+    CON_LOGISTICA,
+    CON_MANTENIMIENTO,
+    CON_MERCADEO,
+    CON_HELADERIAS,
+    CON_RESTAURANTES,
+    CON_PLANTA_HELADOS,
+    CON_PLANTA_PRODUCCION,
+    CON_SARGLAFT,
+    CON_TECNOLOGIA,
+    CON_UBICACIONES
 
 }

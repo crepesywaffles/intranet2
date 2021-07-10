@@ -1,6 +1,7 @@
 export {default as btn1} from "../calidad/BTNCalidad.png"
 export {default as btn2} from "../calidad/BTNIndicadores.png"
 export {default as btn3} from "../calidad/BTNMedioAmbiente.png"
+export {default as btn4} from "../calidad/BTNProgramasCal.png"
 export {default as HeaderCalidad} from  "../calidad/Calidad.png"
 export {default as HeaderMedioA} from "../calidad/MedioAmbiente.png"
 export {default as InfoCalidad} from "../calidad/InfoCalidad.png"

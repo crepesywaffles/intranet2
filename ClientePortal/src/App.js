@@ -5,8 +5,18 @@ import 'semantic-ui-css/semantic.min.css';
 import routes from "./config/routing/routes"
 import AppRoute from "./config/routing/AppRoute"
 import "@fortawesome/fontawesome-free"
+import ReactGA from "react-ga"
+import { useEffect } from 'react';
+
+
+
+
 
 function App() {
+  ReactGA.initialize(process.env.GOOGLETRACKINGCODE)
+  useEffect(()=>(
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  ))
   return (
     <div className="App">
       <BrowserRouter>
@@ -26,4 +36,4 @@ function App() {
   );
 }
 
-export default App;
+export default (App);

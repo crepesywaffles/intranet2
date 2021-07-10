@@ -43,7 +43,7 @@ export default class Formacion extends Component {
                 <Container fluid align="center">
                     <Image src={Info} />
                 </Container>
-                <Carusel interval={3000}>
+                {/* <Carusel interval={3000}>
                     {sml && (
                         sml.Sliders.map((sl) => (
                             <Carousel.Item key={sl.id}>
@@ -54,7 +54,7 @@ export default class Formacion extends Component {
 
                         ))
                     )}
-                </Carusel>
+                </Carusel> */}
                 <Divider hidden />
                 
                 <Divider hidden />

@@ -134,6 +134,12 @@ export const CON_CALIDAD_INDICADORES={
     exact:false,
     isPrivate:true
 }
+export const CON_CALIDAD_PROGRAMAS={
+    component:containers.CON_CALIDAD_PROGRAMAS,
+    path:paths.CON_CALIDAD_PROGRAMAS,
+    exact:false,
+    isPrivate:true
+}
 export const CON_MEDIOAMBIENTE={
     component:containers.CON_MEDIOAMBIENTE,
     path:paths.CON_MEDIOAMBIENTE,
@@ -328,6 +334,102 @@ export const   CON_ACTUALIZATE_BEATRIZ={
     exact:true,
     isPrivate:true
 }
+export const   CON_FUNDADORES={
+    component:containers.CON_FUNDADORES,
+    path:paths.CON_FUNDADORES,
+    exact:true,
+    isPrivate:true
+}
+export const   CON_GERENCIA={
+    component:containers.CON_GERENCIA,
+    path:paths.CON_GERENCIA,
+    exact:true,
+    isPrivate:true
+}
+export const   CON_RECONOCIMIENTOS={
+    component:containers.CON_RECONOCIMIENTOS,
+    path:paths.CON_RECONOCIMIENTOS,
+    exact:true,
+    isPrivate:true
+}
+export const CON_COMPRAS={
+    component:containers.CON_COMPRAS,
+    path:paths.CON_COMPRAS,
+    exact:true,
+    isPrivate:true
+}
+export const CON_FINANCIERA={
+    component:containers.CON_FINANCIERA,
+    path:paths.CON_FINANCIERA,
+    exact:true,
+    isPrivate:true
+}
+export const CON_LEGAL={
+    component:containers.CON_LEGAL,
+    path:paths.CON_LEGAL,
+    exact:true,
+    isPrivate:true
+}
+export const CON_LOGISTICA={
+    component:containers.CON_LOGISTICA,
+    path:paths.CON_LOGISTICA,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MANTENIMIENTO={
+    component:containers.CON_MANTENIMIENTO,
+    path:paths.CON_MANTENIMIENTO,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MERCADEO={
+    component:containers.CON_MERCADEO,
+    path:paths.CON_MERCADEO,
+    exact:true,
+    isPrivate:true
+}
+export const CON_HELADERIAS={
+    component:containers.CON_HELADERIAS,
+    path:paths.CON_HELADERIAS,
+    exact:true,
+    isPrivate:true
+}
+export const CON_RESTAURANTES={
+    component:containers.CON_RESTAURANTES,
+    path:paths.CON_RESTAURANTES,
+    exact:true,
+    isPrivate:true
+}
+export const CON_PLANTA_HELADOS={
+    component:containers.CON_PLANTA_HELADOS,
+    path:paths.CON_PLANTA_HELADOS,
+    exact:true,
+    isPrivate:true
+}
+export const CON_PLANTA_PRODUCCION={
+    component:containers.CON_PLANTA_PRODUCCION,
+    path:paths.CON_PLANTA_PRODUCCION,
+    exact:true,
+    isPrivate:true
+}
+export const CON_SARGLAFT={
+    component:containers.CON_SARGLAFT,
+    path:paths.CON_SARGLAFT,
+    exact:true,
+    isPrivate:true
+}
+export const CON_TECNOLOGIA={
+    component:containers.CON_TECNOLOGIA,
+    path:paths.CON_TECNOLOGIA,
+    exact:true,
+    isPrivate:true
+}
+export const CON_UBICACIONES={
+    component:containers.CON_UBICACIONES,
+    path:paths.CON_UBICACIONES,
+    exact:true,
+    isPrivate:true
+}
 
 
 
@@ -356,6 +458,7 @@ export default [
     CON_CALIDAD_REQUISITOS,
     CON_CALIDAD_CORE,
     CON_CALIDAD_INDICADORES,
+    CON_CALIDAD_PROGRAMAS,
     CON_MEDIOAMBIENTE,
     CON_ACADEMIA,
     CON_ACADEMIA_ARTE,
@@ -387,6 +490,22 @@ export default [
     CON_GENTE_RESTAURANTES,
     CON_GENTE_CALL,
     CON_GENTE_CAMION,
-    CON_GENTE_COCINA
+    CON_GENTE_COCINA,
+    CON_FUNDADORES,
+    CON_GERENCIA,
+    CON_RECONOCIMIENTOS,
+    CON_COMPRAS,
+    CON_FINANCIERA,
+    CON_LEGAL,
+    CON_LOGISTICA,
+    CON_MANTENIMIENTO,
+    CON_MERCADEO,
+    CON_HELADERIAS,
+    CON_RESTAURANTES,
+    CON_PLANTA_HELADOS,
+    CON_PLANTA_PRODUCCION,
+    CON_SARGLAFT,
+    CON_TECNOLOGIA,
+    CON_UBICACIONES
 ]
 

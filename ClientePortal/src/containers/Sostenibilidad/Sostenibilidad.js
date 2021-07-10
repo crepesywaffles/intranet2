@@ -1,7 +1,7 @@
 import apiURL from "../../utils/apiURL"
 import Layout from '../../componentes/Layout/Layout'
 import {Container,Image,Grid,Button,Divider} from "semantic-ui-react"
-import {data1,data2} from "../../assets/sostenibilidad/index"
+import {data1,data2,Infosostenibilidad} from "../../assets/sostenibilidad/index"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
@@ -69,6 +69,7 @@ export default class Sostenibilidad extends Component {
         console.log(capacitador)
         return (
             <Layout>
+            <Image src={Infosostenibilidad} atl="descripción sostenibilidad"/>
             <Image src={data1} alt="Regiones" />
             <Divider hidden />
             <Grid columns='equal' verticalAlign='middle' centered >

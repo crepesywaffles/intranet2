@@ -7,10 +7,12 @@ import {Empoderamiento} from "../../assets/academia/EL/index"
 import {Grid,Image,Divider} from "semantic-ui-react"
 import {Link} from "react-router-dom"
 import *as paths from "../../config/routing/paths";
+import Infoacademia from "../../assets/academia/InfoAcademia.png"
 export default class AcademiaMain extends Component {
     render() {
         return (
             <Layout>
+                <Image src={Infoacademia}/>
                 <Grid centered={true}  verticalAlign="middle"columns={2}>
                     <Grid.Column>
                         <Image as={Link} className="botonimg" to={paths.CON_ACADEMIA_ARTE} src={ArteCultura} size="medium" />

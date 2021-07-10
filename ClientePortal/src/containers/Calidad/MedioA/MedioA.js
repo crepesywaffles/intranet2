@@ -6,7 +6,7 @@ import Modal from "../../../componentes/Modal/Modal";
 import Grupobtn from "../../../componentes/GrupoBtn/Grupobtn1"
 import apiURL from "../../../utils/apiURL"
 import *as paths from "../../../config/routing/paths"
-import {HeaderMedioA} from "../../../assets/calidad/index"
+import {HeaderMedioA,InfoMedio} from "../../../assets/calidad/index"
 import {Link} from "react-router-dom"
 import Directorio from '../../../componentes/Directorio/Directorio';
 
@@ -38,6 +38,7 @@ export default class MedioA extends Component {
         return (
             <Layout>
                 <Image as={Link} src={HeaderMedioA} to={paths.CON_CALIDAD} />
+                <Image  src={InfoMedio}/>
                 <Divider hidden />
                 <Container stackable align="center">
                     <Grid stackable centered columns={3}>

@@ -37,7 +37,7 @@ export default class Seleccion extends Component {
             <Layout>
                 <Image as={Link} to={paths.CON_DH} src={Header} />
                 <Image src={Info} />
-                <Carusel>
+                {/* <Carusel>
                     {sml && (
                         sml.slider.map((sl) => (
                             <Carousel.Item key={sl.id}>
@@ -48,7 +48,7 @@ export default class Seleccion extends Component {
 
                         ))
                     )}
-                </Carusel>
+                </Carusel> */}
                 
                 <Divider hidden />
                 <Divider hidden />

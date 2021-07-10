@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Layout from "../../../componentes/Layout/Layout"
 import { Grid, Container,Image} from "semantic-ui-react";
-import {btnAlergenos,btnHabladores,btnInstructivos,btnNoticias,btnProcedimientos,btnProgramas,btnRequisitos} from "../../../assets/calidad/main/index"
-import {HeaderCalidad} from "../../../assets/calidad/index"
+import {btnAlergenos,btnHabladores,btnInstructivos,btnNoticias,btnProcedimientos,btnRequisitos} from "../../../assets/calidad/main/index"
+import {HeaderCalidad,InfoCalidad} from "../../../assets/calidad/index"
 import Grupobtn from "../../../componentes/GrupoBtn/Grupobtn1";
 import Modal from "../../../componentes/Modal/Modal"
 import BucadorCalidad from "../../../componentes/Buscador/BuscadorCalidad"
@@ -28,6 +28,7 @@ export default class CalidadMain extends Component {
                 <Container stackable align="center">
                     <Grid stackable centered columns={3}>
                     <Image as={Link} to={paths.CON_CALIDAD} src={HeaderCalidad} />
+                    <Image  src={InfoCalidad} />
                             <Grid.Column>
                                 {directorio && directorio.map((dir)=>(
                                     <Directorio
@@ -93,13 +94,7 @@ export default class CalidadMain extends Component {
                                 >
 
                                 </Modal>
-                                <Modal
-                                    btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btnProgramas} />}
-                                    size={"fullscreen"}
-
-                                >
-
-                                </Modal>
+                                
                                 <Modal
                                     open={false}
                                     btn={<Grupobtn as={Link} path={paths.CON_CALIDAD_REQUISITOS} class={"botonimg btn"} size="medium" src={btnRequisitos} />}

@@ -48,18 +48,34 @@ export default function Layout(props) {
                                 <Link to={paths.CON_NUESTRAEMPRESA_GENTE} style={LinkStyle}>Nuestra Gente </Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/directorio-pdv" style={LinkStyle} >Nuestros reconocimientos</Link>
+                                <Link to={paths.CON_RECONOCIMIENTOS} style={LinkStyle} >Nuestros reconocimientos</Link>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <Link to={paths.CON_UBICACIONES} style={LinkStyle} >Dónde estamos</Link>
                             </Dropdown.Item>
                             
+                        </Dropdown.Menu>
+                    </Dropdown>
+                    <Dropdown style={LinkStyle} item text='RECONÓCENOS'>
+                        <Dropdown.Menu> 
+                            <Dropdown.Item>
+                                <Link style={LinkStyle} to={paths.CON_ACTUALIZATE_PODCAST} >Podcast</Link>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <Link  style={LinkStyle} to={paths.CON_ACTUALIZATE} >Entrevistas</Link>
+                            </Dropdown.Item>
+                            {/* <Dropdown.Item>
+                                <Link  style={LinkStyle} to={paths.CON_ACTUALIZATE_BEATRIZ} >Crece e inspirate con Beatriz</Link>
+                            </Dropdown.Item> */}
                         </Dropdown.Menu>
                     </Dropdown>
                     <Dropdown item text='NUESTROS EQUIPOS' style={LinkStyle}>
                         <Dropdown.Menu>
                             <Dropdown.Item>
-                                <Link to={paths.CON_DH} style={LinkStyle} >Nuestros Fundadores</Link>
+                                <Link to={paths.CON_FUNDADORES} style={LinkStyle} >Nuestros Fundadores</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/dir-admon" style={LinkStyle}>Gerencia Administrativa</Link>
+                                <Link to={paths.CON_GERENCIA} style={LinkStyle}>Gerencia Administrativa</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
                                 <Link to={paths.CON_DH} style={LinkStyle} >Dirección Desarrollo Humano</Link>
@@ -74,37 +90,40 @@ export default function Layout(props) {
                                 <Link to={paths.CON_ACADEMIA} style={LinkStyle} >Dirección Academia de las Artes</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/dir-financiera" style={LinkStyle} >Dirección Financiera</Link>
+                                <Link to={paths.CON_TECNOLOGIA} style={LinkStyle} >Dirección Tecnología</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/dir-producto-compras" style={LinkStyle} >Dirección Compras y Alimentos</Link>
+                                <Link to={paths.CON_FINANCIERA} style={LinkStyle} >Dirección Financiera</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/dir-logistica" style={LinkStyle}>Dirección Logística y Abastecimiento</Link>
+                                <Link to={paths.CON_COMPRAS} style={LinkStyle} >Dirección Compras y Alimentos</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/dir-operativa-rest" style={LinkStyle} >Dirección Operativa Restaurantes</Link>
+                                <Link to={paths.CON_LOGISTICA} style={LinkStyle}>Dirección Logística y Abastecimiento</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/dir-operativa-hel" style={LinkStyle} >Dirección Operativa Heladerías</Link>
+                                <Link to={paths.CON_RESTAURANTES} style={LinkStyle} >Dirección Operativa Restaurantes</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/dir-mantenimiento" style={LinkStyle} >Dirección de Mantenimiento</Link>
+                                <Link to={paths.CON_HELADERIAS} style={LinkStyle} >Dirección Operativa Heladerías</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/dir-planta-produccion" style={LinkStyle} >Dirección Planta de Producción</Link>
+                                <Link to={paths.CON_MANTENIMIENTO} style={LinkStyle} >Dirección de Mantenimiento</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/dir-planta-hel" style={LinkStyle} >Dirección Planta de Helados</Link>
+                                <Link to={paths.CON_PLANTA_PRODUCCION} style={LinkStyle} >Dirección Planta de Producción</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/dir-tecnologia" style={LinkStyle} >Dirección Tecnología</Link>
+                                <Link to={paths.CON_PLANTA_HELADOS} style={LinkStyle} >Dirección Planta de Helados</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/dir-innovacion" style={LinkStyle}>Dirección de Innovación</Link>
+                                <Link to={paths.CON_MERCADEO} style={LinkStyle}>Dirección de Mercadeo e Innovación</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to="/dir-innovacion" style={LinkStyle}>Dirección Legal y Administrativa</Link>
+                                <Link to={paths.CON_LEGAL} style={LinkStyle}>Dirección Legal y Administrativa</Link>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <Link to={paths.CON_SARGLAFT} style={LinkStyle}>SAGRLAFT</Link>
                             </Dropdown.Item>
                             
                         </Dropdown.Menu>
@@ -119,25 +138,13 @@ export default function Layout(props) {
                             <Dropdown.Item>
                                 <a className="a_target" target="_blanck" href="https://forms.office.com/Pages/ResponsePage.aspx?id=o-892U5X-0KhwOBKlt3QwfSJHoVqmZVGnddDUfmHRTpUNU82R0MzMjVZWUROTFpPSlBNTzhOQVpERSQlQCN0PWcu">Encuesta de prevención hogar</a>
                                 </Dropdown.Item>
-                            <Dropdown.Item>
+                            {/* <Dropdown.Item>
 
                             <a className="a_target" target="_blanck" href="http://169.48.72.72/opencart/upload/index.php?route=common/home"><strong>Tienda interna Crepes&Waffles</strong></a>
-                            </Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
-                    <Dropdown style={LinkStyle} item text='RECONOCENOS'>
-                        <Dropdown.Menu> 
-                            <Dropdown.Item>
-                                <Link style={LinkStyle} to={paths.CON_ACTUALIZATE_PODCAST} >Podcast</Link>
-                            </Dropdown.Item>
-                            <Dropdown.Item>
-                                <Link  style={LinkStyle} to={paths.CON_ACTUALIZATE} >Entrevistas</Link>
-                            </Dropdown.Item>
-                            {/* <Dropdown.Item>
-                                <Link  style={LinkStyle} to={paths.CON_ACTUALIZATE_BEATRIZ} >Crece e inspirate con Beatriz</Link>
                             </Dropdown.Item> */}
                         </Dropdown.Menu>
                     </Dropdown>
+                    
                     <Menu.Item>
                     <Button onClick={cerrarsesion} secondary>Cerrar Sesión</Button>
                     </Menu.Item>
