@@ -8,6 +8,18 @@ export const CON_HOME={
     exact:true,
     isPrivate:true
 }
+export const CON_VACUNACION={
+    component:containers.CON_VACUNACION,
+    path:paths.CON_VACUNACION,
+    exact:true,
+    isPrivate:true
+}
+export const CON_VACUNACION_GALERIA={
+    component:containers.CON_VACUNACION_GALERIA,
+    path:paths.CON_VACUNACION_GALERIA,
+    exact:true,
+    isPrivate:true
+}
 export const CON_LOGIN={
     component:containers.CON_LOGIN,
     path:paths.CON_LOGIN,
@@ -370,6 +382,42 @@ export const CON_LEGAL={
     exact:true,
     isPrivate:true
 }
+export const CON_LEGAL_CENTROSERVICIO={
+    component:containers.CON_LEGAL_CENTROSERVICIO,
+    path:paths.CON_LEGAL_CENTROSERVICIO,
+    exact:true,
+    isPrivate:true
+}
+export const CON_LEGAL_CENTROSERVICIO_DIRADMON={
+    component:containers.CON_LEGAL_CENTROSERVICIO_DIRADMON,
+    path:paths.CON_LEGAL_CENTROSERVICIO_DIRADMON,
+    exact:true,
+    isPrivate:true
+}
+export const CON_LEGAL_CENTROSERVICIO_DIRPDV={
+    component:containers.CON_LEGAL_CENTROSERVICIO_DIRPDV,
+    path:paths.CON_LEGAL_CENTROSERVICIO_DIRPDV,
+    exact:true,
+    isPrivate:true
+}
+export const CON_LEGAL_GESTIONDOCUMENTAL={
+    component:containers.CON_LEGAL_GESTIONDOCUMENTAL,
+    path:paths.CON_LEGAL_GESTIONDOCUMENTAL,
+    exact:true,
+    isPrivate:true
+}
+export const CON_LEGAL_INMUEBLES={
+    component:containers.CON_LEGAL_INMUEBLES,
+    path:paths.CON_LEGAL_INMUEBLES,
+    exact:true,
+    isPrivate:true
+}
+export const CON_LEGAL_SEGURIDAD={
+    component:containers.CON_LEGAL_SEGURIDAD,
+    path:paths.CON_LEGAL_SEGURIDAD,
+    exact:true,
+    isPrivate:true
+}
 export const CON_LOGISTICA={
     component:containers.CON_LOGISTICA,
     path:paths.CON_LOGISTICA,
@@ -415,6 +463,30 @@ export const CON_PLANTA_PRODUCCION={
 export const CON_SARGLAFT={
     component:containers.CON_SARGLAFT,
     path:paths.CON_SARGLAFT,
+    exact:true,
+    isPrivate:true
+}
+export const CON_SARGLAFT_PTEE={
+    component:containers.CON_SARGLAFT_PTEE,
+    path:paths.CON_SARGLAFT_PTEE,
+    exact:true,
+    isPrivate:true
+}
+export const CON_SARGLAFT_PTEE_VIDEOS={
+    component:containers.CON_SARGLAFT_PTEE_VIDEOS,
+    path:paths.CON_SARGLAFT_PTEE_VIDEOS,
+    exact:true,
+    isPrivate:true
+}
+export const CON_SARGLAFT_INFO={
+    component:containers.CON_SARGLAFT_INFO,
+    path:paths.CON_SARGLAFT_INFO,
+    exact:true,
+    isPrivate:true
+}
+export const CON_SARGLAFT_INFO_VIDEOS={
+    component:containers.CON_SARGLAFT_INFO_VIDEOS,
+    path:paths.CON_SARGLAFT_INFO_VIDEOS,
     exact:true,
     isPrivate:true
 }
@@ -497,6 +569,12 @@ export default [
     CON_COMPRAS,
     CON_FINANCIERA,
     CON_LEGAL,
+    CON_LEGAL_CENTROSERVICIO,
+    CON_LEGAL_CENTROSERVICIO_DIRADMON,
+    CON_LEGAL_CENTROSERVICIO_DIRPDV,
+    CON_LEGAL_GESTIONDOCUMENTAL,
+    CON_LEGAL_INMUEBLES,
+    CON_LEGAL_SEGURIDAD,
     CON_LOGISTICA,
     CON_MANTENIMIENTO,
     CON_MERCADEO,
@@ -505,7 +583,13 @@ export default [
     CON_PLANTA_HELADOS,
     CON_PLANTA_PRODUCCION,
     CON_SARGLAFT,
+    CON_SARGLAFT_PTEE,
+    CON_SARGLAFT_INFO,
+    CON_SARGLAFT_INFO_VIDEOS,
+    CON_SARGLAFT_PTEE_VIDEOS,
     CON_TECNOLOGIA,
-    CON_UBICACIONES
+    CON_UBICACIONES,
+    CON_VACUNACION,
+    CON_VACUNACION_GALERIA
 ]
 

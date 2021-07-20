@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import Layout from "../../../../componentes/Layout/Layout"
 import apiURL from "../../../../utils/apiURL";
-import Modal from "../../../../componentes/Modal/ModalT"
 import "./Galeria.css"
-import { EditorVerticalAlignBottom } from 'material-ui/svg-icons';
+
 
 
 

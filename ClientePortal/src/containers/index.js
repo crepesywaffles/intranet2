@@ -1,4 +1,6 @@
 import CON_HOME from "../containers/Home/Home";
+import CON_VACUNACION  from "../containers/Home/Vacunación/Vacunacion"
+import CON_VACUNACION_GALERIA from "../containers/Home/Vacunación/Galeria"
 import CON_LOGIN from "../containers/Login/Login";
 import CON_DH from "../containers/DH/Dh"
 import CON_DH_BIENESTAR from "../containers/DH/Areas/Bienestar/Bienestar"
@@ -59,6 +61,12 @@ import CON_CALIDAD_PROGRAMAS from "../containers/Calidad/Programas"
 import CON_COMPRAS from "../containers/Compras/Compras"
 import CON_FINANCIERA from "../containers/Financiera/Financiera"
 import CON_LEGAL from "../containers/Legaladmin/Legal"
+import CON_LEGAL_CENTROSERVICIO from "../containers/Legaladmin/CentroServicio/CentroServicio"
+import CON_LEGAL_CENTROSERVICIO_DIRADMON  from "../containers/Legaladmin/CentroServicio/Directorioadmon";
+import CON_LEGAL_CENTROSERVICIO_DIRPDV from "../containers/Legaladmin/CentroServicio/Directoriopdv";
+import CON_LEGAL_GESTIONDOCUMENTAL  from "../containers/Legaladmin/GestionDocu/GestionDocu";
+import CON_LEGAL_INMUEBLES from "../containers/Legaladmin/Inmuebles/Inmuebles";
+import CON_LEGAL_SEGURIDAD from "../containers/Legaladmin/Seguridad/Seguridad"
 import CON_LOGISTICA from "../containers/Logistica/Logistica"
 import CON_MANTENIMIENTO from "../containers/Mantenimiento/Mantenimiento"
 import CON_MERCADEO from "../containers/Mercadeo/Mercadeo"
@@ -67,8 +75,13 @@ import CON_RESTAURANTES from "../containers/Orestaurantes/Restaurantes"
 import CON_PLANTA_HELADOS from "../containers/Plantahelados/Plantahelados"
 import CON_PLANTA_PRODUCCION from "../containers/Plantaproducion/Plantaproduccion"
 import CON_SARGLAFT from "../containers/Sarglaft/Sarglaft"
+import CON_SARGLAFT_PTEE from "../containers/Sarglaft/Ptee"
 import CON_TECNOLOGIA from "../containers/Tecnologia/Tecnologia"
 import CON_UBICACIONES from "../containers/Nuestra/Lugares"
+import CON_SARGLAFT_INFO  from "../containers/Sarglaft/Info"
+import CON_SARGLAFT_INFO_VIDEOS from "../containers/Sarglaft/Info_videos"
+import CON_SARGLAFT_PTEE_VIDEOS from "../containers/Sarglaft/Ptee_videos"
+
 
 
 export default {
@@ -141,7 +154,19 @@ export default {
     CON_PLANTA_HELADOS,
     CON_PLANTA_PRODUCCION,
     CON_SARGLAFT,
+    CON_SARGLAFT_PTEE,
+    CON_SARGLAFT_INFO,
+    CON_SARGLAFT_INFO_VIDEOS,
+    CON_SARGLAFT_PTEE_VIDEOS,
     CON_TECNOLOGIA,
-    CON_UBICACIONES
+    CON_UBICACIONES,
+    CON_LEGAL_CENTROSERVICIO,
+    CON_LEGAL_CENTROSERVICIO_DIRADMON,
+    CON_LEGAL_CENTROSERVICIO_DIRPDV,
+    CON_LEGAL_GESTIONDOCUMENTAL,
+    CON_LEGAL_INMUEBLES,
+    CON_LEGAL_SEGURIDAD,
+    CON_VACUNACION,
+    CON_VACUNACION_GALERIA
 
 }

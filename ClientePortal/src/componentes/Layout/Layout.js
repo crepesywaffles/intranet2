@@ -123,7 +123,7 @@ export default function Layout(props) {
                                 <Link to={paths.CON_LEGAL} style={LinkStyle}>Dirección Legal y Administrativa</Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
-                                <Link to={paths.CON_SARGLAFT} style={LinkStyle}>SAGRLAFT</Link>
+                                <Link to={paths.CON_SARGLAFT} style={LinkStyle}>SAGRILAFT</Link>
                             </Dropdown.Item>
                             
                         </Dropdown.Menu>

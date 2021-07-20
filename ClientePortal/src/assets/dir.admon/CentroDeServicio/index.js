@@ -1,0 +1,6 @@
+export {default as Directorioadmon} from "../CentroDeServicio/BotonesDirectorioAdministracion.png"
+export {default as Directoriopdv} from "../CentroDeServicio/BotonesDirectorioPDV.png"
+export {default as Horarios} from "../CentroDeServicio/BotonesHorarios.png"
+export {default as Recomendaciones} from "../CentroDeServicio/BotonesRecomendaciones.png"
+export {default as header} from "../CentroDeServicio/CabezoteCentroServicio.png"
+export {default as mision} from "../CentroDeServicio/MisionesCentroServicio.png"

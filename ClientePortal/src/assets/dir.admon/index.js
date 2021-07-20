@@ -1,0 +1,5 @@
+export {default as CentroServicio} from "../dir.admon/BotonesCentroServicio.png"
+export {default as GestionDocumenta} from "../dir.admon/BotonesGestionDocumental.png"
+export {default as Inmuebles} from "../dir.admon/BotonesInmuebles.png"
+export {default as Seguridad} from "../dir.admon/BotonesSeguridad.png"
+export {default as header} from "../dir.admon/CabezoteDIRLegalAdmin.png"

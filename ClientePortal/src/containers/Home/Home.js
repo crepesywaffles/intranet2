@@ -8,6 +8,7 @@ import Boton3 from "../../assets/home/BotonBeneficios.png"
 import Boton4 from "../../assets/home/BotonCOVID19.png"
 import Boton5 from "../../assets/home/BotonCumpleaños.png"
 import Boton6 from "../../assets/home/BotonEcommerce.png"
+import {Vacunacion} from "../../assets/vacunacion/index"
 
 import "../Home/Home.css"
 import { Component } from 'react'
@@ -86,9 +87,10 @@ class Home extends Component {
                                 {/* <Image as="a" target="_blanck" href="http://169.48.72.72/opencart/upload/index.php?route=common/home" className="botonimg" rounded src={Boton6} /> */}
                                 {/* <Image className="botonimg" as="a" target="_blanck" href="https://manual.crepesywaffles.com:8090/Login.aspx?ReturnUrl=%2fdefault.aspx"rounded src={Boton1} />
                                 <Image className="botonimg" rounded src={Boton2} /> */}
+                                <Image as={Link} to={paths.CON_VACUNACION} className="botonimg" rounded src={Vacunacion} />
                                 <Image as={Link} to={paths.CON_DH_BIENESTAR} className="botonimg" rounded src={Boton3} />
                                 <Image as={Link} to={paths.CON_DH_SST_COVID} className="botonimg" rounded src={Boton4} />
-                                {/* <Image className="botonimg" rounded src={Boton5} /> */}
+                                <Image className="botonimg" rounded />
                             </Image.Group>
                         </Container>
                     </Grid.Column>

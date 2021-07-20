@@ -1,5 +1,14 @@
 /* Globales */
-
+.con_numero_vacunas{
+  position: relative;
+}
+.numero_vacunas{
+  position: absolute;
+  z-index: 1;
+  left: 61%;
+  top:48%;
+  font-size: 60px;
+}
 .botonimg:hover{
     -webkit-transition: all 1.2s ease;
     -moz-transition: all 1.2s ease;
