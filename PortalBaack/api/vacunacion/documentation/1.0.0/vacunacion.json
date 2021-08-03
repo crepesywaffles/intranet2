@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/noticias-inocuidads": {
+    "/vacunacions": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,10 +10,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Vacunacion"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Noticias-inocuidad"
+          "Vacunacion"
         ],
         "parameters": [
           {
@@ -202,11 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Vacunacion"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Noticias-inocuidad"
+          "Vacunacion"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewNoticias-inocuidad"
+                "$ref": "#/components/schemas/NewVacunacion"
               }
             }
           }
         }
       }
     },
-    "/noticias-inocuidads/count": {
+    "/vacunacions/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -270,8 +265,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Noticias-inocuidad"
+          "Vacunacion"
         ],
         "parameters": []
       }
     },
-    "/noticias-inocuidads/{id}": {
+    "/vacunacions/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -326,11 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Vacunacion"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Noticias-inocuidad"
+          "Vacunacion"
         ],
         "parameters": [
           {
@@ -392,11 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Vacunacion"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Noticias-inocuidad"
+          "Vacunacion"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewNoticias-inocuidad"
+                "$ref": "#/components/schemas/NewVacunacion"
               }
             }
           }
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Noticias-inocuidad"
+          "Vacunacion"
         ],
         "parameters": [
           {
@@ -527,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Noticias-inocuidad": {
+      "Vacunacion": {
         "required": [
           "id"
         ],
@@ -535,7 +522,7 @@
           "id": {
             "type": "string"
           },
-          "noticia": {
+          "fotos": {
             "type": "array",
             "items": {
               "required": [
@@ -605,11 +592,75 @@
               }
             }
           },
-          "area": {
-            "type": "string"
+          "numero_vacunas": {
+            "type": "integer"
           },
-          "categoria": {
-            "type": "string"
+          "abc": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -617,13 +668,10 @@
           }
         }
       },
-      "NewNoticias-inocuidad": {
+      "NewVacunacion": {
         "properties": {
-          "area": {
-            "type": "string"
-          },
-          "categoria": {
-            "type": "string"
+          "numero_vacunas": {
+            "type": "integer"
           },
           "published_at": {
             "type": "string",
@@ -639,5 +687,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Vacunacion"
+    }
+  ]
 }

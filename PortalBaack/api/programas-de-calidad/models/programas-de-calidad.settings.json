@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "noticias_inocuidads",
+  "collectionName": "programas_de_calidads",
   "info": {
-    "name": "Noticias_inocuidad",
+    "name": "programas de calidad",
     "description": ""
   },
   "options": {
@@ -11,7 +11,10 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "noticia": {
+    "categoria": {
+      "type": "text"
+    },
+    "documentos": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -22,11 +25,10 @@
       "plugin": "upload",
       "required": false
     },
-    "area": {
-      "type": "text"
-    },
-    "categoria": {
-      "type": "text"
+    "anexos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "anexo.anexo"
     }
   }
 }

@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "noticias_inocuidads",
+  "collectionName": "vacunacions",
   "info": {
-    "name": "Noticias_inocuidad",
-    "description": ""
+    "name": "vacunacion"
   },
   "options": {
     "increments": true,
@@ -11,7 +10,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "noticia": {
+    "fotos": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -22,11 +21,19 @@
       "plugin": "upload",
       "required": false
     },
-    "area": {
-      "type": "text"
+    "numero_vacunas": {
+      "type": "integer"
     },
-    "categoria": {
-      "type": "text"
+    "abc": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

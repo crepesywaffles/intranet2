@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/programas-de-calidads",
+      "handler": "programas-de-calidad.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/programas-de-calidads/count",
+      "handler": "programas-de-calidad.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/programas-de-calidads/:id",
+      "handler": "programas-de-calidad.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/programas-de-calidads",
+      "handler": "programas-de-calidad.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/programas-de-calidads/:id",
+      "handler": "programas-de-calidad.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/programas-de-calidads/:id",
+      "handler": "programas-de-calidad.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/facturacions",
+      "handler": "facturacion.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/facturacions/count",
+      "handler": "facturacion.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/facturacions/:id",
+      "handler": "facturacion.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/facturacions",
+      "handler": "facturacion.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/facturacions/:id",
+      "handler": "facturacion.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/facturacions/:id",
+      "handler": "facturacion.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "kind": "collectionType",
+  "collectionName": "facturacions",
+  "info": {
+    "name": "facturación",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "documento_equivalente": {
+      "type": "biginteger",
+      "required": true
+    },
+    "file_doc_equivalente": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "pais": {
+      "type": "enumeration",
+      "enum": [
+        "Colombia"
+      ],
+      "required": true
+    },
+    "Restaurante": {
+      "type": "enumeration",
+      "enum": [
+        "Bogota",
+        "Bucaramanga",
+        "Villavicencio",
+        "Medellin",
+        "Cali",
+        "Manizales",
+        "Pereira",
+        "Cartagena",
+        "SantaMarta",
+        "Barranquilla"
+      ],
+      "required": true
+    },
+    "solicitante": {
+      "type": "text",
+      "required": true
+    },
+    "rut": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "nombre_exp_factura": {
+      "type": "string",
+      "required": true
+    },
+    "correo_exp_factura": {
+      "type": "email",
+      "required": true
+    },
+    "telefono": {
+      "type": "biginteger",
+      "required": true
+    },
+    "contacto_facturacion": {
+      "type": "biginteger",
+      "required": true
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": [
+        "Pendiente",
+        "Enviado"
+      ],
+      "default": "Pendiente"
+    }
+  }
+}

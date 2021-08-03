@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/noticias-inocuidads": {
+    "/facturacions": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,10 +10,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Facturacion"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Noticias-inocuidad"
+          "Facturacion"
         ],
         "parameters": [
           {
@@ -202,11 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Facturacion"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Noticias-inocuidad"
+          "Facturacion"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewNoticias-inocuidad"
+                "$ref": "#/components/schemas/NewFacturacion"
               }
             }
           }
         }
       }
     },
-    "/noticias-inocuidads/count": {
+    "/facturacions/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -270,8 +265,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Noticias-inocuidad"
+          "Facturacion"
         ],
         "parameters": []
       }
     },
-    "/noticias-inocuidads/{id}": {
+    "/facturacions/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -326,11 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Facturacion"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Noticias-inocuidad"
+          "Facturacion"
         ],
         "parameters": [
           {
@@ -392,11 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Facturacion"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Noticias-inocuidad"
+          "Facturacion"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewNoticias-inocuidad"
+                "$ref": "#/components/schemas/NewFacturacion"
               }
             }
           }
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Noticias-inocuidad"
+          "Facturacion"
         ],
         "parameters": [
           {
@@ -527,107 +514,265 @@
   },
   "components": {
     "schemas": {
-      "Noticias-inocuidad": {
+      "Facturacion": {
         "required": [
-          "id"
+          "id",
+          "documento_equivalente",
+          "file_doc_equivalente",
+          "pais",
+          "Restaurante",
+          "solicitante",
+          "rut",
+          "nombre_exp_factura",
+          "correo_exp_factura",
+          "telefono",
+          "contacto_facturacion"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "noticia": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
+          "documento_equivalente": {
+            "type": "integer"
+          },
+          "file_doc_equivalente": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
-          "area": {
-            "type": "string"
-          },
-          "categoria": {
-            "type": "string"
-          },
-          "published_at": {
+          "pais": {
             "type": "string",
-            "format": "date-time"
+            "enum": [
+              "Colombia"
+            ]
+          },
+          "Restaurante": {
+            "type": "string",
+            "enum": [
+              "Bogota",
+              "Bucaramanga",
+              "Villavicencio",
+              "Medellin",
+              "Cali",
+              "Manizales",
+              "Pereira",
+              "Cartagena",
+              "SantaMarta",
+              "Barranquilla"
+            ]
+          },
+          "solicitante": {
+            "type": "string"
+          },
+          "rut": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "nombre_exp_factura": {
+            "type": "string"
+          },
+          "correo_exp_factura": {
+            "type": "string"
+          },
+          "telefono": {
+            "type": "integer"
+          },
+          "contacto_facturacion": {
+            "type": "integer"
+          },
+          "estado": {
+            "type": "string",
+            "default": "Pendiente",
+            "enum": [
+              "Pendiente",
+              "Enviado"
+            ]
           }
         }
       },
-      "NewNoticias-inocuidad": {
+      "NewFacturacion": {
+        "required": [
+          "documento_equivalente",
+          "pais",
+          "Restaurante",
+          "solicitante",
+          "nombre_exp_factura",
+          "correo_exp_factura",
+          "telefono",
+          "contacto_facturacion"
+        ],
         "properties": {
-          "area": {
-            "type": "string"
+          "documento_equivalente": {
+            "type": "integer"
           },
-          "categoria": {
-            "type": "string"
-          },
-          "published_at": {
+          "pais": {
             "type": "string",
-            "format": "date-time"
+            "enum": [
+              "Colombia"
+            ]
+          },
+          "Restaurante": {
+            "type": "string",
+            "enum": [
+              "Bogota",
+              "Bucaramanga",
+              "Villavicencio",
+              "Medellin",
+              "Cali",
+              "Manizales",
+              "Pereira",
+              "Cartagena",
+              "SantaMarta",
+              "Barranquilla"
+            ]
+          },
+          "solicitante": {
+            "type": "string"
+          },
+          "nombre_exp_factura": {
+            "type": "string"
+          },
+          "correo_exp_factura": {
+            "type": "string"
+          },
+          "telefono": {
+            "type": "integer"
+          },
+          "contacto_facturacion": {
+            "type": "integer"
+          },
+          "estado": {
+            "type": "string",
+            "default": "Pendiente",
+            "enum": [
+              "Pendiente",
+              "Enviado"
+            ]
           },
           "created_by": {
             "type": "string"
@@ -639,5 +784,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Facturacion"
+    }
+  ]
 }

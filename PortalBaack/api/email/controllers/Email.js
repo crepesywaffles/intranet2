@@ -16,8 +16,8 @@ module.exports = {
     try {
       const emailOptions = {
         to: sendTo,
-        subject: 'This is a test',
-        html: `<h1>Welcome!</h1><p>This is a test HTML email.</p>`,
+        subject: 'Test de prueba de envio correo',
+        html: `<h1>Hola!</h1><p>Prueba servicio correos SMTP portal-artesanos (servidor Centos7 CYW)</p>`,
       }
       await strapi.plugins['email'].services.email.send(emailOptions)
       strapi.log.debug(`Email sent to ${sendTo}`)
