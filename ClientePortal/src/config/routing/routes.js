@@ -119,9 +119,40 @@ export const CON_CALIDAD_CORE={
 export const CON_CALIDAD_NOTICIAS={
     component:containers.CON_CALIDAD_NOTICIAS,
     path:paths.CON_CALIDAD_NOTICIAS,
+    exact:true,
+    isPrivate:true
+}
+export const CON_CALIDAD_NOTICIAS_ALERGENOS={
+    component:containers.CON_CALIDAD_NOTICIAS_ALERGENOS,
+    path:paths.CON_CALIDAD_NOTICIAS_ALERGENOS,
     exact:false,
     isPrivate:true
 }
+export const CON_CALIDAD_NOTICIAS_DOCUMENTACION={
+    component:containers.CON_CALIDAD_NOTICIAS_DOCUMENTACION,
+    path:paths.CON_CALIDAD_NOTICIAS_DOCUMENTACION,
+    exact:false,
+    isPrivate:true
+}
+export const CON_CALIDAD_NOTICIAS_LYD={
+    component:containers.CON_CALIDAD_NOTICIAS_LYD,
+    path:paths.CON_CALIDAD_NOTICIAS_LYD,
+    exact:false,
+    isPrivate:true
+}
+export const CON_CALIDAD_NOTICIAS_PLAGAS={
+    component:containers.CON_CALIDAD_NOTICIAS_PLAGAS,
+    path:paths.CON_CALIDAD_NOTICIAS_PLAGAS,
+    exact:false,
+    isPrivate:true
+}
+export const CON_CALIDAD_NOTICIAS_PRODUCTO={
+    component:containers.CON_CALIDAD_NOTICIAS_PRODUCTO,
+    path:paths.CON_CALIDAD_NOTICIAS_PRODUCTO,
+    exact:false,
+    isPrivate:true
+}
+
 export const CON_CALIDAD_HABLADORES={
     component:containers.CON_CALIDAD_HABLADORES,
     path:paths.CON_CALIDAD_HABLADORES,
@@ -502,6 +533,18 @@ export const CON_UBICACIONES={
     exact:true,
     isPrivate:true
 }
+export const CON_FORM_FACTURACION={
+    component:containers.CON_FORM_FACTURACION,
+    path:paths.CON_FORM_FACTURACION,
+    exact:true,
+    isPrivate:false
+}
+export const CON_ADMIN_FACTURACION={
+    component:containers.CON_ADMIN_FACTURACION,
+    path:paths.CON_ADMIN_FACTURACION,
+    exact:true,
+    isPrivate:true
+}
 
 
 
@@ -525,6 +568,11 @@ export default [
     CON_DH_SST_COVID_GALERIA,
     CON_CALIDAD,
     CON_CALIDAD_NOTICIAS,
+    CON_CALIDAD_NOTICIAS_ALERGENOS,
+    CON_CALIDAD_NOTICIAS_DOCUMENTACION,
+    CON_CALIDAD_NOTICIAS_LYD,
+    CON_CALIDAD_NOTICIAS_PLAGAS,
+    CON_CALIDAD_NOTICIAS_PRODUCTO,
     CON_CALIDAD_HABLADORES,
     CON_CALIDAD_PROCEDIMIENTOS,
     CON_CALIDAD_REQUISITOS,
@@ -590,6 +638,8 @@ export default [
     CON_TECNOLOGIA,
     CON_UBICACIONES,
     CON_VACUNACION,
-    CON_VACUNACION_GALERIA
+    CON_VACUNACION_GALERIA,
+    CON_ADMIN_FACTURACION,
+    CON_FORM_FACTURACION
 ]
 

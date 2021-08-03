@@ -1,9 +1,9 @@
 import React from 'react'
 import Layout from "../../componentes/Layout/Layout"
-import { Container, Grid, Image } from "semantic-ui-react";
+import { Container, Grid, Image,Divider} from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import *as paths from "../../config/routing/paths";
-import {btn1,btn2,btn3,btn4} from "../../assets/calidad/index"
+import {btn1,btn2,btn3,btn4,HeaderCYM} from "../../assets/calidad/index"
 import Modal from "../../componentes/Modal/Modal"
 import Grupobtn from "../../componentes/GrupoBtn/Grupobtn1"
 
@@ -11,6 +11,8 @@ import Grupobtn from "../../componentes/GrupoBtn/Grupobtn1"
 export default function Calidad() {
     return (
         <Layout>
+            <Image src={HeaderCYM} />
+            <Divider hidden />
             <Container stackable align="center">
                     <Grid stackable centered columns={4}>
                         <Grid.Row>
@@ -29,6 +31,7 @@ export default function Calidad() {
                         </Grid.Row>
                     </Grid>
                 </Container>
+                <Divider hidden />
         </Layout>
     )
 }
