@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Layout from "../../../componentes/Layout/Layout";
-import { btnhabladores , btninstructivos, btnnoticias , btnprogramas} from "../../../assets/calidad/M.A/index"
+import {procesos,aspectosGenerales,Indicadores,Mundodehoy,NoticiasMA} from "../../../assets/calidad/M.A/index"
 import { Grid, Container,Image,Divider} from "semantic-ui-react";
 import Modal from "../../../componentes/Modal/Modal";
 import Grupobtn from "../../../componentes/GrupoBtn/Grupobtn1"
@@ -41,8 +41,8 @@ export default class MedioA extends Component {
                 <Image  src={InfoMedio}/>
                 <Divider hidden />
                 <Container stackable align="center">
-                    <Grid stackable centered columns={3}>
-                    <Grid.Column>
+                    <Grid stackable centered>
+                    <Grid.Column width={7}>
                                 {directorio && directorio.map((dir)=>(
                                     <Directorio
                                         key={dir.id}
@@ -51,55 +51,19 @@ export default class MedioA extends Component {
                                         email={dir.Correo}
                                     />
                                 ))}
-                            </Grid.Column>
-                            <Grid.Column >
-                            <Modal
-                                    btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btnhabladores} />}
-                                    size={"fullscreen"}
-                                >
-                                    {habladores && habladores.map((img) => (
-                                        img.map((im) => (
-                                            <div className="container-habladores">
-                                                <img src={`${im.url}`} />
-                                            </div>
-
-                                        ))
-                                    ))}
-                                </Modal>
-                                <Modal
-                                    btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btninstructivos} />}
-                                    size={"fullscreen"}
-                                >
-                                    <Modal
-                                        btn={<div as="buttom"className="div-btn">Abastecimiento C.C</div>}
-                                        size={"fullscreen"}
-                                    >
-                                        <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=vhfra00n30" width="100%" height="750" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
-                                    </Modal>
-                                    <Modal
-                                        btn={<div as="buttom"className="div-btn">Abastecimiento punto externo</div>}
-                                        size={"fullscreen"}
-                                    >
-                                        <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=1un23ii1ci" width="100%" height="750" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
-                                    </Modal>
-                                </Modal>
-                            </Grid.Column>
-                            <Grid.Column>
-                            <Modal
-                                    btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btnnoticias} />}
-                                    size={"fullscreen"}
-                                >
-                                    {noticiasmedio && noticiasmedio.noticia.map((noticia)=>(
-                                        <img src={`${noticia.url}`}/>
-                                    ))}
-                                </Modal>
-                                <Modal
-                                    btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btnprogramas} />}
-                                    size={"fullscreen"}
-                                >
-                                    
-                                </Modal>
-                            </Grid.Column>
+                    </Grid.Column>
+                    <Grid.Column width={8}>
+                    <Grid.Row >
+                        <Image src={aspectosGenerales} size="small" className="botonimg p-2"/>
+                        <Image src={procesos} size="small" className="botonimg p-2"/>
+                        <Image src={Mundodehoy} size="small" className="botonimg p-2"/>
+                    </Grid.Row>
+                    <Divider hidden/>
+                    <Grid.Row>
+                        <Image src={NoticiasMA} size="small" className="botonimg p-2"/>
+                        <Image src={Indicadores} size="small" className="botonimg p-2"/>
+                    </Grid.Row>
+                    </Grid.Column>
                     </Grid>
                 </Container>
             </Layout>

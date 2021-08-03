@@ -17,6 +17,11 @@ import CON_DH_SST_COVID from "../containers/DH/Areas/SST/Covid"
 import CON_DH_SST_COVID_GALERIA from "../containers/DH/Areas/SST/Galeria";
 import CON_CALIDAD from "../containers/Calidad/Calidad"
 import CON_CALIDAD_NOTICIAS from "../containers/Calidad/CalidadCore/GaleriaNoticias"
+import CON_CALIDAD_NOTICIAS_ALERGENOS from "../containers/Calidad/NoticiasCalidad/Alergenos"
+import CON_CALIDAD_NOTICIAS_DOCUMENTACION from "../containers/Calidad/NoticiasCalidad/Documentacion"
+import CON_CALIDAD_NOTICIAS_LYD from "../containers/Calidad/NoticiasCalidad/Limpiezaydesinfeccion"
+import CON_CALIDAD_NOTICIAS_PLAGAS from "../containers/Calidad/NoticiasCalidad/Manejoplagas"
+import CON_CALIDAD_NOTICIAS_PRODUCTO from "../containers/Calidad/NoticiasCalidad/ManejoProducto"
 import CON_CALIDAD_HABLADORES from "../containers/Calidad/CalidadCore/Habladores"
 import CON_CALIDAD_PROCEDIMIENTOS  from "../containers/Calidad/CalidadCore/ProcedimeintosE"
 import CON_CALIDAD_REQUISITOS  from "../containers/Calidad/CalidadCore/RequisitosH"
@@ -81,6 +86,8 @@ import CON_UBICACIONES from "../containers/Nuestra/Lugares"
 import CON_SARGLAFT_INFO  from "../containers/Sarglaft/Info"
 import CON_SARGLAFT_INFO_VIDEOS from "../containers/Sarglaft/Info_videos"
 import CON_SARGLAFT_PTEE_VIDEOS from "../containers/Sarglaft/Ptee_videos"
+import CON_FORM_FACTURACION from "../containers/Financiera/FormFacturación"
+import CON_ADMIN_FACTURACION from "../containers/Financiera/AdminFacturacion"
 
 
 
@@ -105,6 +112,11 @@ export default {
     CON_CALIDAD_INDICADORES,
     CON_MEDIOAMBIENTE,
     CON_CALIDAD_NOTICIAS,
+    CON_CALIDAD_NOTICIAS_ALERGENOS,
+    CON_CALIDAD_NOTICIAS_DOCUMENTACION,
+    CON_CALIDAD_NOTICIAS_LYD,
+    CON_CALIDAD_NOTICIAS_PLAGAS,
+    CON_CALIDAD_NOTICIAS_PRODUCTO,
     CON_CALIDAD_HABLADORES,
     CON_CALIDAD_PROCEDIMIENTOS,
     CON_CALIDAD_REQUISITOS,
@@ -167,6 +179,8 @@ export default {
     CON_LEGAL_INMUEBLES,
     CON_LEGAL_SEGURIDAD,
     CON_VACUNACION,
-    CON_VACUNACION_GALERIA
+    CON_VACUNACION_GALERIA,
+    CON_FORM_FACTURACION,
+    CON_ADMIN_FACTURACION
 
 }

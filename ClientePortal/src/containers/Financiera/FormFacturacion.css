@@ -1,0 +1,49 @@
+.main{
+background-color:#fff8e8 ;
+}
+
+
+.Header{
+    height: 70px;
+    text-align: center;
+    padding-top: 15px;
+    
+}
+.container-form{
+    height: 100vh;
+}
+.separador{
+    height: 20px;
+    background-color:#bb4129 ;
+}
+.btn-custom{
+    background-color: #bb4129;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 60px;
+}
+.title-form{
+    background-color: #3C1E1B;
+    width: 210px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    margin: 10px;
+}
+.pri-label{
+    font-size: 16px;
+    font-weight: bold;
+}
+.form-file{
+    width: 100%;
+    font-weight: bold;
+}
+.select-form{
+    width:635px;
+}
+@media (max-width: 600px) {
+    .select-form{
+        width:280px;
+    }
+  }

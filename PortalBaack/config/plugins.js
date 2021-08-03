@@ -1,5 +1,4 @@
 module.exports = ({ env }) => ({
-    
     email: {
       provider: env('EMAIL_PROVIDER'),
       providerOptions: {

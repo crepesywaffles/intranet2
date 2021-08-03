@@ -13,10 +13,10 @@
     "@testing-library/user-event": "^12.1.10",
     "@zoomus/websdk": "^1.8.6",
     "axios": "^0.21.1",
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^5.0.2",
     "material-ui": "^0.20.2",
     "react": "^17.0.1",
-    "react-bootstrap": "^1.4.0",
+    "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "^17.0.1",
     "react-ga": "^3.3.0",
     "react-player": "^2.9.0",
@@ -26,6 +26,7 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.1",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.0",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
