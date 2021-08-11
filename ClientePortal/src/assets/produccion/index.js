@@ -1,0 +1,5 @@
+export {default as Actividades} from "./BtnActividadesCocina.png"
+export {default as ConoceCocina} from "./BtnConoceCocina.png"
+export {default as Mural} from "./BtnMural2021.png"
+export {default as Practicas} from "./BtnPracticasManufactura.png"
+export {default as Salsas} from "./BtnSalsasCasa.png"

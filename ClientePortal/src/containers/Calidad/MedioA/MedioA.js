@@ -54,9 +54,9 @@ export default class MedioA extends Component {
                     </Grid.Column>
                     <Grid.Column width={8}>
                     <Grid.Row >
-                        <Image src={aspectosGenerales} size="small" className="botonimg p-2"/>
+                        <Image as={Link} to={paths.CON_MEDIOAMBIENTE_ASPECTOSGENERALES} src={aspectosGenerales} size="small" className="botonimg p-2"/>
                         <Image src={procesos} size="small" className="botonimg p-2"/>
-                        <Image src={Mundodehoy} size="small" className="botonimg p-2"/>
+                        <Image as={Link} to={paths.CON_MEDIOAMBIENTE_MUNDODEHOY}src={Mundodehoy} size="small" className="botonimg p-2"/>
                     </Grid.Row>
                     <Divider hidden/>
                     <Grid.Row>

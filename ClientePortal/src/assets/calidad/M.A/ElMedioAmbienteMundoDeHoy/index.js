@@ -1,0 +1,8 @@
+export {default as Biodiversidad} from "./BTNBiodiversidad.png"
+export {default as Calendario} from "./BTNCalendarioAmbiental.png"
+export {default as CambioClimatico} from "./BTNCambioClimatico.png"
+export {default as ConsumoAgua} from "./BTNConsumoAgua.png"
+export {default as EconomiaCircular} from "./BTNEconomiaCircular.png"
+export {default as ODS} from "./BTNODSC&W.png"
+export {default as ResiduosSolidos} from "./BTNResiduosSolidos.png"
+export {default as ServiciosEco} from "./BTNServiciosEcosistemicos.png"
