@@ -12,15 +12,7 @@ import "../../Sostenibilidad/Sostenibilidad.css"
 import *as paths from "../../../config/routing/paths"
 
 export default class GaleriaNoticias extends Component {
-    state = {
-        img: []
     
-      };
-      componentDidMount() {
-        fetch(`${apiURL}/noticias-inocuidads`)
-          .then((res) => res.json())
-          .then((res) => this.setState({ img: res }));
-      }
     
     render() {
         const LinkStyle = {

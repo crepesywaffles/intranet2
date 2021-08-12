@@ -36,7 +36,7 @@ function handleSubmit(e) {
   .then(response => {
     // Handle success.
     localStorage.setItem('Usertoken', response.data.jwt);
-    localStorage.setItem('Rol', response.data.rol);
+    localStorage.setItem('Rol', response.data.user.rol);
   })
   .catch(error => {
     // Handle error.

@@ -28,6 +28,23 @@ import CON_CALIDAD_REQUISITOS  from "../containers/Calidad/CalidadCore/Requisito
 import CON_CALIDAD_CORE from "./Calidad/CalidadCore/CalidadMain";
 import CON_CALIDAD_INDICADORES from "./Calidad/Indicadores";
 import CON_MEDIOAMBIENTE from "./Calidad/MedioA/MedioA";
+import CON_MEDIOAMBIENTE_ASPECTOSGENERALES from "./Calidad/MedioA/AspectosGenerales/AspectosGenerales"
+import CON_MA_ASPECTOS_AGUARESIDUAL from "./Calidad/MedioA/AspectosGenerales/AguaResidual"
+import CON_MA_ASPECTOS_ENERGIA from "./Calidad/MedioA/AspectosGenerales/Energia"
+import CON_MA_ASPECTOS_AGUAPOTABLE from "./Calidad/MedioA/AspectosGenerales/AguaPotable"
+import CON_MA_ASPECTOS_RESIDUOS from "./Calidad/MedioA/AspectosGenerales/ResiduosSolidos"
+import CON_MA_ASPECTOS_ECONOMIA from "./Calidad/MedioA/AspectosGenerales/Economia"
+import CON_MEDIOAMBIENTE_MUNDODEHOY from "./Calidad/MedioA/MedioAmbienteMundo/MedioAmbienteMundo"
+import CON_MEDIOAMBIENTE_ASPECTOSAMBIENTALES from "./Calidad/MedioA/AspectosAmbientales/AspectosAmbientales"
+import CON_MEDIOAMBIENTE_NOTICIAS from "./Calidad/MedioA/NoticiasMA/NoticiasMA"
+import CON_MEDIOAMBIENTE_NOTICIAS_AGUAPOTABLE  from "./Calidad/MedioA/NoticiasMA/AguaPotable"
+import CON_MEDIOAMBIENTE_NOTICIAS_AGUARESIDUAL from "./Calidad/MedioA/NoticiasMA/AguaResidual"
+import CON_MEDIOAMBIENTE_NOTICIAS_PEDIDOS from "./Calidad/MedioA/NoticiasMA/Pedidos"
+import CON_MEDIOAMBIENTE_NOTICIAS_RESIDUOS from "./Calidad/MedioA/NoticiasMA/ResiduosSolidos"
+import CON_MA_ASPECTOSAMBIENTALES_COCINACENTRAL from "./Calidad/MedioA/AspectosAmbientales/CocinaCentral"
+import CON_MA_ASPECTOSAMBIENTALES_COCINABUCARA from "./Calidad/MedioA/AspectosAmbientales/CocinaBucara"
+import CON_MA_ASPECTOSAMBIENTALES_PDVCC from "./Calidad/MedioA/AspectosAmbientales/PdvCC"
+import CON_MA_ASPECTOSAMBIENTALES_PDVCALLE from "./Calidad/MedioA/AspectosAmbientales/PdvCalle"
 import CON_ACADEMIA   from "../containers/Academia/AcademiaMain"
 import CON_ACADEMIA_ARTE from "../containers/Academia/Arteycultura/Arteycultura"
 import CON_ACADEMIA_EMPODERAMIENTO from "../containers/Academia/Empoderamiento/Empoderamiento";
@@ -65,6 +82,10 @@ import CON_RECONOCIMIENTOS from "../containers/Nuestra/Reconocimientos"
 import CON_CALIDAD_PROGRAMAS from "../containers/Calidad/Programas"
 import CON_COMPRAS from "../containers/Compras/Compras"
 import CON_FINANCIERA from "../containers/Financiera/Financiera"
+import CON_FINANCIERA_PLANEACION from "../containers/Financiera/Planeacion/Planeacion"
+import CON_FINANCIERA_NOMINA from "../containers/Financiera/Nomina/Nomina"
+import CON_FINANCIERA_TESORERIA from "../containers/Financiera/Tesoreria/Tesoreria"
+import CON_FINANCIERA_CONTABILIDAD from "../containers/Financiera/Contabilidad/Contabilidad"
 import CON_LEGAL from "../containers/Legaladmin/Legal"
 import CON_LEGAL_CENTROSERVICIO from "../containers/Legaladmin/CentroServicio/CentroServicio"
 import CON_LEGAL_CENTROSERVICIO_DIRADMON  from "../containers/Legaladmin/CentroServicio/Directorioadmon";
@@ -111,6 +132,23 @@ export default {
     CON_CALIDAD_CORE,
     CON_CALIDAD_INDICADORES,
     CON_MEDIOAMBIENTE,
+    CON_MEDIOAMBIENTE_ASPECTOSGENERALES,
+    CON_MA_ASPECTOS_AGUARESIDUAL,
+    CON_MA_ASPECTOS_ENERGIA,
+    CON_MA_ASPECTOS_AGUAPOTABLE,
+    CON_MA_ASPECTOS_RESIDUOS,
+    CON_MA_ASPECTOS_ECONOMIA,
+    CON_MEDIOAMBIENTE_MUNDODEHOY,
+    CON_MEDIOAMBIENTE_ASPECTOSAMBIENTALES,
+    CON_MEDIOAMBIENTE_NOTICIAS,
+    CON_MEDIOAMBIENTE_NOTICIAS_AGUAPOTABLE,
+    CON_MEDIOAMBIENTE_NOTICIAS_AGUARESIDUAL,
+    CON_MEDIOAMBIENTE_NOTICIAS_PEDIDOS,
+    CON_MEDIOAMBIENTE_NOTICIAS_RESIDUOS,
+    CON_MA_ASPECTOSAMBIENTALES_COCINACENTRAL,
+    CON_MA_ASPECTOSAMBIENTALES_COCINABUCARA,
+    CON_MA_ASPECTOSAMBIENTALES_PDVCC,
+    CON_MA_ASPECTOSAMBIENTALES_PDVCALLE,
     CON_CALIDAD_NOTICIAS,
     CON_CALIDAD_NOTICIAS_ALERGENOS,
     CON_CALIDAD_NOTICIAS_DOCUMENTACION,
@@ -157,6 +195,10 @@ export default {
     CON_CALIDAD_PROGRAMAS,
     CON_COMPRAS,
     CON_FINANCIERA,
+    CON_FINANCIERA_PLANEACION,
+    CON_FINANCIERA_NOMINA,
+    CON_FINANCIERA_TESORERIA,
+    CON_FINANCIERA_CONTABILIDAD,
     CON_LEGAL,
     CON_LOGISTICA,
     CON_MANTENIMIENTO,

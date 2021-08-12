@@ -6,13 +6,26 @@ import Grupobtn from '../../../componentes/GrupoBtn/Grupobtn1'
 import { Grid,Image,Container,Divider} from 'semantic-ui-react'
 import*as paths from "../../../config/routing/paths"
 import {Link} from "react-router-dom"
+import apiURL from '../../../utils/apiURL'
+
 
 export default class CentroServicio extends Component {
+    state = {
+        media: [],
+    };
+
+    componentDidMount() {
+        fetch(`${apiURL}/adminlegals`)
+            .then((res) => res.json())
+            .then((res) => this.setState({ media: res }));
+    }
     render() {
+        const info= this.state.media[0]
+        console.log(info && info)
         return (
             <Layout>
-                <Image src={header} as={Link} to={paths.CON_LEGAL}/>
-                <Image src={mision} />
+                <Image src={header} as={Link} to={paths.CON_LEGAL} fluid/>
+                <Image src={mision} fluid/>
                 <Grid centered={true} stackable  verticalAlign="middle" >
                 <Grid.Column width={4}>
                             <Modal

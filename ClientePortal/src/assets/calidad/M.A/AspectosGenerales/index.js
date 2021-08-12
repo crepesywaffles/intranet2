@@ -1,0 +1,6 @@
+export {default as AguaPotable} from "../AspectosGenerales/BTNAguaPotable.png"
+export {default as AguaResidual} from "../AspectosGenerales/BTNAguaResidual.png"
+export {default as Economia} from "../AspectosGenerales/BTNEconomiaCircular.png"
+export {default as Energia} from "../AspectosGenerales/BTNEnergia.png"
+export {default as ResiduosSolidos} from "../AspectosGenerales/BTNResiduosSolidos.png"
+export {default as Aspectos} from "../AspectosGenerales/AspectosGenerales.png"

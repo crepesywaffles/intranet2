@@ -9,6 +9,7 @@ import *as paths from "../../../config/routing/paths"
 import {HeaderMedioA,InfoMedio} from "../../../assets/calidad/index"
 import {Link} from "react-router-dom"
 import Directorio from '../../../componentes/Directorio/Directorio';
+import PlacesAirportShuttle from 'material-ui/svg-icons/places/airport-shuttle';
 
 
 
@@ -54,13 +55,13 @@ export default class MedioA extends Component {
                     </Grid.Column>
                     <Grid.Column width={8}>
                     <Grid.Row >
-                        <Image src={aspectosGenerales} size="small" className="botonimg p-2"/>
-                        <Image src={procesos} size="small" className="botonimg p-2"/>
-                        <Image src={Mundodehoy} size="small" className="botonimg p-2"/>
+                        <Image as={Link} to={paths.CON_MEDIOAMBIENTE_ASPECTOSGENERALES} src={aspectosGenerales} size="small" className="botonimg p-2"/>
+                        <Image as={Link} to={paths.CON_MEDIOAMBIENTE_ASPECTOSAMBIENTALES} src={procesos} size="small" className="botonimg p-2"/>
+                        <Image as={Link} to={paths.CON_MEDIOAMBIENTE_MUNDODEHOY} src={Mundodehoy} size="small" className="botonimg p-2"/>
                     </Grid.Row>
                     <Divider hidden/>
                     <Grid.Row>
-                        <Image src={NoticiasMA} size="small" className="botonimg p-2"/>
+                        <Image as={Link} src={NoticiasMA} to={paths.CON_MEDIOAMBIENTE_NOTICIAS} size="small" className="botonimg p-2"/>
                         <Image src={Indicadores} size="small" className="botonimg p-2"/>
                     </Grid.Row>
                     </Grid.Column>

@@ -11,13 +11,15 @@ module.exports = {
   send: async (ctx) => {
     const body = ctx.request.body
     const sendTo = body.email
+    const subject= body.asunto
+    const message= body.mensaje
     strapi.log.debug(`Trying to send an email to ${sendTo}`)
 
     try {
       const emailOptions = {
         to: sendTo,
-        subject: 'Test de prueba de envio correo',
-        html: `<h1>Hola!</h1><p>Prueba servicio correos SMTP portal-artesanos (servidor Centos7 CYW)</p>`,
+        subject: subject,
+        html: message,
       }
       await strapi.plugins['email'].services.email.send(emailOptions)
       strapi.log.debug(`Email sent to ${sendTo}`)

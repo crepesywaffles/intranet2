@@ -189,6 +189,108 @@ export const CON_MEDIOAMBIENTE={
     exact:true,
     isPrivate:true
 }
+export const CON_MEDIOAMBIENTE_ASPECTOSGENERALES={
+    component:containers.CON_MEDIOAMBIENTE_ASPECTOSGENERALES,
+    path:paths.CON_MEDIOAMBIENTE_ASPECTOSGENERALES,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MEDIOAMBIENTE_ASPECTOSAMBIENTALES={
+    component:containers.CON_MEDIOAMBIENTE_ASPECTOSAMBIENTALES,
+    path:paths.CON_MEDIOAMBIENTE_ASPECTOSAMBIENTALES,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MEDIOAMBIENTE_NOTICIAS={
+    component:containers.CON_MEDIOAMBIENTE_NOTICIAS,
+    path:paths.CON_MEDIOAMBIENTE_NOTICIAS,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MEDIOAMBIENTE_NOTICIAS_AGUAPOTABLE={
+    component:containers.CON_MEDIOAMBIENTE_NOTICIAS_AGUAPOTABLE,
+    path:paths.CON_MEDIOAMBIENTE_NOTICIAS_AGUAPOTABLE,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MEDIOAMBIENTE_NOTICIAS_AGUARESIDUAL={
+    component:containers.CON_MEDIOAMBIENTE_NOTICIAS_AGUARESIDUAL,
+    path:paths.CON_MEDIOAMBIENTE_NOTICIAS_AGUARESIDUAL,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MEDIOAMBIENTE_NOTICIAS_PEDIDOS={
+    component:containers.CON_MEDIOAMBIENTE_NOTICIAS_PEDIDOS,
+    path:paths.CON_MEDIOAMBIENTE_NOTICIAS_PEDIDOS,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MEDIOAMBIENTE_NOTICIAS_RESIDUOS={
+    component:containers.CON_MEDIOAMBIENTE_NOTICIAS_RESIDUOS,
+    path:paths.CON_MEDIOAMBIENTE_NOTICIAS_RESIDUOS,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MA_ASPECTOSAMBIENTALES_COCINACENTRAL={
+    component:containers.CON_MA_ASPECTOSAMBIENTALES_COCINACENTRAL,
+    path:paths.CON_MA_ASPECTOSAMBIENTALES_COCINACENTRAL,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MA_ASPECTOSAMBIENTALES_COCINABUCARA={
+    component:containers.CON_MA_ASPECTOSAMBIENTALES_COCINABUCARA,
+    path:paths.CON_MA_ASPECTOSAMBIENTALES_COCINABUCARA,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MA_ASPECTOSAMBIENTALES_PDVCC={
+    component:containers.CON_MA_ASPECTOSAMBIENTALES_PDVCC,
+    path:paths.CON_MA_ASPECTOSAMBIENTALES_PDVCC,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MA_ASPECTOSAMBIENTALES_PDVCALLE={
+    component:containers.CON_MA_ASPECTOSAMBIENTALES_PDVCALLE,
+    path:paths.CON_MA_ASPECTOSAMBIENTALES_PDVCALLE,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MA_ASPECTOS_AGUARESIDUAL={
+    component:containers.CON_MA_ASPECTOS_AGUARESIDUAL,
+    path:paths.CON_MA_ASPECTOS_AGUARESIDUAL,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MA_ASPECTOS_ENERGIA={
+    component:containers.CON_MA_ASPECTOS_ENERGIA,
+    path:paths.CON_MA_ASPECTOS_ENERGIA,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MA_ASPECTOS_AGUAPOTABLE={
+    component:containers.CON_MA_ASPECTOS_AGUAPOTABLE,
+    path:paths.CON_MA_ASPECTOS_AGUAPOTABLE,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MA_ASPECTOS_RESIDUOS={
+    component:containers.CON_MA_ASPECTOS_RESIDUOS,
+    path:paths.CON_MA_ASPECTOS_RESIDUOS,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MA_ASPECTOS_ECONOMIA={
+    component:containers.CON_MA_ASPECTOS_ECONOMIA,
+    path:paths.CON_MA_ASPECTOS_ECONOMIA,
+    exact:true,
+    isPrivate:true
+}
+export const CON_MEDIOAMBIENTE_MUNDODEHOY={
+    component:containers.CON_MEDIOAMBIENTE_MUNDODEHOY,
+    path:paths.CON_MEDIOAMBIENTE_MUNDODEHOY,
+    exact:true,
+    isPrivate:true
+}
 export const CON_ACADEMIA={
     component:containers.CON_ACADEMIA,
     path:paths.CON_ACADEMIA,
@@ -407,6 +509,30 @@ export const CON_FINANCIERA={
     exact:true,
     isPrivate:true
 }
+export const CON_FINANCIERA_PLANEACION={
+    component:containers.CON_FINANCIERA_PLANEACION,
+    path:paths.CON_FINANCIERA_PLANEACION,
+    exact:true,
+    isPrivate:true
+}
+export const CON_FINANCIERA_NOMINA={
+    component:containers.CON_FINANCIERA_NOMINA,
+    path:paths.CON_FINANCIERA_NOMINA,
+    exact:true,
+    isPrivate:true
+}
+export const CON_FINANCIERA_TESORERIA={
+    component:containers.CON_FINANCIERA_TESORERIA,
+    path:paths.CON_FINANCIERA_TESORERIA,
+    exact:true,
+    isPrivate:true
+}
+export const CON_FINANCIERA_CONTABILIDAD={
+    component:containers.CON_FINANCIERA_CONTABILIDAD,
+    path:paths.CON_FINANCIERA_CONTABILIDAD,
+    exact:true,
+    isPrivate:true
+}
 export const CON_LEGAL={
     component:containers.CON_LEGAL,
     path:paths.CON_LEGAL,
@@ -580,6 +706,23 @@ export default [
     CON_CALIDAD_INDICADORES,
     CON_CALIDAD_PROGRAMAS,
     CON_MEDIOAMBIENTE,
+    CON_MEDIOAMBIENTE_ASPECTOSGENERALES,
+    CON_MA_ASPECTOS_AGUARESIDUAL,
+    CON_MA_ASPECTOS_ENERGIA,
+    CON_MA_ASPECTOS_AGUAPOTABLE,
+    CON_MA_ASPECTOS_RESIDUOS,
+    CON_MA_ASPECTOS_ECONOMIA,
+    CON_MEDIOAMBIENTE_MUNDODEHOY,
+    CON_MEDIOAMBIENTE_ASPECTOSAMBIENTALES,
+    CON_MEDIOAMBIENTE_NOTICIAS,
+    CON_MEDIOAMBIENTE_NOTICIAS_AGUAPOTABLE,
+    CON_MEDIOAMBIENTE_NOTICIAS_AGUARESIDUAL,
+    CON_MEDIOAMBIENTE_NOTICIAS_PEDIDOS,
+    CON_MEDIOAMBIENTE_NOTICIAS_RESIDUOS,
+    CON_MA_ASPECTOSAMBIENTALES_COCINACENTRAL,
+    CON_MA_ASPECTOSAMBIENTALES_COCINABUCARA,
+    CON_MA_ASPECTOSAMBIENTALES_PDVCC,
+    CON_MA_ASPECTOSAMBIENTALES_PDVCALLE,
     CON_ACADEMIA,
     CON_ACADEMIA_ARTE,
     CON_ACADEMIA_EMPODERAMIENTO,
@@ -616,6 +759,10 @@ export default [
     CON_RECONOCIMIENTOS,
     CON_COMPRAS,
     CON_FINANCIERA,
+    CON_FINANCIERA_PLANEACION,
+    CON_FINANCIERA_NOMINA,
+    CON_FINANCIERA_TESORERIA,
+    CON_FINANCIERA_CONTABILIDAD,
     CON_LEGAL,
     CON_LEGAL_CENTROSERVICIO,
     CON_LEGAL_CENTROSERVICIO_DIRADMON,
