@@ -1,19 +1,18 @@
 import React, { Component } from 'react'
-import Layout from "../../../componentes/Layout/Layout"
-import apiURL from "../../../utils/apiURL";
+import Layout from '../../../../componentes/Layout/Layout'
+import {Grid, Container,Image,Divider} from "semantic-ui-react"
+import apiURL from '../../../../utils/apiURL'
+import {Link} from "react-router-dom"
+import {Aguapotable,Aguaresidual,Pedidos,ResiduosSolidos} from "../../../../assets/calidad/M.A/Noticias/index"
+import *as paths from "../../../../config/routing/paths"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import {CaruselAlergenos,CaruselDoc,CaruselLYD,CaruselPlagas,CaruselProducto} from "../../../assets/calidad/main/index"
-import { HeaderCalidad } from '../../../assets/calidad';
-import {Image,Grid,Divider} from "semantic-ui-react"
-import {Link} from "react-router-dom"
-import "../../Sostenibilidad/Sostenibilidad.css"
-import *as paths from "../../../config/routing/paths"
+import { HeaderMedioA} from '../../../../assets/calidad/index';
 
-export default class GaleriaNoticias extends Component {
-    
-    
+
+
+export default class NoticiasMA extends Component {
     render() {
         const LinkStyle = {
             textDecoration: "none",
@@ -61,56 +60,46 @@ export default class GaleriaNoticias extends Component {
         return (
             <Layout>
             <Divider hidden />
-            <Image as={Link} to={paths.CON_CALIDAD_CORE} src={HeaderCalidad}/>
+            <Image as={Link} to={paths.CON_CALIDAD_CORE} src={HeaderMedioA}/>
             <div className="container mt-5 carousel container-car">
             <Slider {...settings}>
             <div className="card-wrapper">
                 <div className="card">
                     <div className="card-s">
-                        <Link to={paths.CON_CALIDAD_NOTICIAS_ALERGENOS} style={LinkStyle}><img src={`${CaruselAlergenos}`}/></Link>
+                        <Link to={paths.CON_MEDIOAMBIENTE_NOTICIAS_AGUAPOTABLE} style={LinkStyle}><img src={`${Aguapotable}`}/></Link>
                     </div>
                     <div className="social-des">
-                    <Link to={paths.CON_CALIDAD_NOTICIAS_ALERGENOS} style={LinkStyle}><h1>Alergenos</h1></Link>
+                    <Link to={paths.CON_MEDIOAMBIENTE_NOTICIAS_AGUAPOTABLE} style={LinkStyle}><h1>Agua potable</h1></Link>
                     </div>
                 </div>
             </div>
             <div className="card-wrapper">
                 <div className="card">
                     <div className="card-s">
-                        <Link to={paths.CON_CALIDAD_NOTICIAS_DOCUMENTACION} style={LinkStyle}><img src={`${CaruselDoc}`}/></Link>
+                        <Link to={paths.CON_MEDIOAMBIENTE_NOTICIAS_AGUARESIDUAL} style={LinkStyle}><img src={`${Aguaresidual}`}/></Link>
                     </div>
                     <div className="social-des">
-                    <Link to={paths.CON_CALIDAD_NOTICIAS_DOCUMENTACION} style={LinkStyle}><h1>Documentación</h1></Link>
+                    <Link to={paths.CON_MEDIOAMBIENTE_NOTICIAS_AGUARESIDUAL} style={LinkStyle}><h1>Agua residual</h1></Link>
                     </div>
                 </div>
             </div>
             <div className="card-wrapper">
                 <div className="card">
                     <div className="card-s">
-                        <Link  to={paths.CON_CALIDAD_NOTICIAS_LYD} style={LinkStyle}><img src={`${CaruselLYD}`}/></Link>
+                        <Link  to={paths.CON_MEDIOAMBIENTE_NOTICIAS_PEDIDOS} style={LinkStyle}><img src={`${Pedidos}`}/></Link>
                     </div>
                     <div className="social-des">
-                    <Link to={paths.CON_CALIDAD_NOTICIAS_LYD}  style={LinkStyle}><h1>Limpieza y Desinfección</h1></Link>
+                    <Link to={paths.CON_MEDIOAMBIENTE_NOTICIAS_PEDIDOS}  style={LinkStyle}><h1>Pedidos Almacén</h1></Link>
                     </div>
                 </div>
             </div>
             <div className="card-wrapper">
                 <div className="card">
                     <div className="card-s">
-                        <Link to={paths.CON_CALIDAD_NOTICIAS_PLAGAS} style={LinkStyle}><img src={`${CaruselPlagas}`}/></Link>
+                        <Link to={paths.CON_MEDIOAMBIENTE_NOTICIAS_RESIDUOS} style={LinkStyle}><img src={`${ResiduosSolidos}`}/></Link>
                     </div>
                     <div className="social-des">
-                    <Link to={paths.CON_CALIDAD_NOTICIAS_PLAGAS}  style={LinkStyle}><h1>Manejo de plagas</h1></Link>
-                    </div>
-                </div>
-            </div>
-            <div className="card-wrapper">
-                <div className="card">
-                    <div className="card-s">
-                        <Link to={paths.CON_CALIDAD_NOTICIAS_PRODUCTO}  style={LinkStyle}><img src={`${CaruselProducto}`}/></Link>
-                    </div>
-                    <div className="social-des">
-                    <Link to={paths.CON_CALIDAD_NOTICIAS_PRODUCTO} style={LinkStyle}><h1>Manejo Producto</h1></Link>
+                    <Link to={paths.CON_MEDIOAMBIENTE_NOTICIAS_RESIDUOS}  style={LinkStyle}><h1>Residuos solidos</h1></Link>
                     </div>
                 </div>
             </div>
