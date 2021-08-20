@@ -128,7 +128,7 @@ export default function Layout(props) {
                             
                         </Dropdown.Menu>
                     </Dropdown>
-                    <Dropdown style={LinkStyle} item text='APLICATIVOS'>
+                    <Dropdown style={LinkStyle} item text='FORMULARIOS'>
                         <Dropdown.Menu style={LinkStyle}>
                             <Dropdown.Item>
                                 <a className="a_target" target="_blanck" href="https://forms.office.com/Pages/ResponsePage.aspx?id=o-892U5X-0KhwOBKlt3QwfSJHoVqmZVGnddDUfmHRTpUNk5GSlhIMTFBQk1YQjhSM1RTSVIxRzc0MSQlQCN0PWcu">Reporte accidentes</a></Dropdown.Item>
