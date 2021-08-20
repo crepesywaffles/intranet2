@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from "../../componentes/Layout/Layout";
-import { Container, Grid, Image } from "semantic-ui-react";
+import { Container, Grid, Image,Divider } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import BtnBienestar from "../../assets/dh/BtnBienestar.png"
 import BtnAdmonP from "../../assets/dh/BtnAdmonP.png"
@@ -41,6 +41,7 @@ export default function Dh() {
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>
+                    <Divider hidden/>
                 </Container>
             </Layout>
         </div>

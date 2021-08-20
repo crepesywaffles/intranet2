@@ -1,4 +1,4 @@
-export {default as btn1} from "../Relaciones/BtnCalendarioDotacion.png"
+export {default as btn1} from "../Relaciones/BTNCalendarioDotacion.png"
 export {default as btn2} from "../Relaciones/BTNSolicitudCertLaboral.png"
 export {default as btn3} from "../Relaciones/BTNReglamentoInterno.png"
 export {default as Header} from "../Relaciones/CabezoteRelaciones.png"

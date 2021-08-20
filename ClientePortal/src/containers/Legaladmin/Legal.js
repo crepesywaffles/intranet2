@@ -16,7 +16,7 @@ export default class Legal extends Component {
                 <Grid stackable centered>
                     <Image as={Link} to={paths.CON_LEGAL_CENTROSERVICIO} size="medium" className="botonimg" src={CentroServicio}/>
                     <Image as={Link} to={paths.CON_LEGAL_GESTIONDOCUMENTAL} size="medium" className="botonimg" src={GestionDocumenta}/>
-                    <Image as={Link} to={paths.CON_LEGAL_INMUEBLES} size="medium" className="botonimg" src={Inmuebles}/>
+                    {/* <Image as={Link} to={paths.CON_LEGAL_INMUEBLES} size="medium" className="botonimg" src={Inmuebles}/> */}
                     <Image as={Link} to={paths.CON_LEGAL_SEGURIDAD} size="medium" className="botonimg" src={Seguridad}/>
                 </Grid>
                 <Divider hidden/>

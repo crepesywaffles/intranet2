@@ -21,7 +21,7 @@
 }
 .login form{
     background-color: rgba(255, 245,230,0.7);
-    padding: 0px 30px 0px 30px ;
+    padding: 0px 30px 10px 30px ;
 }
 .login img{
     display: block;

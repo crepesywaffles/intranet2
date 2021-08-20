@@ -1,10 +1,12 @@
 
 import "./FormFacturacion.css";
 import { Container } from "semantic-ui-react";
-import React, { useState} from 'react';
+import React, { useState,useEffect} from 'react';
 import apiURL from "../../utils/apiURL";
 import axios from "axios"
 import Swal from "sweetalert2"
+import Logo from "../../assets/home/LogoMoneda.png"
+
 
 
 export default function FormFacturación() {
@@ -17,15 +19,20 @@ export default function FormFacturación() {
         correo_exp_factura: "",
         telefono: "",
         contacto_facturacion: "",
+        radicado:"",
     });
-    const { documento_equivalente,Restaurante,solicitante,nombre_exp_factura,correo_exp_factura,telefono,contacto_facturacion } = inputs;
+    const { documento_equivalente,Restaurante,solicitante,nombre_exp_factura,correo_exp_factura,telefono,contacto_facturacion,radicado} = inputs;
     const [docequivalente, setDocequivalente] = useState(null)
+    const [n_radicado, setN_radicado] = useState('')
     const [rut, setRut] = useState(null)
+    useEffect(()=>{
+      fetch(`${apiURL}/facturacions`)
+      .then((res) => res.json())
+      .then((res) => setN_radicado(res.length))
+    });
     function handleChange(e) {
-      console.log(e.target.value)
       const { name, value } = e.target;
       setInputs(inputs => ({ ...inputs, [name]: value }));
-      console.log(inputs)
     }
     function handleChangeSelect(e){
       const value = e.target.value
@@ -37,11 +44,12 @@ export default function FormFacturación() {
     const  handleChangeRut= e => {
       setRut(e.target.files[0]);
     }
+    
     function sendEmail(){
       var data = new FormData();
       data.append('email', correo_exp_factura);
       data.append('asunto', 'confirmacion solicitud factura electronica');
-      data.append('mensaje', `<h1>Crepes y Waffles S.A</h1><br/><p>Hemos recibido su solicitud de facturación electronica, para la factura ${documento_equivalente}</p>`);
+      data.append('mensaje', `<h1>Crepes y Waffles S.A</h1><br/><p>Hemos recibido su solicitud de facturación electronica, para la factura ${documento_equivalente}</p><br/><spam>el radicado de su solicitud es ${radicado}<spam/>`);
 
       var config = {
         method: 'post',
@@ -62,6 +70,8 @@ export default function FormFacturación() {
         data.append("data",JSON.stringify(inputs))
         data.append('files.file_doc_equivalente', docequivalente)
         data.append('files.rut',rut)
+        console.log(data)
+        
 
         var config ={
           method:"post",
@@ -77,20 +87,20 @@ export default function FormFacturación() {
             confirmButtonText: 'Continuar'
           })
           sendEmail()
-          // window.location.reload()
           console.log(JSON.stringify(response.data));
         })
         .catch(function (error) {
           Swal.fire({
-            title: "Error de envio ",
-            text: 'archivos no validos, recuerde solo recibimos archivos pdf o jpg',
+            title: "Error de envio",
+            text: 'Por favor complete el formulario en su totalidad.\nRecuerde que solo recibimos archivos jpg o pdf',
             icon: 'error',
             confirmButtonText: 'Continuar'
           })
           console.log(error);
         });
+        setTimeout(window.location.reload.bind(window.location), 5000)
     }
-    console.log(Restaurante,telefono)
+    console.log(documento_equivalente,Restaurante,solicitante,nombre_exp_factura,correo_exp_factura,telefono,contacto_facturacion,radicado)
     return (
       <div className="main">
         <div className="Header">
@@ -124,8 +134,8 @@ export default function FormFacturación() {
               <label className="pri-label">
                 CIUDAD EN LA QUE ESTA UBICADO EL RESTAURANTE
                 <br />
-                <select className="form-control select-form" style={Restaurante == '' || Restaurante =='Selecciona la ciudad' ? {backgroundColor:"#FF4848"}:{backgroundColor:"#54E346"}} onChange={handleChangeSelect}>
-                  <option selected>Selecciona la ciudad</option>
+                <select className="form-control select-form"  onChange={handleChangeSelect}>
+                  <option>Seleccione una ciudad</option>
                   <option value="Bogota">Bogotá</option>
                   <option value="Bucaramanga">Bucaramanga</option>
                   <option value="Villavicencio">Villavicencio</option>
@@ -139,8 +149,26 @@ export default function FormFacturación() {
                 </select>
               </label>
               </div>
+              {Restaurante != "" ? 
+              <div className="mb-1">
+                <label className="pri-label">ESTE ES SU NUMERO DE RADICADO<br/><strong>Click aqui para continuar</strong><br/></label>
+                <br />
+                <input
+                  className="text-center radicado"
+                  type="text"
+                  required
+                  maxlength="200"
+                  size="45"
+                  value={`${n_radicado}-CYW-${Restaurante}`}
+                  onClick={handleChange}
+                  name="radicado"
+                  readOnly
+                />
               </div>
-              {Restaurante != '' ? 
+              :null
+              }
+              </div>
+              {radicado === `${n_radicado}-CYW-${Restaurante}` ? 
               <>
               <div className="d-flex flex-wrap pt-5 justify-content-center text-center">
               <div className="mb-3">

@@ -15,7 +15,7 @@ export default class CentroServicio extends Component {
     };
 
     componentDidMount() {
-        fetch(`${apiURL}/adminlegals`)
+        fetch(`${apiURL}/dirlegals`)
             .then((res) => res.json())
             .then((res) => this.setState({ media: res }));
     }
@@ -27,7 +27,7 @@ export default class CentroServicio extends Component {
                 <Image src={header} as={Link} to={paths.CON_LEGAL} fluid/>
                 <Image src={mision} fluid/>
                 <Grid centered={true} stackable  verticalAlign="middle" >
-                <Grid.Column width={4}>
+                {/* <Grid.Column width={4}>
                             <Modal
                                 open={false}
                                 btn={<Grupobtn as={Link} path={paths.CON_LEGAL_CENTROSERVICIO_DIRADMON} class={"botonimg btn"} size="medium" src={Directorioadmon} />}
@@ -40,7 +40,7 @@ export default class CentroServicio extends Component {
                                 btn={<Grupobtn as={Link} path={paths.CON_LEGAL_CENTROSERVICIO_DIRPDV} class={"botonimg btn"} size="medium" src={Directoriopdv} />}
                             >
                             </Modal>
-                    </Grid.Column>
+                    </Grid.Column> */}
                     <Grid.Column width={4}>
                         <Modal
                                 btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={Horarios} />}

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Layout from "../../../componentes/Layout/Layout"
 import { Grid, Container,Image} from "semantic-ui-react";
 import {btnAlergenos,btnHabladores,btnInstructivos,btnNoticias,btnProcedimientos,Beatriz,Eduardo} from "../../../assets/calidad/main/index"
-import {HeaderCalidad,InfoCalidad} from "../../../assets/calidad/index"
+import {HeaderCalidad,InfoCalidad,creencia1,creencia2,creencia3} from "../../../assets/calidad/index"
 import Grupobtn from "../../../componentes/GrupoBtn/Grupobtn1";
 import Modal from "../../../componentes/Modal/Modal"
 import BucadorCalidad from "../../../componentes/Buscador/BuscadorCalidad"
@@ -33,6 +33,17 @@ export default class CalidadMain extends Component {
                     </Grid.Column>
                     <Grid.Column width={8}>
                     <Image  src={Eduardo} />
+                    </Grid.Column>;
+                </Grid>
+                <Grid centered>
+                    <Grid.Column width={5}>
+                    <Image  src={creencia1} />
+                    </Grid.Column>
+                    <Grid.Column width={5}>
+                    <Image  src={creencia2} />
+                    </Grid.Column>;
+                    <Grid.Column width={5}>
+                    <Image  src={creencia3} />
                     </Grid.Column>;
                 </Grid>
                 <Container stackable align="center">

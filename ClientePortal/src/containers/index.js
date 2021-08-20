@@ -29,6 +29,7 @@ import CON_CALIDAD_CORE from "./Calidad/CalidadCore/CalidadMain";
 import CON_CALIDAD_INDICADORES from "./Calidad/Indicadores";
 import CON_MEDIOAMBIENTE from "./Calidad/MedioA/MedioA";
 import CON_MEDIOAMBIENTE_ASPECTOSGENERALES from "./Calidad/MedioA/AspectosGenerales/AspectosGenerales"
+import CON_MEDIOAMBIENTE_INDICADORES from "./Calidad/MedioA/Indicadores"
 import CON_MA_ASPECTOS_AGUARESIDUAL from "./Calidad/MedioA/AspectosGenerales/AguaResidual"
 import CON_MA_ASPECTOS_ENERGIA from "./Calidad/MedioA/AspectosGenerales/Energia"
 import CON_MA_ASPECTOS_AGUAPOTABLE from "./Calidad/MedioA/AspectosGenerales/AguaPotable"
@@ -141,6 +142,7 @@ export default {
     CON_MEDIOAMBIENTE_MUNDODEHOY,
     CON_MEDIOAMBIENTE_ASPECTOSAMBIENTALES,
     CON_MEDIOAMBIENTE_NOTICIAS,
+    CON_MEDIOAMBIENTE_INDICADORES,
     CON_MEDIOAMBIENTE_NOTICIAS_AGUAPOTABLE,
     CON_MEDIOAMBIENTE_NOTICIAS_AGUARESIDUAL,
     CON_MEDIOAMBIENTE_NOTICIAS_PEDIDOS,

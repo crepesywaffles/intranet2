@@ -12,12 +12,23 @@ import*as paths from "../../config/routing/paths"
 
 
 export default class AdminFacturacion extends Component {
-    state = { facturas : []}
+    searchRadicado = this.searchRadicado.bind(this);
+    state = { 
+        facturas : [],
+        value:""
+    }
     componentDidMount() {
-        fetch(`${apiURL}/facturacions?_sort=created_at:DESC`)
+        fetch(`${apiURL}/facturacions?Restaurante_contains=Bogota&_sort=created_at:DESC`)
           .then((res) => res.json())
           .then((res) => this.setState({ facturas : res }));
       }
+      
+    searchRadicado(e){
+        this.setState({ value:e.target.value});
+        fetch(`${apiURL}/facturacions?radicado_contains=${this.state.value}`)
+          .then((res) => res.json())
+          .then((res) => this.setState({ facturas : res }));
+    }  
     async handleStatusSend(id) {
         
             await axios
@@ -51,9 +62,10 @@ export default class AdminFacturacion extends Component {
             })
             window.location.reload()
     }
-
+    
     
     render() {
+        console.log(this.state.value)
         const StyledBadge = styled(Badge)`
         color: green;
         font-weight: 700;
@@ -97,17 +109,19 @@ export default class AdminFacturacion extends Component {
                 <div className="d-block text-center">
                     <Image as={Link} to={paths.CON_HOME} centered src={logo} size="tiny"/>
                     <div className="title-form p-1 mx-auto"><Link to={paths.CON_FORM_FACTURACION}>SOLICITUDES FACTURACIÓN ELECTRONICA</Link></div>
+                    <input type="search" value={this.state.value} onChange={this.searchRadicado} placeholder="Ingrese el numero de radicado" />
                 </div>
                     <div className="rainbow-m-bottom_xx-large">
                     <TableWithBrowserPagination pageSize={5} data={facturas} keyField="id" variant="listview">
+                        <Column header="Radicado" field="radicado" />
                         <Column header="Numero Doc.Equivalente" field="documento_equivalente" />
                         <Column header="Documento Equivalente" field="file_doc_equivalente.url" component={RefDoc}/>
+                        <Column header="Rut" field="rut.url" component={RefDoc}/>
                         <Column header="Solicitante" field="solicitante" />
                         <Column header="Restaurante" field="Restaurante" />
                         <Column header="correo a expedir factura" field="correo_exp_factura" />
                         <Column header="Telefono" field="telefono" />
                         <Column header="Fecha" field="created_at" />
-                        <Column header="Rut" field="rut.url" component={RefDoc}/>
                         <Column header="Estado" field="estado" component={StatusBadge} />
                         <Column header="Cambio de estado" field="id" component={RefCheck}/>
                         <Column field="id" component={RefPend}/>
