@@ -109,33 +109,34 @@ export default class Formacion extends Component {
                                     }
                                 </Container>
                             </Modal>
-                            <Modal
-                                open={false}
-                                btn={<Grupobtn as={"a"} href="https://forms.gle/HdHSD8rFoNJMU9SS8"
-                                    target="_blank" class={"botonimg btn"} size="medium" src={btn7} />}
-
-                            ></Modal>
+                            
                         </Container>
                     </Grid.Column>
                     <Grid.Column>
                         <Container stackable centered>
                             {/* info toderas */}
-                            <Modal
+                            {/* <Modal
                                 btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn4} />}
                                 size={"fullscreen"}
                             >
                                 <Container>
                                     <Buscador />
                                 </Container>
-                            </Modal>
+                            </Modal> */}
                             {/* Universidad Coorporativa */}
-                            <Modal
+                            {/* <Modal
                                 btn={<Grupobtn as={"a"} class={"botonimg btn"} size="medium" src={btn5} />}
                             >
                                 <Container>
 
                                 </Container>
-                            </Modal>
+                            </Modal> */}
+                            <Modal
+                                open={false}
+                                btn={<Grupobtn as={"a"} href="https://forms.gle/HdHSD8rFoNJMU9SS8"
+                                    target="_blank" class={"botonimg btn"} size="medium" src={btn7} />}
+
+                            ></Modal>
                             <Modal
 
                                 btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn6} />}
@@ -153,4 +154,6 @@ export default class Formacion extends Component {
         );
     }
 }
+
+
 

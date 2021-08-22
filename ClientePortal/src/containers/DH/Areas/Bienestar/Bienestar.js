@@ -43,15 +43,15 @@ export default class Bienestar extends Component {
                 <Container fluid align="center">
                 <Image src={btn17}/>
                 </Container>
-                {/* {slider && (
+                {slider && (
                     <Carusel interval={3000}>
                         <Carousel.Item >
                             <img className=" d-block w-100"
-                                src={`${slider.Sliders[0].url}`}
+                                src={`${apiURL}${slider.Sliders[0].url}`}
                             />
                         </Carousel.Item>
                     </Carusel>
-                )} */}
+                )}
                 <Divider hidden />
                 
                 
@@ -81,7 +81,7 @@ export default class Bienestar extends Component {
                                 size={"fullscreen"}
                             >
                                 <Container>
-                                    <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=1p3bf5krzp" width="100%" height="750" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+                                    <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=hna788j7t9" width="100%" height="750" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
                                 </Container>
                             </Modal>
                             {/* Beneficios bachillerato */}
@@ -102,7 +102,7 @@ export default class Bienestar extends Component {
                             >
                                 <Container>
                                     {link && (
-                                        <Image src={`${link.Imagenes[1].url}`} size="massive" />
+                                        <Image src={`${apiURL}${link.Imagenes[1].url}`} size="massive" />
                                     )}
                                 </Container>
                             </Modal>
@@ -133,7 +133,7 @@ export default class Bienestar extends Component {
                                 size={"fullscreen"}
                             >
                                 <Container>
-                                    <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=dk8om85tk5" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+                                    <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=zna788j7t9" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
                                 </Container>
                             </Modal>
                             {/* Afiliaicones y retiros EPS */}

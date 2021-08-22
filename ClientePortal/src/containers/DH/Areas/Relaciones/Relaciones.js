@@ -56,19 +56,14 @@ export default class Seleccion extends Component {
                         >
                             <iframe src="https://outlook.office365.com/owa/calendar/14233adb853d4e3bbd213c8d6813f476@crepesywaffles.com/d2fafc38fb2548fba982252ff717f7a16610153096679833633/calendar.html" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen />
                         </Modal>
-                        <Modal
-                            open={false}
-                            btn={<Grupobtn as={"a"} href="https://forms.office.com/Pages/ResponsePage.aspx?id=o-892U5X-0KhwOBKlt3QwVf8h5h1vF9KkioirAzwpGZUNTBNQzhIS05TNjhVOUZDSUpDWk9UR0xOOS4u" target="_blank" class={"botonimg btn"} size="medium" src={btn2} />}
-                            size={"fullscreen"}
-                        >
-                        </Modal>
-                        <Modal
+                        
+                        {/* <Modal
                             btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn5} />}
                             size={"fullscreen"}
 
                         >
                         <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=vt86pccbdc" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
-                        </Modal>
+                        </Modal> */}
                         <Modal
                             open={false}
                             btn={<Grupobtn as={"a"} href="https://docs.google.com/forms/d/e/1FAIpQLSfn-7HCDG_hXzT7cixD2bdKrxIduMeEdiw_ks4fRKo9Nd8hgw/viewform" target="_blank" class={"botonimg btn"} size="medium" src={btn7} />}
@@ -84,7 +79,7 @@ export default class Seleccion extends Component {
                             size={"fullscreen"}
 
                         >
-                             <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=dpio5ask9s" width="100%" height="750" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+                             <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=7tnwkkxwb1" width="100%" height="750" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
                         </Modal>
                         <Modal
                             btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btn4} />}
@@ -93,16 +88,10 @@ export default class Seleccion extends Component {
                         >
                             <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=vclrleqjiq" width="100%" height="750" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen> </iframe>"
                         </Modal>
-                        <Modal
-                            open={false}
-                            btn={<Grupobtn as={"a"} href="https://forms.office.com/Pages/ResponsePage.aspx?id=o-892U5X-0KhwOBKlt3QwVf8h5h1vF9KkioirAzwpGZUQzA5RURCN1U1RjJOMk45TjFJN0VFOEc1UC4u" target="_blank" class={"botonimg btn"} size="medium" src={btn6} />}
-                            size={"fullscreen"}
-                        >
-                        </Modal>
+                        
                     </Grid.Column>
                 </Grid>
             </Layout>
         )
     }
 }
-

@@ -102,7 +102,7 @@ export default class Aliados extends Component {
                     {aliado && aliado.filter((content)=>(content.name == "ContenidoPlenitud.pdf")).map((pdf)=>(
                         <Modal
                         open={false}
-                        btn={<Grupobtn as={"a"} href={`${pdf.url}`}
+                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
                             target="_blank" class={"botonimg btn"} size="medium" src={btn7} />}
                         ></Modal>
                     ))}
@@ -128,3 +128,4 @@ export default class Aliados extends Component {
         )
     }
 }
+

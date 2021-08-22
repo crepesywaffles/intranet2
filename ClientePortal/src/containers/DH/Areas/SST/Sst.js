@@ -27,7 +27,8 @@ export default class Sst extends Component {
 
         const sml = this.state.img[0]
         const dir = this.state.img[1]
-        console.log(dir)
+        const doc= sml && sml.doc[0].url
+        console.log(doc)
 
         return (
             <Layout>
@@ -37,9 +38,11 @@ export default class Sst extends Component {
                     {sml && (
                         sml.Slidersst.map((sl) => (
                             <Carousel.Item key={sl.id}>
+                                <a href={`${apiURL}${doc}`} target="_blank">
                                 <img className=" d-block w-100"
-                                    src={`${sl.url}`}
+                                    src={`${apiURL}${sl.url}`}
                                 />
+                                </a>
                             </Carousel.Item>
 
                         ))
@@ -114,3 +117,4 @@ export default class Sst extends Component {
         )
     }
 }
+

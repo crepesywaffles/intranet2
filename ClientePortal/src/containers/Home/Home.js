@@ -56,7 +56,7 @@ class Home extends Component {
                 <Carusel>
                     {this.state.img.map((task, index) =>
                         <Carousel.Item >
-                            <img className=" d-block w-100 " key={index.id} alt={task.name + "Slider"} src={`${task.url}`} />
+                            <img className=" d-block w-100 " key={index.id} alt={task.name + "Slider"} src={`${apiURL}${task.url}`}/>
                         </Carousel.Item>
                     )}
                 </Carusel>
@@ -102,3 +102,4 @@ class Home extends Component {
 }
 
 export default Home;
+

@@ -56,7 +56,7 @@ function handleSubmit(e) {
       <div className="login">
             <form name="form" onSubmit={handleSubmit}>
             <img src={logo}/>
-            <h2>Portal Artesanos</h2>
+            <h2>Comunicarte CYW</h2>
                 <div className="form-group">
                     <label>Usuario</label>
                     <input type="text" name="username" value={username} onChange={handleChange} className={'form-control' + (submitted && !username ? ' is-invalid' : '')} />

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Layout from "../../../../componentes/Layout/Layout"
-import { btn1, btn2, Header,Info } from "../../../../assets/dh/seleccion/index"
+import { btn1, btn2, Header,Info,ConvocaExternas,ConvocaInternas } from "../../../../assets/dh/seleccion/index"
 import { Grid, Container, Image, Divider } from "semantic-ui-react";
 import Grupobtn from "../../../../componentes/GrupoBtn/Grupobtn1";
 import Modal from "../../../../componentes/Modal/Modal"
@@ -37,18 +37,18 @@ export default class Seleccion extends Component {
             <Layout>
                 <Image as={Link} to={paths.CON_DH} src={Header} />
                 <Image src={Info} />
-                {/* <Carusel>
+                <Carusel>
                     {sml && (
                         sml.slider.map((sl) => (
                             <Carousel.Item key={sl.id}>
                                 <img className=" d-block w-100"
-                                    src={`${sl.url}`}
+                                    src={`${apiURL}${sl.url}`}
                                 />
                             </Carousel.Item>
 
                         ))
                     )}
-                </Carusel> */}
+                </Carusel>
                 
                 <Divider hidden />
                 <Divider hidden />
@@ -70,6 +70,7 @@ export default class Seleccion extends Component {
                     <Grid.Column>
                         <Container stackable centered aling="center">
                             {/* Convocatorias */}
+                            
                             <Modal
                                 btn={<Grupobtn as={"button"} class={"botonimg btn"} src={btn1}  centered />}
                                 size={"fullscreen"}
@@ -80,7 +81,7 @@ export default class Seleccion extends Component {
                                         con.map((co) => (
                                             <div className="cartas-carta">
                                                 <Carta key={co.id}
-                                                    img={`${co.Imagen.url}`}
+                                                    img={`${apiURL}${co.Imagen.url}`}
                                                     size="medium"
                                                     titulo={co.titulo}
                                                     cargo={co.cargo}
@@ -90,6 +91,8 @@ export default class Seleccion extends Component {
                                                     condicion1={co.condicion1}
                                                     condicion2={co.condicion2}
                                                     condicion3={co.condicion3}
+                                                    condicion4={co.condicion4}
+                                                    href={co.url}
                                                 >
                                                 </Carta>
                                             </div>
@@ -100,7 +103,7 @@ export default class Seleccion extends Component {
                             {/* Hojas de vida Familiares */}
                             <Modal
                                 open={false}
-                                btn={<Grupobtn as={"a"} href="https://forms.office.com/Pages/ResponsePage.aspx?id=o-892U5X-0KhwOBKlt3QwVhFKEtt0mNGsJMOl9urY_dUOTIzRUo5RzRQNjJXMEU2Sk1KWkdGOFJXNi4u" target="_blank" class={"botonimg btn"} size="medium" src={btn2} />}
+                                btn={<Grupobtn as={"a"} href="https://forms.office.com/Pages/ResponsePage.aspx?id=o-892U5X-0KhwOBKlt3QwVhFKEtt0mNGsJMOl9urY_dUOTIzRUo5RzRQNjJXMEU2Sk1KWkdGOFJXNi4u" target="_blank" class={"botonimg btn"}  src={btn2} />}
                                 size={"fullscreen"}
                             >
                             </Modal>
@@ -111,3 +114,4 @@ export default class Seleccion extends Component {
         )
     }
 }
+
