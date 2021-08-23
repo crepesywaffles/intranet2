@@ -18,7 +18,6 @@ const location = useLocation();
 const [submitted, setSubmitted] = useState(false);
 
 function handleChange(e) {
-  console.log(e.target.value)
   const { name, value } = e.target;
   setInputs(inputs => ({ ...inputs, [name]: value }));
   console.log(inputs)
@@ -37,6 +36,8 @@ function handleSubmit(e) {
     // Handle success.
     localStorage.setItem('Usertoken', response.data.jwt);
     localStorage.setItem('Rol', response.data.user.rol);
+    localStorage.setItem('NombresApellidos',response.data.user.nombres_apellidos);
+    console.log(response)
   })
   .catch(error => {
     // Handle error.
@@ -65,7 +66,7 @@ function handleSubmit(e) {
                     }
                 </div>
                 <div className="form-group">
-                    <label>contraseña</label>
+                    <label>Contraseña</label>
                     <input type="password" name="password" value={password} onChange={handleChange} className={'form-control' + (submitted && !password ? ' is-invalid' : '')} />
                     {submitted && !password &&
                         <div className="invalid-feedback">Ingrese su contraseña</div>
@@ -74,7 +75,7 @@ function handleSubmit(e) {
                 <div className="terminos">
                 <label><input type="checkbox" name="TYC" required />
                 <Modal
-                    btn={`Acepto terminos y condiciones`}
+                    btn={`Acepto términos y condiciones`}
                     size={"small"}
                     centered={"true"}
                     

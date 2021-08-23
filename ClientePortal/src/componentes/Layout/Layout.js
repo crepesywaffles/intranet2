@@ -19,7 +19,7 @@ export default function Layout(props) {
         fontFamily: "Arial",
         fontSize: "1.2em"
     }
-    
+    const user = localStorage.NombresApellidos
     function cerrarsesion() {
         window.location.pathname="/"
         localStorage.clear()
@@ -30,6 +30,7 @@ export default function Layout(props) {
         <Container className={"layout"} fluid>
             <Grid.Row>
                 <Image to={paths.CON_HOME} as={Link} src={Header} />
+                <div className="text-center"><h3>{`Hola ${user}, estamos felices de tenerte aquí`}</h3></div>
             </Grid.Row>
             <Grid.Row>
                 <Menu stackable="true" tabular borderless horinzontal="true" fluid widths={5}>

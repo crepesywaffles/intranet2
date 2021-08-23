@@ -76,12 +76,12 @@ class Home extends Component {
                             </Container>
                             <Container>
                                 {day && (
-                                    <Image src={`${day.url}`}/>
+                                    <Image src={`${apiURL}${day.url}`}/>
                                 )}
                             </Container>
                         </Container>
                     </Grid.Column>
-                    <Grid.Column verticalAlign="middle">
+                    <Grid.Column>
                         <Container align="center">
                             <Image.Group className="mobile-img" size="medium">
                                 {/* <Image as="a" target="_blanck" href="http://169.48.72.72/opencart/upload/index.php?route=common/home" className="botonimg" rounded src={Boton6} /> */}
