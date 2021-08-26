@@ -43,9 +43,12 @@ function handleSubmit(e) {
     // Handle error.
     alert("Datos de inicio de sesión incorrectos")
   })
-    if(localStorage.Usertoken){
+  if(localStorage.Rol == "feB" || localStorage.Rol == "feM" || localStorage.Rol == "feC" || localStorage.Rol == "feBA"||localStorage.Rol == "feCT"){
+    window.location.pathname="/adminfacturacion"
+  }else if(localStorage.Usertoken){
       window.location.pathname="/home"
     }
+    
   }
 }
 

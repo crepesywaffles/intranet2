@@ -24,12 +24,18 @@ export default function FormFacturación() {
     const { documento_equivalente,Restaurante,solicitante,nombre_exp_factura,correo_exp_factura,telefono,contacto_facturacion,radicado} = inputs;
     const [docequivalente, setDocequivalente] = useState(null)
     const [n_radicado, setN_radicado] = useState('')
+    const [terminos,setTerminos]= useState(false)
     const [rut, setRut] = useState(null)
     useEffect(()=>{
       fetch(`${apiURL}/facturacions`)
       .then((res) => res.json())
       .then((res) => setN_radicado(res.length))
     });
+    function handleTerminos(e){
+      e.target.checked == true ?
+      setTerminos(true):
+      setTerminos(false)
+    }
     function handleChange(e) {
       const { name, value } = e.target;
       setInputs(inputs => ({ ...inputs, [name]: value }));
@@ -48,8 +54,8 @@ export default function FormFacturación() {
     function sendEmail(){
       var data = new FormData();
       data.append('email', correo_exp_factura);
-      data.append('asunto', 'confirmacion solicitud factura electronica');
-      data.append('mensaje', `<h1>Crepes y Waffles S.A</h1><br/><p>Hemos recibido su solicitud de facturación electronica, para la factura ${documento_equivalente}</p><br/><spam>el radicado de su solicitud es ${radicado}<spam/>`);
+      data.append('asunto', 'Confirmacion solicitud factura eléctronica');
+      data.append('mensaje', `<h1>Crepes y Waffles S.A</h1><br/><p>Hemos recibido su solicitud de facturación eléctronica, para la factura ${documento_equivalente}</p><br/><spam>el radicado de su solicitud es ${radicado}<spam/><br/>En 5 días hábiles estará recibiendo respuesta por parte nuestra.`);
 
       var config = {
         method: 'post',
@@ -62,7 +68,59 @@ export default function FormFacturación() {
       })
       .catch(function (error) {
       console.log(error);
-});
+      });
+    }
+    function sendNotification(){
+      switch(Restaurante){
+        case "Bogota":
+            var correo = "clientes.fe.bogota@crepesywaffles.com";
+            break;
+        case "Medellin":
+            var correo= "clientes.fe.medellin@crepesywaffles.com";
+            break;
+        case "Barranquilla":
+            var correo = "clientes.fe.barranquilla@crepesywaffles.com";
+            break;
+        case "Cali": 
+            var correo= "clientes.fe.cali@crepesywaffles.com";
+            break;
+        case "Cartagena":
+          var correo= "clientes.fe.cartagena@crepesywaffles.com";
+          break;
+          case "Bucaramanga":
+            var correo= "clientes.fe.bogota@crepesywaffles.com";
+            break;
+        case "Villavicencio":
+          var correo= "clientes.fe.bogota@crepesywaffles.com";
+          break;
+        case "Manizales":
+          var correo= "clientes.fe.cali@crepesywaffles.com";
+          break;
+          case "Pereira":
+        var correo= "clientes.fe.cali@crepesywaffles.com";
+        break;
+        case "Santa Marta":
+        var correo= "clientes.fe.cartagena@crepesywaffles.com";
+        break;
+        
+      }
+      var data = new FormData();
+      data.append('email', correo);
+      data.append('asunto', 'Nueva solicitud facturación electronica');
+      data.append('mensaje', `<h1>Conunicarte CYW</h1><br/><p>Has recibido una solicitud de facturación electronica, para la factura ${documento_equivalente}</p><br/><spam>el radicado de la solicitud es ${radicado}<spam/>en la ciudad ${Restaurante}`);
+
+      var config = {
+        method: 'post',
+        url: 'http://www.portaldeartesanos.com:1337/emails',
+        data : data
+      };
+      axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch(function (error) {
+      console.log(error);
+      });
     }
     function handleSubmit(e){
         e.preventDefault();
@@ -87,6 +145,8 @@ export default function FormFacturación() {
             confirmButtonText: 'Continuar'
           })
           sendEmail()
+          sendNotification()
+          setTimeout(window.location.reload.bind(window.location), 5000)
           console.log(JSON.stringify(response.data));
         })
         .catch(function (error) {
@@ -98,7 +158,6 @@ export default function FormFacturación() {
           })
           console.log(error);
         });
-        setTimeout(window.location.reload.bind(window.location), 5000)
     }
     console.log(documento_equivalente,Restaurante,solicitante,nombre_exp_factura,correo_exp_factura,telefono,contacto_facturacion,radicado)
     return (
@@ -112,6 +171,10 @@ export default function FormFacturación() {
           <div className="title-form p-1 mx-auto">FACTURACIÓN ELECTRONICA</div>
           <div className="text-center p-1 mx-auto">
             <h2>Solicitala llenado estos datos</h2>
+            <spam className="text-center p-1 mx-auto">
+              TODOS LOS CAMPOS SON OBLIGATORIOS
+            </spam>
+            <br />
             <spam>
               Recuerda que enviando este formulario apruebas estar de acuerdo
               con la{" "}
@@ -124,32 +187,35 @@ export default function FormFacturación() {
             </spam>
             <br />
             <br />
-            <spam className="text-center p-1 mx-auto">
-              TODOS LOS CAMPOS SON OBLIGATORIOS
-            </spam>
+            <div className="terminos">
+            <label><input type="checkbox" name="TYC" checked={terminos} onChange={handleTerminos} required/><strong>Acepto política de tratamiento de datos</strong></label>
+            </div>
           </div>
           <form className="pb-5" onSubmit={handleSubmit} id="form-facturacion-electronica">
             <div className="d-flex flex-wrap pt-5 justify-content-center text-center">
             <div className="d-flex flex-wrap pt-2 justify-content-center text-center container-fluid">
+              {terminos == true ?
               <label className="pri-label">
                 CIUDAD EN LA QUE ESTA UBICADO EL RESTAURANTE
                 <br />
                 <select className="form-control select-form"  onChange={handleChangeSelect}>
                   <option>Seleccione una ciudad</option>
-                  <option value="Bogota">Bogotá</option>
-                  <option value="Bucaramanga">Bucaramanga</option>
-                  <option value="Villavicencio">Villavicencio</option>
-                  <option value="Medellin">Medellín</option>
-                  <option value="Cali">Cali</option>
-                  <option value="Manizales">Manizales</option>
-                  <option value="Pereira">Pereira</option>
-                  <option value="Cartagena">Cartagena</option>
-                  <option value="Santa Marta">Santa Marta</option>
                   <option value="Barranquilla">Barranquilla</option>
+                  <option value="Bogota">Bogotá (cundinamarca)</option>
+                  <option value="Bucaramanga">Bucaramanga</option>
+                  <option value="Cali">Cali</option>
+                  <option value="Cartagena">Cartagena</option>
+                  <option value="Manizales">Manizales</option>
+                  <option value="Medellin">Medellín (Antioquia)</option>
+                  <option value="Pereira">Pereira</option>
+                  <option value="Santa Marta">Santa Marta</option>
+                  <option value="Villavicencio">Villavicencio</option>
                 </select>
               </label>
+              :null
+              }
               </div>
-              {Restaurante != "" ? 
+              {Restaurante != "" && terminos == true ? 
               <div className="mb-1">
                 <label className="pri-label">ESTE ES SU NUMERO DE RADICADO<br/><strong>Click aqui para continuar</strong><br/></label>
                 <br />
@@ -158,7 +224,7 @@ export default function FormFacturación() {
                   type="text"
                   required
                   maxlength="200"
-                  size="45"
+                  size="60"
                   value={`${n_radicado}-CYW-${Restaurante}`}
                   onClick={handleChange}
                   name="radicado"
@@ -168,11 +234,11 @@ export default function FormFacturación() {
               :null
               }
               </div>
-              {radicado === `${n_radicado}-CYW-${Restaurante}` ? 
+              {radicado === `${n_radicado}-CYW-${Restaurante}` && terminos == true ? 
               <>
               <div className="d-flex flex-wrap pt-5 justify-content-center text-center">
               <div className="mb-3">
-                <label className="pri-label">NUM.DOCUMENTO EQUIVALENTE (POS)</label>
+                <label className="pri-label">NUM.DOCUMENTO EQUIVALENTE<br/>(Sistema POS número)</label>
                 <br />
                 <input
                   className="form-control"
@@ -218,7 +284,7 @@ export default function FormFacturación() {
                 </div>
                 <div className="mb-3">
                   <label className="pri-label" for="file">
-                    RUT(jpg o pdf)
+                    RUT ACTUALIZADO(jpg o pdf)
                   </label>
                   <br />
                   <input
