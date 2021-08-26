@@ -2,6 +2,7 @@ export const CON_HOME= "/home";
 export const CON_VACUNACION="/vacunacion";
 export const CON_VACUNACION_GALERIA="/vacunacion/galeria";
 export const CON_LOGIN= "/";
+export const CON_TUTORIAL= "/guia";
 export const CON_DH = "/desarrollohumano";
 export const CON_DH_BIENESTAR = "/desarrollohumano/bienestar";
 export const CON_DH_BIENESTAR_GALERIA = "/desarrollohumano/bienestar/galeria";

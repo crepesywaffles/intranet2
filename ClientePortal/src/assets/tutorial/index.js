@@ -1,0 +1,5 @@
+export {default as pieza1} from "./LANZAMIENTO_1.jpg"
+export {default as pieza2} from "./LANZAMIENTO_2.jpg"
+export {default as pieza3} from "./LANZAMIENTO_3.jpg"
+export {default as pieza4} from "./LANZAMIENTO_4.jpg"
+export {default as pieza5} from "./LANZAMIENTO_5.jpg"

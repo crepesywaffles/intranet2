@@ -23,14 +23,15 @@ export default function FormFacturación() {
     });
     const { documento_equivalente,Restaurante,solicitante,nombre_exp_factura,correo_exp_factura,telefono,contacto_facturacion,radicado} = inputs;
     const [docequivalente, setDocequivalente] = useState(null)
-    const [n_radicado, setN_radicado] = useState('')
+    // const [n_radicado, setN_radicado] = useState('')
     const [terminos,setTerminos]= useState(false)
     const [rut, setRut] = useState(null)
-    useEffect(()=>{
-      fetch(`${apiURL}/facturacions`)
-      .then((res) => res.json())
-      .then((res) => setN_radicado(res.length))
-    });
+    const [confirmemail,setConfirmemail]= useState("")
+    // useEffect(()=>{
+    //   fetch(`${apiURL}/facturacions`)
+    //   .then((res) => res.json())
+    //   .then((res) => setN_radicado(res.length))
+    // });
     function handleTerminos(e){
       e.target.checked == true ?
       setTerminos(true):
@@ -50,12 +51,28 @@ export default function FormFacturación() {
     const  handleChangeRut= e => {
       setRut(e.target.files[0]);
     }
+    async function updateRadicado(id) {
+        
+      await axios
+         .put(`${apiURL}/facturacions/${id}`, {
+             radicado: `${id}-CYW-${Restaurante}`,
+             
+         })
+         .then(response => {
+             console.log(response)
+             
+         })
+         .catch(error => {
+             // Handle error.
+             alert("Error en petición")
+         })
+ }
     
-    function sendEmail(){
+    function sendEmail(id){
       var data = new FormData();
       data.append('email', correo_exp_factura);
       data.append('asunto', 'Confirmacion solicitud factura eléctronica');
-      data.append('mensaje', `<h1>Crepes y Waffles S.A</h1><br/><p>Hemos recibido su solicitud de facturación eléctronica, para la factura ${documento_equivalente}</p><br/><spam>el radicado de su solicitud es ${radicado}<spam/><br/>En 5 días hábiles estará recibiendo respuesta por parte nuestra.`);
+      data.append('mensaje', `<h1>Crepes y Waffles S.A</h1><br/><p>Hemos recibido su solicitud de facturación eléctronica, para la factura ${documento_equivalente}</p><br/><spam>el radicado de su solicitud es ${id}<spam/><br/>En 5 días hábiles estará recibiendo respuesta por parte nuestra.`);
 
       var config = {
         method: 'post',
@@ -70,7 +87,7 @@ export default function FormFacturación() {
       console.log(error);
       });
     }
-    function sendNotification(){
+    function sendNotification(id){
       switch(Restaurante){
         case "Bogota":
             var correo = "clientes.fe.bogota@crepesywaffles.com";
@@ -107,7 +124,7 @@ export default function FormFacturación() {
       var data = new FormData();
       data.append('email', correo);
       data.append('asunto', 'Nueva solicitud facturación electronica');
-      data.append('mensaje', `<h1>Conunicarte CYW</h1><br/><p>Has recibido una solicitud de facturación electronica, para la factura ${documento_equivalente}</p><br/><spam>el radicado de la solicitud es ${radicado}<spam/>en la ciudad ${Restaurante}`);
+      data.append('mensaje', `<h1>Conunicarte CYW</h1><br/><p>Has recibido una solicitud de facturación electronica, para la factura ${documento_equivalente}</p><br/><spam>el radicado de la solicitud es ${id}-CYW-${Restaurante} <spam/>en la ciudad ${Restaurante}`);
 
       var config = {
         method: 'post',
@@ -128,9 +145,7 @@ export default function FormFacturación() {
         data.append("data",JSON.stringify(inputs))
         data.append('files.file_doc_equivalente', docequivalente)
         data.append('files.rut',rut)
-        console.log(data)
         
-
         var config ={
           method:"post",
           url:`${apiURL}/facturacions`,
@@ -144,11 +159,14 @@ export default function FormFacturación() {
             icon: 'success',
             confirmButtonText: 'Continuar'
           })
-          sendEmail()
-          sendNotification()
+          sendEmail(response.data.id)
+          sendNotification(response.data.id)
+          updateRadicado(response.data.id)
+
           setTimeout(window.location.reload.bind(window.location), 5000)
           console.log(JSON.stringify(response.data));
         })
+        
         .catch(function (error) {
           Swal.fire({
             title: "Error de envio",
@@ -158,6 +176,7 @@ export default function FormFacturación() {
           })
           console.log(error);
         });
+        
     }
     console.log(documento_equivalente,Restaurante,solicitante,nombre_exp_factura,correo_exp_factura,telefono,contacto_facturacion,radicado)
     return (
@@ -215,9 +234,8 @@ export default function FormFacturación() {
               :null
               }
               </div>
-              {Restaurante != "" && terminos == true ? 
-              <div className="mb-1">
-                <label className="pri-label">ESTE ES SU NUMERO DE RADICADO<br/><strong>Click aqui para continuar</strong><br/></label>
+              {/* <div className="mb-1">
+                <label className="pri-label"></label>
                 <br />
                 <input
                   className="text-center radicado"
@@ -225,16 +243,14 @@ export default function FormFacturación() {
                   required
                   maxlength="200"
                   size="60"
-                  value={`${n_radicado}-CYW-${Restaurante}`}
+                  value={`${n_radicado}-CYW-${Restaurante}`}  
                   onClick={handleChange}
                   name="radicado"
                   readOnly
                 />
+              </div> */}
               </div>
-              :null
-              }
-              </div>
-              {radicado === `${n_radicado}-CYW-${Restaurante}` && terminos == true ? 
+              {terminos == true ? 
               <>
               <div className="d-flex flex-wrap pt-5 justify-content-center text-center">
               <div className="mb-3">
@@ -322,7 +338,7 @@ export default function FormFacturación() {
                 <br />
                 <input
                   className="form-control container-fluid"
-                  type="text"
+                  type="email"
                   required
                   maxlength="255"
                   size="82"

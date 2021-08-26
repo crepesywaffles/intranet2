@@ -2,6 +2,7 @@ import CON_HOME from "../containers/Home/Home";
 import CON_VACUNACION  from "../containers/Home/Vacunación/Vacunacion"
 import CON_VACUNACION_GALERIA from "../containers/Home/Vacunación/Galeria"
 import CON_LOGIN from "../containers/Login/Login";
+import CON_TUTORIAL from "./Login/Tutorial";
 import CON_DH from "../containers/DH/Dh"
 import CON_DH_BIENESTAR from "../containers/DH/Areas/Bienestar/Bienestar"
 import CON_DH_BIENESTAR_GALERIA from "../containers/DH/Areas/Bienestar/Galeria"
@@ -116,6 +117,7 @@ import CON_ADMIN_FACTURACION from "../containers/Financiera/AdminFacturacion"
 export default {
     CON_HOME,
     CON_LOGIN,
+    CON_TUTORIAL,
     CON_DH,
     CON_DH_BIENESTAR,
     CON_DH_FORMACION,

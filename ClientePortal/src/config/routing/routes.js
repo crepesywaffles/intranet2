@@ -26,6 +26,12 @@ export const CON_LOGIN={
     exact:true,
     isPrivate:false
 }
+export const CON_TUTORIAL={
+    component:containers.CON_TUTORIAL,
+    path:paths.CON_TUTORIAL,
+    exact:true,
+    isPrivate:false
+}
 export const CON_DH={
     component:containers.CON_DH,
     path:paths.CON_DH,
@@ -685,6 +691,7 @@ export const CON_ADMIN_FACTURACION={
 export default [
     CON_HOME,
     CON_LOGIN,
+    CON_TUTORIAL,
     CON_DH,
     CON_DH_BIENESTAR,
     CON_DH_FYD,

@@ -1,10 +1,12 @@
-import {useLocation } from 'react-router-dom';
+import {Link, useLocation } from 'react-router-dom';
 import React, { useState} from 'react';
 import axios from 'axios';
 import apiURL from "../../utils/apiURL"
 import logo from "../../assets/home/LogoMoneda.png"
 import "../Login/Login.css"
 import Modal from "../../componentes/Modal/Modal"
+import { Button } from 'semantic-ui-react';
+import *as paths from "../../config/routing/paths"
 
 
 
@@ -91,9 +93,13 @@ function handleSubmit(e) {
                 
                 
                 <div className="form-group">
-                    <button className="btn btn-dark">
+                    <Button secondary>
                         Ingresar
-                    </button>
+                    </Button>
+                    &nbsp;
+                    <Button as={Link} to={paths.CON_TUTORIAL} secondary>
+                        ¿Como funciona la intranet?
+                    </Button>
                 </div>
             </form>
         </div>
