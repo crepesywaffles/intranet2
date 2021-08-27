@@ -48,8 +48,8 @@ export default class MedioA extends Component {
                                     <Directorio
                                         key={dir.id}
                                         nombre={dir.Nombre}
-                                        // extension={dir.Extension}
-                                        email={dir.Correo}
+                                        extension={dir.Extension}
+                                        // email={dir.Correo}
                                     />
                                 ))}
                     </Grid.Column>

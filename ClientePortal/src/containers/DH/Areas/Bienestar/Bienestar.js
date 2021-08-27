@@ -65,8 +65,8 @@ export default class Bienestar extends Component {
                                     <Directorio
                                         key={slider.id}
                                         nombre={slider.directorioBienestar.Nombre}
-                                        // extension={slider.directorioBienestar.Extension}
-                                        email={slider.directorioBienestar.Correo}
+                                        extension={slider.directorioBienestar.Extension}
+                                        // email={slider.directorioBienestar.Correo}
                                     />
                                 ))}
                         

@@ -29,7 +29,7 @@ export default class Plantaproduccion extends Component {
         const mural2= info && info.Imagenes[4].url
         return (
             <Layout>
-                <Image src={Infoplantapro}/>
+                <Image src={Infoplantapro}/>    
                 <div className="d-flex flex-wrap justify-content-center">
                     <div className="w-25">
                     {info && info.directorio.map((slider)=>(

@@ -41,8 +41,8 @@ export default class Seleccion extends Component {
                                     <Directorio
                                         key={sml.id}
                                         nombre={sml.Nombre}
-                                        // extension={sml.Extension}
-                                        email={sml.Correo}
+                                        extension={sml.Extension}
+                                        // email={sml.Correo}
                                     />
                                 )))}
                         </Container>
