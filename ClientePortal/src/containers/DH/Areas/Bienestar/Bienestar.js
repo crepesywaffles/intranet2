@@ -81,7 +81,7 @@ export default class Bienestar extends Component {
                                 size={"fullscreen"}
                             >
                                 <Container>
-                                    <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=hna788j7t9" width="100%" height="750" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+                                    <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=7tm0hu7y6z" width="100%" height="750" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
                                 </Container>
                             </Modal>
                             {/* Beneficios bachillerato */}
@@ -143,7 +143,7 @@ export default class Bienestar extends Component {
                             >
                                 <Container>
                                     {link && (
-                                        <Image src={`${link.Imagenes[3].url}`} size="massive" />
+                                        <Image src={`${apiURL}${link.Imagenes[3].url}`} size="massive" />
                                     )}
                                 </Container>
                             </Modal>
