@@ -11,9 +11,7 @@ export default class Oheladerias extends Component {
                 <Image src={Infoheladerias}/>
                 <Container centered>
                 <Image src={UnderConstruction} size="massive"/>
-                </Container>
-                
-                
+                </Container>              
             </Layout>
         )
     }

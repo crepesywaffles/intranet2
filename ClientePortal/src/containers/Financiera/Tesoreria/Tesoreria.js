@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import Layout from '../../../componentes/Layout/Layout'
+import banner from "../../../assets/EspacioConstruccion.png"
+import {Image} from "semantic-ui-react"
 
 export default class Tesoreria extends Component {
     render() {
         return (
             <Layout>
-                Tesoreria
+                <Image src={banner} fluid />
             </Layout>
         )
     }
