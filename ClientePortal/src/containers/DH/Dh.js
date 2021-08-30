@@ -8,12 +8,14 @@ import BtnSST from "../../assets/dh/BtnSST.png"
 import BtnFormacion from "../../assets/dh/BtnFormacion.png"
 import BtnSeleccion from "../../assets/dh/BtnSeleccion.png"
 import BtnRelaciones from "../../assets/dh/BtnRelaciones.png"
+import Mision from "../../assets/dh/Infodh.png"
 import *as paths from "../../config/routing/paths";
 
 export default function Dh() {
     return (
         <div>
             <Layout>
+                <Image src={Mision} fluid/>
                 <Container stackable align="center">
                     <Grid stackable centered columns={3}>
                         <Grid.Row>

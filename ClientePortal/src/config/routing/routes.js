@@ -441,6 +441,12 @@ export const   CON_GENTE_DOMICILIARIAS={
     exact:true,
     isPrivate:true
 }
+export const   CON_GENTE_HELADERIAS={
+    component:containers.CON_GENTE_HELADERIAS,
+    path:paths.CON_GENTE_HELADERIAS,
+    exact:true,
+    isPrivate:true
+}
 export const   CON_GENTE_RESTAURANTES={
     component:containers.CON_GENTE_RESTAURANTES,
     path:paths.CON_GENTE_RESTAURANTES,
@@ -765,6 +771,7 @@ export default [
     CON_NUESTRAEMPRESA_GENTE,
     CON_GENTE_DOMICILIARIAS,
     CON_GENTE_RESTAURANTES,
+    CON_GENTE_HELADERIAS,
     CON_GENTE_CALL,
     CON_GENTE_CAMION,
     CON_GENTE_COCINA,

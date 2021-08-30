@@ -75,6 +75,7 @@ import CON_ACTUALIZATE_BEATRIZ from "../containers/Actualizate/Beatriz"
 import CON_NUESTRAEMPRESA_GENTE from "../containers/Nuestra/Gente"
 import CON_GENTE_DOMICILIARIAS from "../containers/Nuestra/NuestraGente/Domiciliarias"
 import CON_GENTE_RESTAURANTES from "../containers/Nuestra/NuestraGente/Restaurantes"
+import CON_GENTE_HELADERIAS from "../containers/Nuestra/NuestraGente/Heladerias"
 import CON_GENTE_CALL from "../containers/Nuestra/NuestraGente/Callcenter"
 import CON_GENTE_CAMION from "../containers/Nuestra/NuestraGente/Camion"
 import CON_GENTE_COCINA from "../containers/Nuestra/NuestraGente/Cocinaoculta";
@@ -190,6 +191,7 @@ export default {
     CON_NUESTRAEMPRESA_GENTE,
     CON_GENTE_DOMICILIARIAS,
     CON_GENTE_RESTAURANTES,
+    CON_GENTE_HELADERIAS,
     CON_GENTE_CALL,
     CON_GENTE_CAMION,
     CON_GENTE_COCINA,

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Layout from "../../../componentes/Layout/Layout"
-import apiURL  from '../../../utils/apiURL';
+import Layout from '../../../componentes/Layout/Layout'
+import apiURL from '../../../utils/apiURL';
 
-export default class Cocinaoculta extends Component {
+export default class Heladerias extends Component {
     state = {
         img: []
     };
@@ -12,7 +12,7 @@ export default class Cocinaoculta extends Component {
             .then((res) => this.setState({ img: res }));
     }
     render() {
-        const ft = this.state.img[4]
+        const ft = this.state.img[5]
         const fotos= ft && ft.imagenes.map((fotos)=>(fotos))
         return (
             <Layout>
