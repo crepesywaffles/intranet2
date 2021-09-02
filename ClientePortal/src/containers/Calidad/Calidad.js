@@ -11,7 +11,7 @@ import Grupobtn from "../../componentes/GrupoBtn/Grupobtn1"
 export default function Calidad() {
     return (
         <Layout>
-            <Image src={HeaderCYM} />
+            <Image src={HeaderCYM} fluid/>
             <Divider hidden />
             <Container stackable align="center">
                     <Grid stackable centered columns={4}>

@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
-import Layout from '../../../../componentes/Layout/Layout'
-import {Grid, Container,Image,Divider} from "semantic-ui-react"
-import apiURL from '../../../../utils/apiURL'
-import {Link} from "react-router-dom"
-import {Aguapotable,Aguaresidual,Pedidos,ResiduosSolidos} from "../../../../assets/calidad/M.A/Noticias/index"
-import *as paths from "../../../../config/routing/paths"
+import Layout from '../../../../../componentes/Layout/Layout'
+import apiURL from '../../../../../utils/apiURL'
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import { HeaderMedioA} from '../../../../assets/calidad/index';
+import { Image,Divider } from 'semantic-ui-react'
+import {Link} from "react-router-dom"
+import "../../../../Sostenibilidad/Sostenibilidad.css"
+import *as paths from "../../../../../config/routing/paths"
+import {DesinfeccionAlimentos,SGI,LyD,Vidautil} from "../../../../../assets/calidad/main/habladores/index"
 
-
-
-export default class NoticiasMA extends Component {
+export default class Heladerias extends Component {
     render() {
         const LinkStyle = {
             textDecoration: "none",
@@ -60,46 +58,35 @@ export default class NoticiasMA extends Component {
         return (
             <Layout>
             <Divider hidden />
-            <Image as={Link} to={paths.CON_CALIDAD_CORE} src={HeaderMedioA}/>
             <div className="container mt-5 carousel container-car">
             <Slider {...settings}>
             <div className="card-wrapper">
                 <div className="card">
                     <div className="card-s">
-                        <Link to={paths.CON_MEDIOAMBIENTE_NOTICIAS_AGUAPOTABLE} style={LinkStyle}><img src={`${Aguapotable}`}/></Link>
+                        <Link to={paths.CON_CALIDAD_HABLADORES_HELADERIAS_DALIMENTOS} style={LinkStyle}><img src={`${DesinfeccionAlimentos}`}/></Link>
                     </div>
                     <div className="social-des">
-                    <Link to={paths.CON_MEDIOAMBIENTE_NOTICIAS_AGUAPOTABLE} style={LinkStyle}><h1>Agua potable</h1></Link>
+                    <Link to={paths.CON_CALIDAD_HABLADORES_HELADERIAS_DALIMENTOS} style={LinkStyle}><h1>Desinfección de Alimentos</h1></Link>
                     </div>
                 </div>
             </div>
             <div className="card-wrapper">
                 <div className="card">
                     <div className="card-s">
-                        <Link to={paths.CON_MEDIOAMBIENTE_NOTICIAS_AGUARESIDUAL} style={LinkStyle}><img src={`${Aguaresidual}`}/></Link>
+                        <Link to={paths.CON_CALIDAD_HABLADORES_HELADERIAS_SGI} style={LinkStyle}><img src={`${SGI}`}/></Link>
                     </div>
                     <div className="social-des">
-                    <Link to={paths.CON_MEDIOAMBIENTE_NOTICIAS_AGUARESIDUAL} style={LinkStyle}><h1>Agua residual</h1></Link>
+                    <Link to={paths.CON_CALIDAD_HABLADORES_HELADERIAS_SGI} style={LinkStyle}><h1>Sistema de Gestión<br/>de inocuidad</h1></Link>
                     </div>
                 </div>
             </div>
             <div className="card-wrapper">
                 <div className="card">
                     <div className="card-s">
-                        <Link  to={paths.CON_MEDIOAMBIENTE_NOTICIAS_PEDIDOS} style={LinkStyle}><img src={`${Pedidos}`}/></Link>
+                        <Link  to={paths.CON_CALIDAD_HABLADORES_HELADERIAS_LYD} style={LinkStyle}><img src={`${LyD}`}/></Link>
                     </div>
                     <div className="social-des">
-                    <Link to={paths.CON_MEDIOAMBIENTE_NOTICIAS_PEDIDOS}  style={LinkStyle}><h1>Pedidos Almacén</h1></Link>
-                    </div>
-                </div>
-            </div>
-            <div className="card-wrapper">
-                <div className="card">
-                    <div className="card-s">
-                        <Link to={paths.CON_MEDIOAMBIENTE_NOTICIAS_RESIDUOS} style={LinkStyle}><img src={`${ResiduosSolidos}`}/></Link>
-                    </div>
-                    <div className="social-des">
-                    <Link to={paths.CON_MEDIOAMBIENTE_NOTICIAS_RESIDUOS}  style={LinkStyle}><h1>Residuos sólidos</h1></Link>
+                    <Link to={paths.CON_CALIDAD_HABLADORES_HELADERIAS_LYD}  style={LinkStyle}><h1>Limpieza y Desinfección</h1></Link>
                     </div>
                 </div>
             </div>

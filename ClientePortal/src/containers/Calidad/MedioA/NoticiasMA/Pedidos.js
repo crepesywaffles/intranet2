@@ -14,7 +14,7 @@ export default class Pedidos extends Component {
       }
     render() {
         const info=this.state.media
-        const pedidos= info && info[2]
+        const pedidos= info && info[4]
         return (
             <Layout>
                 {pedidos && pedidos.media.map((img)=>(

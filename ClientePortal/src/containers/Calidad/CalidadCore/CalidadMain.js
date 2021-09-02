@@ -25,7 +25,7 @@ export default class CalidadMain extends Component {
         const directorio = this.state.directorio.map((dir)=>(dir.directorioCalidad))[0]
         return (
             <Layout>
-                <Image as={Link} to={paths.CON_CALIDAD} src={HeaderCalidad} />
+                <Image as={Link} to={paths.CON_CALIDAD} src={HeaderCalidad} fluid />
                 <Image  src={InfoCalidad} />
                 <Grid centered>
                     <Grid.Column width={8}>
@@ -61,20 +61,20 @@ export default class CalidadMain extends Component {
                             
                             <Grid.Column width={4}>
                                 <Modal
-                                    btn={<Grupobtn as={"button"} class={"botonimg btn"} size="small" src={btnAlergenos} />}
+                                    btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btnAlergenos} />}
                                     size={"fullscreen"}
                                 >
                                     <BucadorCalidad />
                                 </Modal>
                                 <Modal
                                     open= {false}
-                                    btn={<Grupobtn as={"a"} href={paths.CON_CALIDAD_HABLADORES} class={"botonimg btn"} size="small" src={btnHabladores} />}
+                                    btn={<Grupobtn as={"a"} href={paths.CON_CALIDAD_HABLADORES} class={"botonimg btn"} size="medium" src={btnHabladores} />}
                                     size={"fullscreen"}
                                 >
                                     
                                 </Modal>
                                 <Modal
-                                    btn={<Grupobtn as={"button"} class={"botonimg btn"} size="small" src={btnInstructivos} />}
+                                    btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btnInstructivos} />}
                                     size={"fullscreen"}
                                 >
                                 <Modal
@@ -100,7 +100,7 @@ export default class CalidadMain extends Component {
                             <Grid.Column width={4}>
                             <Modal
                                     open="false"
-                                    btn={<Grupobtn as={Link} path={paths.CON_CALIDAD_NOTICIAS} class={"botonimg btn"} size="small" src={btnNoticias} />}
+                                    btn={<Grupobtn as={Link} path={paths.CON_CALIDAD_NOTICIAS} class={"botonimg btn"} size="medium" src={btnNoticias} />}
                                     size={"fullscreen"}
 
                                 >
@@ -108,7 +108,7 @@ export default class CalidadMain extends Component {
                                 </Modal>
                                 <Modal
                                     open={false}
-                                    btn={<Grupobtn as={Link} path={paths.CON_CALIDAD_PROCEDIMIENTOS} class={"botonimg btn"} size="small" src={btnProcedimientos} />}
+                                    btn={<Grupobtn as={Link} path={paths.CON_CALIDAD_PROCEDIMIENTOS} class={"botonimg btn"} size="medium" src={btnProcedimientos} />}
                                     size={"fullscreen"}
                                 >
 

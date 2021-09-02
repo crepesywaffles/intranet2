@@ -1,0 +1,1 @@
+export {default as banner} from "./Banner-Mercadeo-1.jpg"

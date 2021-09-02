@@ -14,7 +14,7 @@ export default class ResiduosSolidos extends Component {
       }
     render() {
         const info=this.state.media
-        const residuos= info && info[3]
+        const residuos= info && info[2]
         return (
             <Layout>
                 {residuos && residuos.media.map((img)=>(

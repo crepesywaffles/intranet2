@@ -12,4 +12,8 @@ export {default as CaruselDoc} from "../main/CarruselDocumentacion.png"
 export {default as CaruselLYD} from "../main/CarruselLimpiezaDesinfeccion.png"
 export {default as CaruselPlagas} from "../main/CarruselManejoPlagas.png"
 export {default as CaruselProducto} from "../main/CarruselManejoProducto.png"
+export {default as Artesano} from "./BTNHabArtesanos.png"
+export {default as Carretinos} from "./BTNHabCarretinos.png"
+export {default as Heladerias} from "./BTNHabHeladerias.png"
+export {default as Restaurantes} from "./BTNHabRestaurantes.png"
 

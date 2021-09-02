@@ -48,7 +48,7 @@ export default class AdminFacturacion extends Component {
           .then((res) => this.setState({ facturas : res }));        
     } 
     searchAll(e){
-        fetch(`${apiURL}/facturacions?Restaurante_contains=${this.state.ciudad}&_sort=created_at:DESC`)
+        fetch(`${apiURL}/facturacions?Restaurante_in=Bogota&Restaurante_in=Bucaramanga&Restaurante_in=Villavicencio&_sort=created_at:DESC`)
           .then((res) => res.json())
           .then((res) => this.setState({ facturas : res }));       
     }   

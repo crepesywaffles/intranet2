@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import Layout from "../../componentes/Layout/Layout"
 import*as paths from "../../config/routing/paths";
-import {btnFormatos,btnVideos,btnManual,btnCodigoEtica,btnReglamento,header} from "../../assets/sagrilaft/index"
+import {btnFormatos,btnVideos,btnManual,btnCodigoEtica,btnReglamento,header,btnlineaEtica,lineaEtica} from "../../assets/sagrilaft/index"
 import {Image,Grid,Divider,Container,Button} from "semantic-ui-react"
 import {Link} from "react-router-dom"
 import Modal from "../../componentes/Modal/Modal"
@@ -25,7 +25,7 @@ export default class Ptee extends Component {
         console.log(forma)
         return (
             <Layout>
-                <Image src={header} as={Link} to={paths.CON_SARGLAFT}/>
+                <Image src={header} as={Link} to={paths.CON_SARGLAFT} fluid/>
                 <Grid centered={true} stackable  verticalAlign="middle" >
                     <Grid.Row>
                     <Grid.Column width={4}>
@@ -84,6 +84,16 @@ export default class Ptee extends Component {
                             >
                                 <Container>
                                 <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=dtm653krzp" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+                                </Container>
+                        </Modal>
+                    </Grid.Column>
+                    <Grid.Column width={4}>
+                        <Modal
+                                btn={<Grupobtn as={"button"} class={"botonimg btn"} size="medium" src={btnlineaEtica} />}
+
+                            >
+                                <Container>
+                                <Image src={lineaEtica} />
                                 </Container>
                         </Modal>
                     </Grid.Column>

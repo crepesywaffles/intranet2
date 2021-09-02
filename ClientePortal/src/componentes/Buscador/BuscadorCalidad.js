@@ -27,15 +27,14 @@ export default class Buscador extends Component {
     render() {
 
         const users = this.state.user
-        console.log(this.state.value)
+        console.log(users)
         return (
             <div>
                 <input type="search" value={this.state.value} onChange={this.handleChange} placeholder="Ingrese el producto a consultar" />
-                <div className="usuarios">
-                    <table className="tabla-u">
+                <div className="usuarios container-fluid">
+                    <table className="tabla-u container-fluid">
                         <tr>
                             <th>Producto</th>
-                            <th>pdv</th>
                             <th>Carta</th>
                             <th>vegetariano</th>
                             <th>vegano</th>
@@ -47,7 +46,6 @@ export default class Buscador extends Component {
                             .map((u) => (
                                 <tr key={u.producto}>
                                     <td>{u.producto}</td>
-                                    <td>{u.Tipo_pdv}</td>
                                     <td>{u.Cartas}</td>
                                     <td>{ u.vegetariano ? "si" : "no"}</td>
                                     <td>{ u.vegano ? u.vegano : "no"}</td>

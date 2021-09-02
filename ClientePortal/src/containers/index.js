@@ -28,6 +28,24 @@ import CON_CALIDAD_PROCEDIMIENTOS  from "../containers/Calidad/CalidadCore/Proce
 import CON_CALIDAD_REQUISITOS  from "../containers/Calidad/CalidadCore/RequisitosH"
 import CON_CALIDAD_CORE from "./Calidad/CalidadCore/CalidadMain";
 import CON_CALIDAD_INDICADORES from "./Calidad/Indicadores";
+import CON_CALIDAD_HABLADORES_ARTESANO from "./Calidad/CalidadCore/Habladores/Artesano/Artesano"
+import CON_CALIDAD_HABLADORES_ARTESANO_DALIMENTOS from "./Calidad/CalidadCore/Habladores/Artesano/DesinfeccionAlimentos"
+import CON_CALIDAD_HABLADORES_ARTESANO_LYD from "./Calidad/CalidadCore/Habladores/Artesano/L&D"
+import CON_CALIDAD_HABLADORES_ARTESANO_SGI from "./Calidad/CalidadCore/Habladores/Artesano/SGinocuidad"
+import CON_CALIDAD_HABLADORES_ARTESANO_VIDAS from "./Calidad/CalidadCore/Habladores/Artesano/Vidasutiles"
+import CON_CALIDAD_HABLADORES_CARRETINOS_DALIMENTOS from "./Calidad/CalidadCore/Habladores/Carretinos/Desinfección&vida"
+import CON_CALIDAD_HABLADORES_CARRETINOS_LYD from "./Calidad/CalidadCore/Habladores/Carretinos/L&D"
+import CON_CALIDAD_HABLADORES_CARRETINOS_SGI from "./Calidad/CalidadCore/Habladores/Carretinos/SGinocuidad"
+import CON_CALIDAD_HABLADORES_CARRETINOS from "./Calidad/CalidadCore/Habladores/Carretinos/Carretinos"
+import CON_CALIDAD_HABLADORES_HELADERIAS from "./Calidad/CalidadCore/Habladores/Heladerias/Heladerias"
+import CON_CALIDAD_HABLADORES_HELADERIAS_DALIMENTOS from "./Calidad/CalidadCore/Habladores/Heladerias/Desinfección&vida"
+import CON_CALIDAD_HABLADORES_HELADERIAS_LYD from "./Calidad/CalidadCore/Habladores/Heladerias/L&D"
+import CON_CALIDAD_HABLADORES_HELADERIAS_SGI from "./Calidad/CalidadCore/Habladores/Heladerias/SGinocuidad"
+import CON_CALIDAD_HABLADORES_RESTAURANTES from "./Calidad/CalidadCore/Habladores/Restaurantes/Restaurantes"
+import CON_CALIDAD_HABLADORES_RESTAURANTES_DALIMENTOS from "./Calidad/CalidadCore/Habladores/Restaurantes/DesinfeccionAlimentos"
+import CON_CALIDAD_HABLADORES_RESTAURANTES_LYD from "./Calidad/CalidadCore/Habladores/Restaurantes/L&D"
+import CON_CALIDAD_HABLADORES_RESTAURANTES_SGI from "./Calidad/CalidadCore/Habladores/Restaurantes/SGinocuidad"
+import CON_CALIDAD_HABLADORES_RESTAURANTES_VIDAS from "./Calidad/CalidadCore/Habladores/Restaurantes/Vidasutiles"
 import CON_MEDIOAMBIENTE from "./Calidad/MedioA/MedioA";
 import CON_MEDIOAMBIENTE_ASPECTOSGENERALES from "./Calidad/MedioA/AspectosGenerales/AspectosGenerales"
 import CON_MEDIOAMBIENTE_INDICADORES from "./Calidad/MedioA/Indicadores"
@@ -135,6 +153,24 @@ export default {
     CON_CALIDAD,
     CON_CALIDAD_CORE,
     CON_CALIDAD_INDICADORES,
+    CON_CALIDAD_HABLADORES_ARTESANO,
+    CON_CALIDAD_HABLADORES_ARTESANO_DALIMENTOS,
+    CON_CALIDAD_HABLADORES_ARTESANO_LYD,
+    CON_CALIDAD_HABLADORES_ARTESANO_SGI,
+    CON_CALIDAD_HABLADORES_ARTESANO_VIDAS,
+    CON_CALIDAD_HABLADORES_CARRETINOS_DALIMENTOS,
+    CON_CALIDAD_HABLADORES_CARRETINOS_LYD,
+    CON_CALIDAD_HABLADORES_CARRETINOS_SGI,
+    CON_CALIDAD_HABLADORES_CARRETINOS,
+    CON_CALIDAD_HABLADORES_HELADERIAS,
+    CON_CALIDAD_HABLADORES_HELADERIAS_DALIMENTOS,
+    CON_CALIDAD_HABLADORES_HELADERIAS_LYD,
+    CON_CALIDAD_HABLADORES_HELADERIAS_SGI,
+    CON_CALIDAD_HABLADORES_RESTAURANTES,
+    CON_CALIDAD_HABLADORES_RESTAURANTES_DALIMENTOS,
+    CON_CALIDAD_HABLADORES_RESTAURANTES_LYD,
+    CON_CALIDAD_HABLADORES_RESTAURANTES_SGI,
+    CON_CALIDAD_HABLADORES_RESTAURANTES_VIDAS,
     CON_MEDIOAMBIENTE,
     CON_MEDIOAMBIENTE_ASPECTOSGENERALES,
     CON_MA_ASPECTOS_AGUARESIDUAL,

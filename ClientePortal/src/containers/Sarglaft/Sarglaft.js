@@ -10,7 +10,7 @@ export default class Sarglaft extends Component {
     render() {
         return (
             <Layout>
-                <Image src={header} as={Link} to={paths.CON_SARGLAFT}/>
+                <Image src={header} as={Link} to={paths.CON_SARGLAFT} fluid/>
                 <Image src={Infosarglaft}/>
                 <Grid stackable container>
                 <Grid.Column width={10}>
