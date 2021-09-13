@@ -18,7 +18,7 @@ export default class Oheladerias extends Component {
                                 size="fullscreen"
                             >
                                 <Container>
-                                <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=vzk51tvqwd" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+                                <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=t32dsq8unf" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
                                 </Container>
                 </Modal>
                 </Grid>

@@ -17,7 +17,7 @@ export default class Restaurantes extends Component {
                                 size="fullscreen"
                             >
                                 <Container>
-                                <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=h9f2m3krzp" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+                                <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=1ufw9ipvxn" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
                                 </Container>
                 </Modal>
                 </Grid>
