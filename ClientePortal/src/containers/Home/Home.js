@@ -6,7 +6,7 @@ import Boton1 from "../../assets/home/Analisisdeventas.png"
 import Boton2 from "../../assets/home/BotonAniversarios.png"
 import Boton3 from "../../assets/home/BotonBeneficios.png"
 import Boton4 from "../../assets/home/BotonCOVID19.png"
-import Boton5 from "../../assets/home/BotonCumpleaños.png"
+import Boton5 from "../../assets/home/BotonAcademiaHome.png"
 import Boton6 from "../../assets/home/BotonEcommerce.png"
 import BotonAutoAyuda from "../../assets/home/BotonAutoayuda.png"
 import {Vacunacion} from "../../assets/vacunacion/index"
@@ -106,13 +106,14 @@ class Home extends Component {
                 <Grid.Column width={8}>
                 <Container>
                 <Container align="center">
-                        <Image.Group className="mobile-img" size="medium">
+                        <Image.Group className="mobile-img" size="small">
                             {/* <Image className="botonimg" as="a" target="_blanck" href="https://manual.crepesywaffles.com:8090/Login.aspx?ReturnUrl=%2fdefault.aspx"rounded src={Boton1} />
                             <Image className="botonimg" rounded src={Boton2} /> */}
                             <Image as={Link} to={paths.CON_VACUNACION} className="botonimg" rounded src={Vacunacion} />
-                            <Image as="a" target="_blanck" href="https://www.sinergylowellsapi.net/vsinergyqabdprod/" className="botonimg" rounded src={BotonAutoAyuda} />
+                            <Image as="a" target="_blanck" href="https://www.sinergylowellsapi.net/vsinergyqabdprod/" bordered  className="botonimg" rounded src={BotonAutoAyuda} />
                             <Image as={Link} to={paths.CON_DH_BIENESTAR} className="botonimg" rounded src={Boton3} />
-                            <Image as={Link} to={paths.CON_DH_SST_COVID} className="botonimg" rounded src={Boton4} />
+                            <Image as={Link} to={paths.CON_DH_SST_COVID} className="botonimg"  bordered rounded src={Boton4} />
+                            <Image as={Link} to={paths.CON_ACADEMIA} className="botonimg" rounded src={Boton5} />
                         </Image.Group>
                     </Container>            
                 
@@ -137,8 +138,10 @@ class Home extends Component {
                         </Container>
                     </Grid.Column>
                     <Grid.Column>
-                    {day && (
-                                    <Image src={`${apiURL}${day.url}`}/>
+                    {day && (          
+                                    <div className="d-flex justify-content-center">
+                                    <Image src={`${apiURL}${day.url}`} size="large"/>
+                                    </div>
                                 )}
                     
                     </Grid.Column>

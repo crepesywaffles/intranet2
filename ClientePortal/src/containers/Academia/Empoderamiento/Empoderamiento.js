@@ -9,7 +9,7 @@ export default class Empoderamiento extends Component {
     render() {
         return (
             <Layout>
-                <Grid centered={true}  verticalAlign="middle"columns={4}>
+                <Grid centered={true}  verticalAlign="middle"columns={2}>
                     <Grid.Column>
                         <Image as={Link} to={paths.CON_ACADEMIA_EMPODERAMIENTO_FORMACIONES} className="botonimg" src={Formaciones} size="medium" />
                         {/* <Image as={Link} className="botonimg" src={Videos} size="medium" />

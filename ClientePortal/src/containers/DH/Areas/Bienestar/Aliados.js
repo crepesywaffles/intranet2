@@ -42,13 +42,15 @@ export default class Aliados extends Component {
                     {aliado && aliado.filter((content)=>(content.name == "ContenidoCoopCafam.pdf")).map((pdf)=>(
                         <Modal
                         open={true}
-                        btn={<Grupobtn as={"a"} href={`${pdf.url}`}
+                        btn={<Grupobtn as={"a"} href={`${apiURL}${pdf.url}`}
                         target="_blank" class={"botonimg btn"} size="medium" src={btn2} />
                         
                     }
                         >
+                            <div className="d-flex flex-direction-col">
                             <Image src={Coop1}/>
                             <Image src={Coop2}/>
+                            </div>
                         </Modal>
                     ))}
                     <Divider hidden/>

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Layout from "../../componentes/Layout/Layout"
 import {Image,Grid} from "semantic-ui-react"
 import {Infosarglaft} from "../../assets/Misiones/index"
-import {btnptee,btnsagrilaft,politicaTransparencia,header} from "../../assets/sagrilaft/index"
+import {btnptee,btnsagrilaft,politicaTransparencia,headersagrilaftptee} from "../../assets/sagrilaft/index"
 import {Link} from "react-router-dom"
 import*as paths from "../../config/routing/paths";
 
@@ -10,7 +10,7 @@ export default class Sarglaft extends Component {
     render() {
         return (
             <Layout>
-                <Image src={header} as={Link} to={paths.CON_SARGLAFT} fluid/>
+                <Image src={headersagrilaftptee} as={Link} to={paths.CON_SARGLAFT} fluid/>
                 <Image src={Infosarglaft}/>
                 <Grid stackable container>
                 <Grid.Column width={10}>
