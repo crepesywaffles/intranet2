@@ -1,4 +1,4 @@
-import {BrowserRouter,Route,Switch} from 'react-router-dom'
+import {BrowserRouter,Route,Switch,HashRouter} from 'react-router-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'semantic-ui-css/semantic.min.css';
@@ -19,7 +19,7 @@ function App() {
   ))
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           {routes.map(route=>(
             <AppRoute
@@ -31,7 +31,7 @@ function App() {
             />
           ))}
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

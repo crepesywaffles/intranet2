@@ -130,6 +130,7 @@ import CON_SARGLAFT_INFO_VIDEOS from "../containers/Sarglaft/Info_videos"
 import CON_SARGLAFT_PTEE_VIDEOS from "../containers/Sarglaft/Ptee_videos"
 import CON_FORM_FACTURACION from "../containers/Financiera/FormFacturación"
 import CON_ADMIN_FACTURACION from "../containers/Financiera/AdminFacturacion"
+import CON_ESCRIBENOS from "../containers/Servicio/Escribenos"
 
 
 
@@ -265,6 +266,7 @@ export default {
     CON_VACUNACION,
     CON_VACUNACION_GALERIA,
     CON_FORM_FACTURACION,
-    CON_ADMIN_FACTURACION
+    CON_ADMIN_FACTURACION,
+    CON_ESCRIBENOS
 
 }

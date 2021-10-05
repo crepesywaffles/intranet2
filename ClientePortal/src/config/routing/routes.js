@@ -798,6 +798,12 @@ export const CON_ADMIN_FACTURACION={
     exact:true,
     isPrivate:true
 }
+export const CON_ESCRIBENOS={
+    component:containers.CON_ESCRIBENOS,
+    path:paths.CON_ESCRIBENOS,
+    exact:true,
+    isPrivate:false
+}
 
 
 
@@ -935,6 +941,7 @@ export default [
     CON_VACUNACION,
     CON_VACUNACION_GALERIA,
     CON_ADMIN_FACTURACION,
-    CON_FORM_FACTURACION
+    CON_FORM_FACTURACION,
+    CON_ESCRIBENOS
 ]
 

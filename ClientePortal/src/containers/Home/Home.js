@@ -22,6 +22,7 @@ import {Link} from "react-router-dom"
 
 
 
+
 class Home extends Component {
 
     state = {
@@ -30,6 +31,7 @@ class Home extends Component {
         day: [],
         update:[]
     }
+    
     componentDidMount() {
         fetch(`${apiURL}/homesliders`)
             .then(res => { return res.json() })
@@ -66,9 +68,9 @@ class Home extends Component {
                 <Carusel>
                     {slider1 && slider1.sliders.map((task, index) =>
                         <Carousel.Item >
-                            {/* <a href={href1}> */}
+                            <a href={href1}>
                                 <img className=" d-block w-100 " key={index.id} alt={task.name + "Slider"} src={`${apiURL}${task.url}`}/>
-                            {/* </a> */}
+                            </a>
                         </Carousel.Item>
                     )}
                     {slider2 && slider2.sliders.map((task, index) =>

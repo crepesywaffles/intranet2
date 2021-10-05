@@ -26,12 +26,18 @@ export default function FormFacturación() {
     // const [n_radicado, setN_radicado] = useState('')
     const [terminos,setTerminos]= useState(false)
     const [rut, setRut] = useState(null)
-    const [confirmemail,setConfirmemail]= useState("")
-    // useEffect(()=>{
-    //   fetch(`${apiURL}/facturacions`)
-    //   .then((res) => res.json())
-    //   .then((res) => setN_radicado(res.length))
-    // });
+    useEffect(() => {
+      setTimeout(function removechat(){
+        const chat= document.body.childNodes
+        let chatnode= chat[chat.length -1].id
+        if(chatnode){
+          var element = document.getElementById(`${chatnode}`);
+          element.parentNode.removeChild(element);
+        }else{
+          console.log(chatnode)
+        }
+      },6000)
+    },[]);
     function handleTerminos(e){
       e.target.checked == true ?
       setTerminos(true):
@@ -51,7 +57,7 @@ export default function FormFacturación() {
     const  handleChangeRut= e => {
       setRut(e.target.files[0]);
     }
-    async function updateRadicado(id) {
+    async function updateRadicado(id) { 
         
       await axios
          .put(`${apiURL}/facturacions/${id}`, {
@@ -178,11 +184,10 @@ export default function FormFacturación() {
         });
         
     }
-    console.log(documento_equivalente,Restaurante,solicitante,nombre_exp_factura,correo_exp_factura,telefono,contacto_facturacion,radicado)
     return (
       <div className="main">
         <div className="Header">
-          <h1>Crepes y waffles S.A</h1>
+          <h1>CREPES & WAFFLES</h1>
         </div>
         <div className="separador pb-4"></div>
         <br/>
@@ -234,21 +239,6 @@ export default function FormFacturación() {
               :null
               }
               </div>
-              {/* <div className="mb-1">
-                <label className="pri-label"></label>
-                <br />
-                <input
-                  className="text-center radicado"
-                  type="text"
-                  required
-                  maxlength="200"
-                  size="60"
-                  value={`${n_radicado}-CYW-${Restaurante}`}  
-                  onClick={handleChange}
-                  name="radicado"
-                  readOnly
-                />
-              </div> */}
               </div>
               {terminos == true ? 
               <>

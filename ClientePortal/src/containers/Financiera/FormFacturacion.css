@@ -1,6 +1,6 @@
 .main{
 background-color:#fff8e8 ;
-height: 1300px;
+height: 100vh
 }
 
 
@@ -44,6 +44,10 @@ height: 1300px;
     width:635px;
 }
 @media (max-width: 600px) {
+    .main{
+        background-color:#fff8e8 ;
+        height: 100%
+        }
     .select-form{
         width:280px;
     }

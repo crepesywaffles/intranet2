@@ -21,7 +21,7 @@ export default function Layout(props) {
     }
     const user = localStorage.NombresApellidos
     function cerrarsesion() {
-        window.location.pathname="/"
+        window.location.href="https://www.comunicartecyw.com"
         localStorage.clear()
     }
       

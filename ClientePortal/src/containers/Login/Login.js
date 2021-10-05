@@ -10,6 +10,9 @@ import *as paths from "../../config/routing/paths"
 
 
 
+
+
+
 export default function Login() {
   const [inputs, setInputs] = useState({
     username: '',
@@ -18,6 +21,8 @@ export default function Login() {
 const { username, password } = inputs;
 const location = useLocation();
 const [submitted, setSubmitted] = useState(false);
+
+
 
 function handleChange(e) {
   const { name, value } = e.target;
@@ -39,16 +44,15 @@ function handleSubmit(e) {
     localStorage.setItem('Usertoken', response.data.jwt);
     localStorage.setItem('Rol', response.data.user.rol);
     localStorage.setItem('NombresApellidos',response.data.user.nombres_apellidos);
-    console.log(response)
   })
   .catch(error => {
     // Handle error.
     alert("Datos de inicio de sesión incorrectos")
   })
   if(localStorage.Rol == "feB" || localStorage.Rol == "feM" || localStorage.Rol == "feC" || localStorage.Rol == "feBA"||localStorage.Rol == "feCT"){
-    window.location.pathname="/adminfacturacion"
+    window.location.href="https://www.comunicartecyw.com/#/adminfacturacion"
   }else if(localStorage.Usertoken){
-      window.location.pathname="/home"
+      window.location.href="http://localhost:3000/#/home"
     }
     
   }
