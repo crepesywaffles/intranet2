@@ -30,7 +30,7 @@ export default class AdminFacturacion extends Component {
         ciudad: ""
     }
     componentDidMount() {
-        fetch(`${apiURL}/facturacions?Restaurante_contains=${this.state.ciudad}&_sort=created_at:DESC`)
+        fetch(`${apiURL}/facturacions?Restaurante_contains=${this.state.ciudad}&_limit=-1&_sort=created_at:DESC`)
           .then((res) => res.json())
           .then((res) => this.setState({ facturas : res }));
       }
@@ -48,10 +48,11 @@ export default class AdminFacturacion extends Component {
           .then((res) => this.setState({ facturas : res }));        
     } 
     searchAll(e){
-        fetch(`${apiURL}/facturacions?Restaurante_in=Bogota&Restaurante_in=Bucaramanga&Restaurante_in=Villavicencio&_sort=created_at:DESC`)
-          .then((res) => res.json())
-          .then((res) => this.setState({ facturas : res }));       
-    }   
+        // fetch(`${apiURL}/facturacions?Restaurante_in=Bogota&Restaurante_in=Bucaramanga&Restaurante_in=Villavicencio&_sort=created_at:DESC`)
+        //   .then((res) => res.json())
+        //   .then((res) => this.setState({ facturas : res }));       
+        window.location.reload()
+    }
     handleRadicado(e){
         e.target.checked == true ?
         this.setState({radic:true,solici:false,all:false})
@@ -70,7 +71,7 @@ export default class AdminFacturacion extends Component {
     handleChangeSelect(e){
         const value = e.target.value
         this.setState({ciudad:value})
-        fetch(`${apiURL}/facturacions?Restaurante_contains=${value}&_sort=created_at:DESC`)
+        fetch(`${apiURL}/facturacions?Restaurante_contains=${value}&_limit=-1&_sort=created_at:DESC`)
           .then((res) => res.json())
           .then((res) => this.setState({ facturas : res }));
     }
@@ -150,6 +151,7 @@ export default class AdminFacturacion extends Component {
         const RefDoc= ({ value }) => <StyledButton as="a" target="_blanck" href={`${apiURL}${value}`}>Ver</StyledButton>;
         const RefCheck= ({ value }) => <StyledButtonCheck as="a" target="_blanck" onClick={() => this.handleStatusSend(value)}>OK</StyledButtonCheck>;
         const RefPend= ({ value }) => <StyledButtonPend as="a" target="_blanck" onClick={() => this.handleStatusPending(value)}>X</StyledButtonPend>;
+        const RefDate= ({ value }) =>  <StyledBadge label={new Date(`${value}`).toLocaleString()}></StyledBadge>;
         console.log(this.state.facturas)
         const {facturas} = this.state
         return (
@@ -219,9 +221,11 @@ export default class AdminFacturacion extends Component {
                     <div className="terminos">
                     <label><input type="radio" name="filtro" checked={this.state.solici == true ? true : false} onChange={this.handleSolicitante} required/><strong>Solictante</strong></label>
                     </div>
+        
                     <div className="terminos">
                     <label><input type="radio" name="filtro" checked={this.state.all == true ? true : false} onChange={this.handleAll} onClick={this.searchAll} required/><strong>Todos</strong></label>
                     </div>
+                    
                     </div>
                     {this.state.radic == true ? 
                     <input type="search" value={this.state.valueradicado} onChange={this.searchRadicado} placeholder="Ingrese el numero de radicado" />:
@@ -232,14 +236,13 @@ export default class AdminFacturacion extends Component {
                     null
                     }
                     </div>
-                    
                     }
                 </div>
                 {this.state.ciudad === "" || this.state.ciudad === "seleccione" ?
                 null
                 :
                     <div className="rainbow-m-bottom_xx-large">
-                    <TableWithBrowserPagination pageSize={10} data={facturas} keyField="id" variant="listview">
+                    <TableWithBrowserPagination pageSize={15} data={facturas} keyField="id" variant="listview">
                         <Column header="Radicado" field="radicado" />
                         <Column header="Numero Doc.Equivalente" field="documento_equivalente" />
                         <Column header="Documento Equivalente" field="file_doc_equivalente.url" component={RefDoc}/>
@@ -248,7 +251,7 @@ export default class AdminFacturacion extends Component {
                         <Column header="Restaurante" field="Restaurante" />
                         <Column header="correo a expedir factura" field="correo_exp_factura" />
                         <Column header="Telefono" field="telefono" />
-                        <Column header="Fecha" field="created_at" />
+                        <Column header="Fecha" field="created_at" component={RefDate}/>
                         <Column header="Estado" field="estado" component={StatusBadge} />
                         <Column header="Cambio de estado" field="id" component={RefCheck}/>
                         <Column field="id" component={RefPend}/>

@@ -52,7 +52,7 @@ function handleSubmit(e) {
   if(localStorage.Rol == "feB" || localStorage.Rol == "feM" || localStorage.Rol == "feC" || localStorage.Rol == "feBA"||localStorage.Rol == "feCT"){
     window.location.href="https://www.comunicartecyw.com/#/adminfacturacion"
   }else if(localStorage.Usertoken){
-      window.location.href="http://localhost:3000/#/home"
+      window.location.href="https://www.comunicartecyw.com/#/home"
     }
     
   }

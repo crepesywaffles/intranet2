@@ -112,7 +112,7 @@ class Home extends Component {
                             {/* <Image className="botonimg" as="a" target="_blanck" href="https://manual.crepesywaffles.com:8090/Login.aspx?ReturnUrl=%2fdefault.aspx"rounded src={Boton1} />
                             <Image className="botonimg" rounded src={Boton2} /> */}
                             <Image as={Link} to={paths.CON_VACUNACION} className="botonimg" rounded src={Vacunacion} />
-                            <Image as="a" target="_blanck" href="https://www.sinergylowellsapi.net/vsinergyqabdprod/" bordered  className="botonimg" rounded src={BotonAutoAyuda} />
+                            <Image as="a" target="_blanck" href="https://www.sinergylowells.co/vsinergyqabdprod/" bordered  className="botonimg" rounded src={BotonAutoAyuda} />
                             <Image as={Link} to={paths.CON_DH_BIENESTAR} className="botonimg" rounded src={Boton3} />
                             <Image as={Link} to={paths.CON_DH_SST_COVID} className="botonimg"  bordered rounded src={Boton4} />
                             <Image as={Link} to={paths.CON_ACADEMIA} className="botonimg" rounded src={Boton5} />

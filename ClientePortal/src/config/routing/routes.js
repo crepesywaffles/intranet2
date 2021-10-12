@@ -421,7 +421,7 @@ export const CON_ACADEMIA={
 export const CON_ACADEMIA_ARTE={
     component:containers.CON_ACADEMIA_ARTE,
     path:paths.CON_ACADEMIA_ARTE,
-    exact:false,
+    exact:true,
     isPrivate:true
 }
 export const CON_ACADEMIA_EMPODERAMIENTO={
@@ -466,10 +466,28 @@ export const CON_ACADEMIA_BI_VIDEOS={
     exact:true,
     isPrivate:true
 }
+export const CON_ACADEMIA_AC_VIDEOS={
+    component:containers.CON_ACADEMIA_AC_VIDEOS,
+    path:paths.CON_ACADEMIA_AC_VIDEOS,
+    exact:true,
+    isPrivate:true
+}
+export const CON_ACADEMIA_EM_VIDEOS={
+    component:containers.CON_ACADEMIA_EM_VIDEOS,
+    path:paths.CON_ACADEMIA_EM_VIDEOS,
+    exact:true,
+    isPrivate:true
+}
+export const CON_ACADEMIA_CO_VIDEOS={
+    component:containers.CON_ACADEMIA_CO_VIDEOS,
+    path:paths.CON_ACADEMIA_CO_VIDEOS,
+    exact:true,
+    isPrivate:true
+}
 export const CON_ACADEMIA_CONCIENCIA={
     component:containers.CON_ACADEMIA_CONCIENCIA,
     path:paths.CON_ACADEMIA_CONCIENCIA,
-    exact:false,
+    exact:true,
     isPrivate:true
 }
 export const CON_SOSTENIBILIDAD={
@@ -886,6 +904,9 @@ export default [
     CON_ACADEMIA_CURSO2,
     CON_ACADEMIA_CURSO3,
     CON_ACADEMIA_BI_VIDEOS,
+    CON_ACADEMIA_AC_VIDEOS,
+    CON_ACADEMIA_EM_VIDEOS,
+    CON_ACADEMIA_CO_VIDEOS,
     CON_SOSTENIBILIDAD,
     CON_SOSTENIBILIDAD_CAJAMARCA,
     CON_SOSTENIBILIDAD_CHOCONTA,

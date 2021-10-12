@@ -82,7 +82,7 @@ export default function FormFacturación() {
 
       var config = {
         method: 'post',
-        url: 'http://www.portaldeartesanos.com:1337/emails',
+        url: 'https://www.portaldeartesanos.com/emails',
         data : data
       };
       axios(config)
@@ -130,11 +130,11 @@ export default function FormFacturación() {
       var data = new FormData();
       data.append('email', correo);
       data.append('asunto', 'Nueva solicitud facturación electronica');
-      data.append('mensaje', `<h1>Conunicarte CYW</h1><br/><p>Has recibido una solicitud de facturación electronica, para la factura ${documento_equivalente}</p><br/><spam>el radicado de la solicitud es ${id}-CYW-${Restaurante} <spam/>en la ciudad ${Restaurante}`);
+      data.append('mensaje', `<h1>Comunicarte CYW</h1><br/><p>Has recibido una solicitud de facturación electronica, para la factura ${documento_equivalente}</p><br/><spam>el radicado de la solicitud es ${id}-CYW-${Restaurante} <spam/>en la ciudad ${Restaurante}`);
 
       var config = {
         method: 'post',
-        url: 'http://www.portaldeartesanos.com:1337/emails',
+        url: 'https://www.portaldeartesanos.com/emails',
         data : data
       };
       axios(config)
@@ -169,18 +169,17 @@ export default function FormFacturación() {
           sendNotification(response.data.id)
           updateRadicado(response.data.id)
 
-          setTimeout(window.location.reload.bind(window.location), 5000)
+          setTimeout(window.location.reload.bind(window.location), 8000)
           console.log(JSON.stringify(response.data));
         })
         
         .catch(function (error) {
           Swal.fire({
             title: "Error de envio",
-            text: 'Por favor complete el formulario en su totalidad.\nRecuerde que solo recibimos archivos jpg o pdf',
+            text: `${error.name}${error.message}`,
             icon: 'error',
             confirmButtonText: 'Continuar'
           })
-          console.log(error);
         });
         
     }
@@ -323,7 +322,7 @@ export default function FormFacturación() {
               </div>
               <div className="mb-3">
                 <label className="pri-label">
-                CORREO ELECTRÓNICO AL QUE LLEGARÁ LA FACTURA ELECTRÓNICA
+                CORREO ELECTRÓNICO AL QUE LLEGARÁ LA FACTURA ELECTRÓNICA<br/>(Resgistrado ante la DIAN)
                 </label>
                 <br />
                 <input
@@ -346,6 +345,8 @@ export default function FormFacturación() {
                   type="text"
                   required
                   maxlength="255"
+                  pattern="^\d+$" 
+                  title="Solo se aceptan digitos"
                   size="34"
                   value={telefono}
                   name="telefono"
@@ -354,13 +355,15 @@ export default function FormFacturación() {
               </div>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <div className="mb-3">
-              <label className="pri-label">CONTACTO FACT. ELECTRÓNICA</label>
+              <label className="pri-label">TELÉFONO FACT. ELECTRÓNICA</label>
                 <br />
                 <input
                   className="form-control"
                   type="text"
                   required
                   maxlength="255"
+                  pattern="^\d+$" 
+                  title="Solo se aceptan digitos"
                   size="34"
                   name="contacto_facturacion"
                   value={contacto_facturacion}

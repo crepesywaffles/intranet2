@@ -12,8 +12,8 @@ export default class Empoderamiento extends Component {
                 <Grid centered={true}  verticalAlign="middle"columns={2}>
                     <Grid.Column>
                         <Image as={Link} to={paths.CON_ACADEMIA_EMPODERAMIENTO_FORMACIONES} className="botonimg" src={Formaciones} size="medium" />
-                        {/* <Image as={Link} className="botonimg" src={Videos} size="medium" />
-                        <Image as={Link} className="botonimg" src={Podcast} size="medium" />
+                        <Image as={Link} to={paths.CON_ACADEMIA_EM_VIDEOS} className="botonimg" src={Videos} size="medium" />
+                        {/* <Image as={Link} className="botonimg" src={Podcast} size="medium" />
                         <Image as={Link} className="botonimg" src={Articulos} size="medium" /> */}
                     </Grid.Column>
                 </Grid>

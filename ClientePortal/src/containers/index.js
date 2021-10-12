@@ -75,6 +75,9 @@ import CON_ACADEMIA_CURSO from "../containers/Academia/Empoderamiento/Curso"
 import CON_ACADEMIA_CURSO2 from "../containers/Academia/Empoderamiento/Curso2"
 import CON_ACADEMIA_CURSO3 from "../containers/Academia/Empoderamiento/Curso3"
 import CON_ACADEMIA_BI_VIDEOS from "../containers/Academia/BienestarIntegral/Videos/Videos"
+import CON_ACADEMIA_AC_VIDEOS from "../containers/Academia/Arteycultura/Videos/Videos";
+import CON_ACADEMIA_EM_VIDEOS from "../containers/Academia/Empoderamiento/Videos/Videos";
+import CON_ACADEMIA_CO_VIDEOS from "../containers/Academia/Conciencia/Videos/Videos";
 import CON_SOSTENIBILIDAD from "../containers/Sostenibilidad/Sostenibilidad";
 import CON_SOSTENIBILIDAD_CAJAMARCA from "../containers/Sostenibilidad/regiones/Cajamarca";
 import CON_SOSTENIBILIDAD_CHOCONTA from "../containers/Sostenibilidad/regiones/Choconta";
@@ -210,6 +213,9 @@ export default {
     CON_ACADEMIA_CURSO2,
     CON_ACADEMIA_CURSO3,
     CON_ACADEMIA_BI_VIDEOS,
+    CON_ACADEMIA_AC_VIDEOS,
+    CON_ACADEMIA_EM_VIDEOS,
+    CON_ACADEMIA_CO_VIDEOS,
     CON_SOSTENIBILIDAD,
     CON_SOSTENIBILIDAD_CAJAMARCA,
     CON_SOSTENIBILIDAD_CHOCONTA,
