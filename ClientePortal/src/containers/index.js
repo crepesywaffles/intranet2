@@ -27,6 +27,7 @@ import CON_CALIDAD_HABLADORES from "../containers/Calidad/CalidadCore/Habladores
 import CON_CALIDAD_PROCEDIMIENTOS  from "../containers/Calidad/CalidadCore/ProcedimeintosE"
 import CON_CALIDAD_REQUISITOS  from "../containers/Calidad/CalidadCore/RequisitosH"
 import CON_CALIDAD_CORE from "./Calidad/CalidadCore/CalidadMain";
+import CON_CALIDAD_ACTIVIDAD from "./Calidad/Actividad"
 import CON_CALIDAD_INDICADORES from "./Calidad/Indicadores";
 import CON_CALIDAD_HABLADORES_ARTESANO from "./Calidad/CalidadCore/Habladores/Artesano/Artesano"
 import CON_CALIDAD_HABLADORES_ARTESANO_DALIMENTOS from "./Calidad/CalidadCore/Habladores/Artesano/DesinfeccionAlimentos"
@@ -155,6 +156,7 @@ export default {
     CON_DH_SST_COVID,
     CON_DH_SST_COVID_GALERIA,
     CON_CALIDAD,
+    CON_CALIDAD_ACTIVIDAD,
     CON_CALIDAD_CORE,
     CON_CALIDAD_INDICADORES,
     CON_CALIDAD_HABLADORES_ARTESANO,

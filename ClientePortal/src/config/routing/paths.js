@@ -17,6 +17,7 @@ export const CON_DH_SST= "/desarrollohumano/seguridadysalud" ;
 export const CON_DH_SST_COVID= "/desarrollohumano/seguridadysalud/covid";
 export const CON_DH_SST_COVID_GALERIA= "/desarrollohumano/seguridadysalud/covid/comunicados";
 export const CON_CALIDAD = "/calidad";
+export const CON_CALIDAD_ACTIVIDAD= "/calidad/actividad";
 export const CON_CALIDAD_CORE = "/calidad/calidad";
 export const CON_CALIDAD_NOTICIAS = "/calidad/noticias";
 export const CON_CALIDAD_NOTICIAS_ALERGENOS="/calidad/noticias/alergenos"

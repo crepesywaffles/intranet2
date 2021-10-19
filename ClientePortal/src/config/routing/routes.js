@@ -116,6 +116,12 @@ export const CON_CALIDAD={
     exact:true,
     isPrivate:true
 }
+export const CON_CALIDAD_ACTIVIDAD={
+    component:containers.CON_CALIDAD_ACTIVIDAD,
+    path:paths.CON_CALIDAD_ACTIVIDAD,
+    exact:true,
+    isPrivate:true
+}
 export const CON_CALIDAD_CORE={
     component:containers.CON_CALIDAD_CORE,
     path:paths.CON_CALIDAD_CORE,
@@ -845,6 +851,7 @@ export default [
     CON_DH_SST_COVID,
     CON_DH_SST_COVID_GALERIA,
     CON_CALIDAD,
+    CON_CALIDAD_ACTIVIDAD,
     CON_CALIDAD_NOTICIAS,
     CON_CALIDAD_NOTICIAS_ALERGENOS,
     CON_CALIDAD_NOTICIAS_DOCUMENTACION,

@@ -60,12 +60,21 @@ class Home extends Component {
         const href1= slider1 && slider1.url
         const slider2= this.state.img[1]
         const href2= slider2 && slider2.url
+        const slider3= this.state.img[2]
+        const href3= slider3 && slider3.url
         const updates = this.state.update
         console.log(href1)
         return (
 
             <Layout>
                 <Carusel>
+                {slider3 && slider3.sliders.map((task, index) =>
+                        <Carousel.Item >
+                            <a href={href3} target="_blank">
+                                <img className=" d-block w-100 " key={index.id} alt={task.name + "Slider"} src={`${apiURL}${task.url}`}/>
+                            </a>
+                        </Carousel.Item>
+                    )}
                     {slider1 && slider1.sliders.map((task, index) =>
                         <Carousel.Item >
                             <a href={href1}>

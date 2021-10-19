@@ -11,6 +11,8 @@ export default function Escribenos() {
     const [subject,setSubject]= useState("")
     const [body,setBody]= useState("")
     const [terminos,setTerminos]= useState(false)
+    const [pais,setPais]= useState("")
+    console.log(pais)
     
     useEffect(() => {
       setTimeout(function removechat(){
@@ -33,8 +35,11 @@ export default function Escribenos() {
     function handleChangeName(e){
         const value = e.target.value
         setName(value)
-        
     }
+    function handleChangePais(e){
+      const value = e.target.value
+      setPais(value)
+  }
     function handleChangeEmail(e){
         const value = e.target.value
         setEmail(value)
@@ -58,7 +63,7 @@ export default function Escribenos() {
         },
         "subject": `${subject}`,
         "comment": {
-        "body": `${body}`
+    "body": `${pais}\n${body}`
         }
     }
     });
@@ -123,7 +128,21 @@ export default function Escribenos() {
           <form className="pb-5" onSubmit={handleSubmit} id="form-facturacion-electronica">
               {terminos == true ? 
               <>
+            
             <div className="d-flex flex-wrap pt-2 justify-content-center text-center container-fluid">
+            <label className="pri-label">
+                  PAÍS
+                  <br />
+                  <select className="form-control select-form" onChange={handleChangePais}>
+                    <option>Seleccione un país</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="España">España</option>
+                    <option value="México">México</option>
+                    <option value="Panamá">Panamá</option>
+                  </select>
+                </label>
               <div className="mb-3">
                 <label className="pri-label">
                 NOMBRES Y APELLIDOS
